@@ -1,0 +1,36 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# =============================================================================
+# Boatrace project defaults
+# =============================================================================
+
+model = "gpt-6-astra"
+model_reasoning_effort = "low"
+plan_mode_reasoning_effort = "low"
+
+model_reasoning_summary = "concise"
+model_verbosity = "low"
+personality = "pragmatic"
+
+# Work autonomously inside the repository, but request approval when needed
+# outside the normal workspace boundary.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+# Documentation/research normally does not require live web access.
+# Switch to live only when freshness actually matters.
+web_search = "cached"
+
+# =============================================================================
+# Multi-agent
+# =============================================================================
+
+[agents]
+
+enabled = true
+
+# Keep parallelism bounded to avoid unnecessary credit use.
+max_concurrent_threads_per_session = 2
+
+default_subagent_model = "gpt-6-astra"
+default_subagent_reasoning_effort = "low"
