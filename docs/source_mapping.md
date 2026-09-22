@@ -1,5 +1,48 @@
 # Phase 2 source mapping
 
+## Phase 2.5 scope and adoption (2026-09-22)
+
+The field meanings below remain unchanged. Full-period migration now means
+**2017-01-01 onward**, following the user's revised [period policy](analysis_periods.md).
+L1/L2/L3/R3 are extracted in calendar-month partitions. KI is extracted by source
+year from 2017 onward, plus `identity-before-2017`: at most one latest KI strictly
+before a player's earliest 2017+ race year, retained only when that selected KI
+is older than 2017. This is minimum identity support, not full old-history coverage.
+
+For Canonical identity, the existing conservative `identity_observation` rule
+selects the earliest eligible observation among this preserved selection, with
+source year strictly before the player's earliest 2017+ race. Missing eligible
+KI stays missing for that player across the foundation. Later-year records do
+not backfill earlier races. Conflicting eligible known sex codes leave identity
+unresolved. No KI performance statistics become features.
+
+Existing sampled canonical records are reused only when their complete adopted
+source payload matches the corresponding preserved history record. Motor
+evidence is moved to the earliest observed entry for that natural motor identity
+when necessary; its generation formula is unchanged. The immutable Phase 2
+datasets keep their original contents.
+
+Successful zero-row extraction has status `SOURCE_EMPTY`. A failed SELECT stops
+the import and never creates a successful empty batch. Upstream acquisition
+history is not present in these base tables: absence there cannot distinguish
+an upstream collection failure, a non-racing date, or a genuinely absent source
+record. Reports explicitly retain that uncertainty.
+
+Unknown finish/ST/course/grade/flag codes are retained; new special-finish
+meanings are not inferred. Contradictory result codes or L3/R3 registrations
+remain Raw-only with counted reasons. A race's `RESULT_RECORDS_PRESENT` status
+requires six adopted entries and six adopted results; this still does not
+assert an official race status or six normal finishes.
+
+Monthly frozen shards contain exact canonical values and Raw references. Their
+`effective_date` is the day after the last observed race in that month (so an
+incomplete latest month does not imply a future cutoff); every included result and source
+race date is earlier than that D, and selected KI years precede the relevant
+race years. They are retrospective result foundations, not as-known-at-T
+prediction datasets. A future consumer must still impose its own D-1 cutoff.
+
+## Phase 2 evidence (unchanged below)
+
 Verified 2026-09-22 against local `pckyotei.public` base tables and:
 
 - `C:\Users\knkzh\Documents\kyotei\PC-KYOTEIデータ仕様書.pdf`
