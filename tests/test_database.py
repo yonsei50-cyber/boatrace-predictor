@@ -28,9 +28,12 @@ class DatabaseTests(unittest.TestCase):
         self.cur.execute('ROLLBACK TO SAVEPOINT rejected_write')
         self.cur.execute('RELEASE SAVEPOINT rejected_write')
 
-    def test_nine_tables_and_non_superuser(self):
-        self.cur.execute("SELECT count(*) FROM information_schema.tables WHERE table_schema IN ('raw','core') AND table_type='BASE TABLE'")
-        self.assertEqual(self.cur.fetchone()[0],9)
+    def test_foundation_and_preinfo_tables_and_non_superuser(self):
+        self.cur.execute("SELECT table_schema||'.'||table_name FROM information_schema.tables WHERE table_schema IN ('raw','core') AND table_type='BASE TABLE'")
+        self.assertEqual({r[0] for r in self.cur.fetchall()}, {
+            'raw.source_batch','raw.source_record','core.venue','core.player',
+            'core.race','core.motor','core.race_entry','core.race_result',
+            'core.dataset_version','core.race_environment_preinfo','core.race_boat_preinfo'})
         self.cur.execute('SELECT rolsuper FROM pg_roles WHERE rolname=current_user')
         self.assertFalse(self.cur.fetchone()[0])
 

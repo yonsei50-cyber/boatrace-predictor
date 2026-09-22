@@ -1,7 +1,39 @@
-# Boatrace foundation — Phase 2 / Phase 2.5 / Phase 3A / Phase 3B
+# Boatrace foundation — Phase 2 through Phase 3C
 
-Nine PostgreSQL tables, immutable source observations, explicit sample import,
+Eleven PostgreSQL tables, immutable source observations, explicit sample import,
 and frozen result datasets. No ratings, models, odds, or betting implementation.
+
+## Phase 3C: environment and start exhibition
+
+C2 and C3 are preserved in the existing immutable Raw framework. The additive
+`0005_environment_preinfo.sql` migration introduces `core.race_environment_preinfo`
+and `core.race_boat_preinfo`. Raw-derived generated values/statuses and guarded
+source identity keep exhibition course/ST separate from result course/ST.
+The corresponding `_status` views include races/boats with `MISSING_SOURCE`.
+
+Temperatures are Celsius, exhibition timing is seconds, and tilt is degrees.
+Wind speed and wave height retain original text with `UNRESOLVED` units.
+Exhibition F/L retain their symbols and have no ordinary numeric ST. Missing
+source rows are never filled from another race or from result information.
+
+Lap, half-lap, turning, and straight times belong to **C4, not C3**. C4 remains
+excluded. `core.c4_field_structural_status` describes venue/field metadata only;
+it does not claim historical C4 values or convert missing C4 rows into data.
+Source-class pre-race availability policy is separate from exact historical
+publication time (unverified) and extraction/ingestion audit timestamps.
+
+```powershell
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.import_environment_preinfo --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3c\raw_import.json'
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.apply_environment_preinfo --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3c\canonical_import.json'
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.audit_environment_preinfo --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3c\audit.json'
+```
+
+Run only the dedicated additive command on the populated target. Repeated
+unchanged Raw imports add nothing; changed partitions block automatic adoption.
+Each Raw or Canonical batch transaction is atomic. An interrupted run can have
+completed earlier batches, so inspect the audit before claiming full coverage.
+The audit uses the explicitly frozen Phase 3C checkpoint counts; it is not a
+rolling production count policy. See [Phase 3C report](docs/phase3c_report.md).
 
 ## Phase 3B: evidence-based result states
 
