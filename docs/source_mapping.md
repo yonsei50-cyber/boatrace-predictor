@@ -1,5 +1,39 @@
 # Phase 2 source mapping
 
+## Phase 3B: result evidence
+
+R2 is preserved as complete JSON observations in `raw.source_record`, with
+`pckyotei.public.brd_r2` location, monthly batches, natural race keys, record and
+batch hashes, extraction time, and unknown historical receipt time. Its dedicated
+version is `phase3b-r2-evidence-v1`; the Phase 2.5 inventory contract is unchanged.
+
+`core.result_source_evidence` exposes all R2/R3 observations and lineage, including
+blank R3 and unjoined source rows. `core.race_result_state` classifies the 2017+
+race universe. `core.boat_finish_state` classifies existing entries without adding
+rows to `core.race_result`. The old `result_status` remains compatible with frozen
+datasets; new consumers must use the separated finish state and race evidence.
+
+The saved PC-KYOTEI specification PDF p.5 confirms R2 `data_kubun=9` means race
+cancellation, and `0` is an initial value. The view conservatively reports
+`R2_EVENT_STATE_PRESENT` and retains raw codes. First-slot valid trifecta payout
+combinations establish payout evidence only. `000` is not a valid combination;
+`***` is a special payout, not an individual result. This does not certify any
+boat's finish. All payout slots remain in the complete Raw payload.
+
+Race completeness and boat finish are independent: six nonblank R3 finishes can
+include special symbols or duplicates. Only numeric 1–6 in a race without numeric
+duplicates is `NUMERIC_VALID`. Duplicate values are
+`NUMERIC_DUPLICATE_UNRESOLVED`; the other numeric finishes in that race are
+`NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED`. Original numbers are retained. Nonblank
+special finish symbols, including finish-side Ｆ/Ｌ, are `UNRESOLVED_SPECIAL`.
+No individual finish is generated for blank/absent R3. The existing F/L ST status
+and NULL numeric ST remain separate and unchanged.
+
+Conflicting Raw revisions are exposed through all source IDs/hashes and raw-value
+arrays; conflicting boat scalar raw values are NULL rather than selecting one.
+No Rating, motor points, responsibility, model eligibility, or historical
+availability is inferred. Existing snapshots and D-1 filtering remain unchanged.
+
 ## Phase 3A: entry-time national win rate
 
 The primary input is L3 `zenkoku_ritsu_1`, distinct from KI `ritsu_1`.

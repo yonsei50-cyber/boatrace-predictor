@@ -26,7 +26,8 @@ def sample_tests():
         with patch('scripts.import_sample.target_connection',connect):
             import_sample()
         suite=unittest.defaultTestLoader.discover(str(Path(__file__).resolve().parents[1]/'tests'))
-        with patch('test_database.target_connection',connect), patch('test_national_win_rate.target_connection',connect):
+        with patch('test_database.target_connection',connect), patch('test_national_win_rate.target_connection',connect), \
+             patch('test_result_states.target_connection',connect):
             result=unittest.TextTestRunner(verbosity=2).run(suite)
         if not result.wasSuccessful() or result.skipped:
             raise RuntimeError('test failure or skip')

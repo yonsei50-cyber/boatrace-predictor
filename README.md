@@ -1,7 +1,33 @@
-# Boatrace foundation — Phase 2 / Phase 2.5 / Phase 3A
+# Boatrace foundation — Phase 2 / Phase 2.5 / Phase 3A / Phase 3B
 
 Nine PostgreSQL tables, immutable source observations, explicit sample import,
 and frozen result datasets. No ratings, models, odds, or betting implementation.
+
+## Phase 3B: evidence-based result states
+
+Three additive views separate race state (`core.race_result_state`), boat finish
+(`core.boat_finish_state`), and immutable R2/R3 lineage
+(`core.result_source_evidence`). Existing start timing status is reused unchanged.
+`RESULT_RECORDS_PRESENT` describes source completeness, not normal finishes or
+model eligibility. Duplicate numeric races and special symbols remain unresolved.
+Missing R3 never receives a finish reconstructed from payouts.
+
+Full R2 observations from 2017 onward are preserved in the existing Raw tables.
+The dedicated importer does not change the Phase 2.5 source inventory or frozen
+datasets. An identical repeat adds no batch; changed partition content blocks.
+Migration `0004_result_states.sql` creates only views and is reapplicable; do not
+rerun initial migrations against the populated target.
+
+```powershell
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.import_result_evidence --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3b\r2_import.json'
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.audit_result_states --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3b\audit.json'
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.investigate_result_evidence --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3b\investigation.json'
+```
+
+The audit validates the current checkpoint counts and independently checks
+numeric classification, lineage, and R2 hashes. Views query the current preserved
+observations; they are not historical prediction snapshots. See the
+[Phase 3B report](docs/phase3b_report.md) for definitions, counts, and limitations.
 
 ## Phase 3A: L3 national win rate
 
