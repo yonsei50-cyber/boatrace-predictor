@@ -1,7 +1,34 @@
-# Boatrace foundation — Phase 2 through Phase 3C
+# Boatrace foundation — Phase 2 through Phase 3D
 
-Eleven PostgreSQL tables, immutable source observations, explicit sample import,
+Twelve PostgreSQL tables, immutable source observations, explicit sample import,
 and frozen result datasets. No ratings, models, odds, or betting implementation.
+
+## Phase 3D: C3 part changes
+
+The additive `0006_race_boat_part_change.sql` migration projects the nine
+documented C3 part fields into `core.race_boat_part_change`, one row per observed
+source field and boat. Multiple fields on one boat remain separate rows. The
+existing preserved C3 Raw record supplies identity, original exchange code,
+hash, source location, and lineage. The documented `0` is an initial code and
+does not create a part-change row; it is not proof that no physical exchange
+occurred. Unexpected nonzero, blank, and invalid codes remain unresolved rows.
+
+The source specification defines exchange codes, not physical quantities.
+`quantity_raw` retains the code, while `quantity` stays NULL for every row.
+The nine part types are normalized only through the saved C3 field definition.
+This layer makes no motor assessment, rating, feature, or prediction. Historical
+individual publication timestamps remain unverified; source-class pre-race
+policy is distinct from extraction and ingestion audit timestamps.
+
+```powershell
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.apply_part_changes --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3d\apply.json'
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.audit_part_changes --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3d\audit.json'
+```
+
+The apply command uses only already-preserved C3 Raw batches. Repeating it
+adds no rows when the source is unchanged. Each monthly batch is atomic; an
+interrupted run may have completed earlier batches, so use the audit for final
+coverage and replay checks. See [Phase 3D report](docs/phase3d_report.md).
 
 ## Phase 3C: environment and start exhibition
 

@@ -29,7 +29,8 @@ def sample_tests():
         with patch('test_database.target_connection',connect), patch('test_national_win_rate.target_connection',connect), \
              patch('test_result_states.target_connection',connect), \
              patch('test_environment_preinfo.target_connection',connect), \
-             patch('test_environment_preinfo_raw.target_connection',connect):
+             patch('test_environment_preinfo_raw.target_connection',connect), \
+             patch('test_part_changes.target_connection',connect):
             result=unittest.TextTestRunner(verbosity=2).run(suite)
         if not result.wasSuccessful() or result.skipped:
             raise RuntimeError('test failure or skip')

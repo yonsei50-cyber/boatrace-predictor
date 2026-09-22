@@ -33,7 +33,8 @@ class DatabaseTests(unittest.TestCase):
         self.assertEqual({r[0] for r in self.cur.fetchall()}, {
             'raw.source_batch','raw.source_record','core.venue','core.player',
             'core.race','core.motor','core.race_entry','core.race_result',
-            'core.dataset_version','core.race_environment_preinfo','core.race_boat_preinfo'})
+            'core.dataset_version','core.race_environment_preinfo','core.race_boat_preinfo',
+            'core.race_boat_part_change'})
         self.cur.execute('SELECT rolsuper FROM pg_roles WHERE rolname=current_user')
         self.assertFalse(self.cur.fetchone()[0])
 
