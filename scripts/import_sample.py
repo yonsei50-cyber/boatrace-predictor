@@ -78,7 +78,11 @@ def snapshot_before(cur, effective_date):
     """Freeze only results strictly earlier than D, with relevant dimensions."""
     statements = {
         'race': 'SELECT * FROM core.race WHERE race_date < %s ORDER BY race_id',
-        'race_entry': '''SELECT e.* FROM core.race_entry e JOIN core.race r USING(race_id)
+        # Keep the versioned Phase 2 result snapshot shape stable as entry inputs grow.
+        'race_entry': '''SELECT e.race_id,e.boat_no,e.venue_code,e.player_id,e.motor_id,
+            e.motor_no_raw,e.f_count_current_term_raw,e.f_count_current_term,
+            e.l_count_current_term_raw,e.source_record_id,e.provenance
+            FROM core.race_entry e JOIN core.race r USING(race_id)
             WHERE r.race_date < %s ORDER BY e.race_id,e.boat_no''',
         'race_result': '''SELECT e.* FROM core.race_result e JOIN core.race r USING(race_id)
             WHERE r.race_date < %s ORDER BY e.race_id,e.boat_no''',

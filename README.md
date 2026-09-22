@@ -1,7 +1,32 @@
-# Boatrace foundation — Phase 2 / Phase 2.5
+# Boatrace foundation — Phase 2 / Phase 2.5 / Phase 3A
 
 Nine PostgreSQL tables, immutable source observations, explicit sample import,
 and frozen result datasets. No ratings, models, odds, or betting implementation.
+
+## Phase 3A: L3 national win rate
+
+`core.race_entry` stores `national_win_rate_raw`, `national_win_rate`, and
+`national_win_rate_status`. `core.race_entry_national_win_rate` exposes their
+race/boat/player identity and Raw record/batch lineage. Only `VALID` has a
+numeric value; `0000` remains `UNRESOLVED` with numeric NULL. No KI fallback.
+Historical publication/receipt time remains `NOT_VERIFIED`, including for VALID
+values. This status is not a historical prediction eligibility flag.
+
+Migration `0003_l3_national_win_rate.sql` is additive and reapplicable on the
+existing target. The dedicated command upgrades, backfills preserved L3, audits
+coverage, and commits atomically. Omitting `--apply` audits without persistent
+writes. The initial migrations must not be run against the populated target.
+
+```powershell
+& 'C:\Users\knkzh\AppData\Local\Python\bin\python.exe' -X utf8 -B -m scripts.national_win_rate --apply --expected-entries 3252960 --report 'C:\Users\knkzh\Documents\boatrace-predictor\.local\phase3a\coverage.json'
+```
+
+The expected count is the verified 2017-01-01 through 2026-09-19 checkpoint,
+not a permanent limit for later imports. Inserts and COPY automatically derive
+the rate from the adopted L3 record and reject mismatched entry identity.
+Existing Phase 2/2.5 result snapshots retain their original column contract;
+they do not acquire this new input. A future prediction dataset needs its own
+versioned input snapshot and time policy. See the [Phase 3A report](docs/phase3a_report.md).
 
 - [Verified Phase 2 report](docs/phase2_report.md)
 - [Source mapping and unresolved definitions](docs/source_mapping.md)

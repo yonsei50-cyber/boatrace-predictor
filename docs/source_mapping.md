@@ -1,5 +1,42 @@
 # Phase 2 source mapping
 
+## Phase 3A: entry-time national win rate
+
+The primary input is L3 `zenkoku_ritsu_1`, distinct from KI `ritsu_1`.
+The saved PC-KYOTEI specification PDF p.1 defines four characters and the
+example `0580 = 5.80`; the table workbook's 出走表(艇番) rows18–20 maps the
+national columns. The existing preflight evidence is retained in
+`.local/preflight/national_score_readonly.json` and `phase3_preflight_report.md`.
+Conversion uses exact four ASCII digits divided by 100 (`0654 = 6.54`). It
+does not interpret this competitive-points average as a first-place percentage.
+
+| Raw | Status | Numeric value |
+|---|---|---|
+| Four ASCII digits other than `0000` | `VALID` | exact decimal / 100 |
+| `0000` | `UNRESOLVED` | NULL; meaning not established, no zero imputation |
+| NULL, empty, space-only | `MISSING` | NULL; exact Raw preserved |
+| Other shapes | `INVALID` | NULL; exact Raw preserved |
+
+`MISSING`/`UNRESOLVED` reuse existing vocabulary. `VALID`/`INVALID` identify
+field-level parsing; they do not assert historical availability or model
+eligibility. No confirmed special/sentinel code is currently classified.
+No unsupported plausibility cutoff is used to discard unusual numeric values.
+
+Three columns on `core.race_entry` preserve the race×boat observation;
+generated numeric/status columns use versioned SQL functions, and the entry
+trigger adopts the exact Raw field and validates race/boat/registration.
+The existing source_record FK resolves source_batch, raw key, hashes, and
+timestamps through `core.race_entry_national_win_rate`. There is no result join.
+The view labels this `RACE_ENTRY_INFORMATION` and historical availability
+`NOT_VERIFIED`; current extraction/ingestion is not historical receipt evidence.
+
+KI remains auxiliary, with May–October term1 and November–April term2.
+No KI matching requirement, fallback, or period-year inference is implemented.
+All D predictions retain the common D-1 result/rating boundary. This race-entry
+input is not a same-day result or a rating update. Frozen Phase 2/2.5 snapshots
+retain their original shape and hashes; future prediction inputs need a new,
+explicitly versioned snapshot contract.
+
 ## Phase 2.5 scope and adoption (2026-09-22)
 
 The field meanings below remain unchanged. Full-period migration now means

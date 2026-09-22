@@ -23,7 +23,11 @@ def snapshot_month(cur, partition):
     where='r.race_date >= %s AND r.race_date < %s'
     queries={
         'race':'SELECT r.* FROM core.race r WHERE '+where+' ORDER BY race_id',
-        'race_entry':'SELECT e.* FROM core.race_entry e JOIN core.race r USING(race_id) WHERE '+where+' ORDER BY e.race_id,e.boat_no',
+        # Phase 2.5 result foundations retain their original versioned shape.
+        'race_entry':'''SELECT e.race_id,e.boat_no,e.venue_code,e.player_id,e.motor_id,
+            e.motor_no_raw,e.f_count_current_term_raw,e.f_count_current_term,
+            e.l_count_current_term_raw,e.source_record_id,e.provenance
+            FROM core.race_entry e JOIN core.race r USING(race_id) WHERE '''+where+' ORDER BY e.race_id,e.boat_no',
         'race_result':'SELECT e.* FROM core.race_result e JOIN core.race r USING(race_id) WHERE '+where+' ORDER BY e.race_id,e.boat_no',
         'player':'SELECT p.* FROM core.player p WHERE EXISTS (SELECT 1 FROM core.race_entry e JOIN core.race r USING(race_id) WHERE e.player_id=p.player_id AND '+where+') ORDER BY player_id',
         'motor':'SELECT m.* FROM core.motor m WHERE EXISTS (SELECT 1 FROM core.race_entry e JOIN core.race r USING(race_id) WHERE e.motor_id=m.motor_id AND '+where+') ORDER BY motor_id',
