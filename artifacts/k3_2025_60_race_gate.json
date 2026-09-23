@@ -1,0 +1,2234 @@
+{
+  "generated_at": "2026-09-23T15:19:37.951739+00:00",
+  "source": "pckyotei.public.brd_k3",
+  "year_encodings": [
+    "2025"
+  ],
+  "malformed_k3_key_rows": 0,
+  "candidate_races": 60,
+  "candidate_boats": 360,
+  "k3_present_probe_bug": 0,
+  "k3_absent": 60,
+  "races": [
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 1,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3448
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3947
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5306
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4887
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5377
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5150
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 2,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4550
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4987
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4486
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4036
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5341
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5320
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 3,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3441
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5153
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5216
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5283
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3532
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5390
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 4,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5234
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5213
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4637
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3406
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5365
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5141
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 5,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5070
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4851
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3475
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4420
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4819
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5364
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 6,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4188
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3652
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3973
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3993
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5320
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5377
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 7,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3659
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5283
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3740
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3448
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3827
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5402
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 8,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3655
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3790
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3441
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5306
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4539
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5341
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 9,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5153
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5150
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3406
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4550
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4645
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4787
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 10,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4887
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5141
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3532
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3653
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3475
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4987
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 11,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4486
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5216
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3686
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3538
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5006
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4851
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 1,
+      "race_no": 12,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4362
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5234
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4420
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3973
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4036
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3740
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 1,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3519
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3957
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5068
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4527
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3690
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4118
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 2,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5183
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5196
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4276
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3893
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4308
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5383
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 3,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3315
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4067
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4824
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4369
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3712
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3848
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 4,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3831
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4483
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4526
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4650
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4139
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3990
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 5,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5266
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3946
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3554
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5321
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5137
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4527
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 6,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5232
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4269
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5183
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3988
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5139
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4199
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 7,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5196
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3690
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4043
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4630
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5262
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5169
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 8,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4442
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3941
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3315
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3519
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3990
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4793
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 9,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5089
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4914
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3967
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4118
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3831
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5061
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 10,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4483
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4199
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5137
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4276
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3957
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4369
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 11,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3946
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4043
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4139
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5068
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4067
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3988
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 7,
+      "race_no": 12,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3941
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4630
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3712
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4269
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4650
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4308
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 1,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5005
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3834
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5244
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5198
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5279
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4941
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 2,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5031
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3277
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4973
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5015
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3482
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5407
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 3,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4691
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3569
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5057
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3246
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5043
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4675
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 4,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4098
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4111
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4140
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5152
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5093
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4672
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 5,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3619
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4319
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4941
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4211
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4379
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5245
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 6,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5315
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3482
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4847
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5278
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3528
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4133
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 7,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5257
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5276
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5198
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5171
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4900
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4659
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 8,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4694
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4951
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5226
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4675
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3432
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4973
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 9,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5245
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5043
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5031
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4140
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4319
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4098
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 10,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4133
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5093
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5015
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5315
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5005
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5257
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 11,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4659
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4379
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4694
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4847
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4691
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3619
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 15,
+      "race_no": 12,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4211
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4900
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5278
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5226
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4951
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5057
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 1,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4007
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4948
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4167
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3901
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3661
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4112
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 2,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4158
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4213
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4896
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4406
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5083
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3787
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 3,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4248
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4669
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5067
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4886
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4009
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5375
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 4,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4919
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4817
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5249
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4709
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3851
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3558
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 5,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4475
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5208
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4950
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3539
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3853
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5106
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 6,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4896
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4549
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4567
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4239
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5388
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3567
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 7,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4669
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3897
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4263
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4112
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4158
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3989
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 8,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4359
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4248
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4406
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4985
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5131
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5404
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 9,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5064
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5106
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4709
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5375
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4167
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4324
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 10,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3853
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5067
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4549
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3558
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4213
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4361
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 11,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4239
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4475
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3661
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3787
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4919
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4263
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 19,
+      "race_no": 12,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3897
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4950
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4009
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4817
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4359
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4948
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 1,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3869
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5143
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3224
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5352
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3436
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3211
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 2,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 5219
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5105
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4562
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3459
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4251
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5417
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 3,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3710
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 5199
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3701
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4394
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4615
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3752
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 4,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4323
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4383
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4226
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3478
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4094
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3948
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 5,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4594
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4266
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 5109
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4195
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5143
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 5352
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 6,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 3769
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3459
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3703
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 3869
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3514
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3505
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 7,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4318
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3436
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3211
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5105
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 4894
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3541
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 8,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4822
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4251
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 3656
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4676
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3224
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3701
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 9,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4195
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4615
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4094
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 5219
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5109
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4226
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 10,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4394
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3514
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4594
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4383
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3769
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3710
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 11,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4266
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 3541
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4318
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4822
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 5199
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 4323
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    },
+    {
+      "date": "2025-08-12",
+      "venue": 20,
+      "race_no": 12,
+      "canonical_boat_count": 6,
+      "canonical_boats": [
+        {
+          "boat_no": 1,
+          "player_registration": 4762
+        },
+        {
+          "boat_no": 2,
+          "player_registration": 4099
+        },
+        {
+          "boat_no": 3,
+          "player_registration": 4136
+        },
+        {
+          "boat_no": 4,
+          "player_registration": 4193
+        },
+        {
+          "boat_no": 5,
+          "player_registration": 3874
+        },
+        {
+          "boat_no": 6,
+          "player_registration": 3955
+        }
+      ],
+      "k3_direct_lookup_count": 0,
+      "k3_direct_rows": [],
+      "k3_normalized_lookup_count": 0,
+      "k3_normalized_rows": [],
+      "classification": "K3_ABSENT"
+    }
+  ]
+}

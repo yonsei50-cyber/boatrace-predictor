@@ -1,4 +1,35 @@
-# Phase 2 source mapping
+# Phase 2 source mapping and current K3 result policy
+
+> **Current result-source policy (2026-09-24):**
+> K3 is the authoritative individual race-result source.
+> R3 is prohibited and must not be used by active project workflows.
+> The older result descriptions below are historical. See
+> the [formal K3-only migration report](k3_only_formal_migration_report.md) and
+> [impact audit](k3_only_source_policy_impact_audit.md). R2 retains its separate
+> race-state, cancellation, and payout role.
+
+## Current result mapping
+
+| Canonical value | Authoritative K3 field | Rule |
+|---|---|---|
+| Race identity | `kaisai_nen`, `kaisai_tsukihi`, `kyoteijo_code`, `race_no` | Match the existing race key exactly; no result is created from R2 |
+| Boat and player | `teiban`, `toroku_bango` | Match the existing entry identity |
+| Finish raw and position | `chakujun` | Keep the exact raw token; only numeric positions 1–6 become numeric finishes |
+| Result status | `chakujun` | `F ` is F; `L0` and `L1` are L; other nonnumeric tokens remain unresolved |
+| Actual course | `shinnyu_course` | Preserve raw; numeric 1–6 only |
+| Start timing | `st` | Preserve raw; F/L never become numeric ST |
+
+K3 has no independent `kigo` field. `result_symbol_raw` therefore remains NULL
+instead of synthesizing a source token. Complete K3 rows are preserved in
+`raw.source_record` and linked to Canonical by `source_record_id`; the
+`core.result_dataset_version` manifest records the adopted monthly batches.
+The 2025 old-Canonical-only 60 races were individually checked against the K3
+table before any Canonical rewrite; the gate record is
+[`artifacts/k3_2025_60_race_gate.json`](../artifacts/k3_2025_60_race_gate.json).
+K3 absence does not delete the race identity or R2 observations, and R2 does not
+fill individual finish, ST, or actual course.
+
+## Historical mapping (superseded for individual results)
 
 ## Phase 3B: result evidence
 

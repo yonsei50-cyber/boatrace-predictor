@@ -15,18 +15,15 @@ def source_boolean(raw):
     return True if raw == '1' else None
 
 def normalize_result(row):
-    finish,course,st,symbol = (row.get(k) for k in ('chakujun','shinnyu_course','st','kigo'))
-    finish_position = integer(finish,1,6)
-    known_symbol = {'F':'F','L':'L','K':'ABSENT','S':'DISQUALIFIED'}.get(symbol)
-    finish_fl = {'Ｆ':'F','Ｌ':'L'}.get(finish)
-    if (finish_fl and known_symbol and finish_fl != known_symbol) or (finish_position and known_symbol):
-        raise ValueError('BLOCKING: conflicting result finish and symbol')
-    status = known_symbol or finish_fl or ('NORMAL' if finish_position else 'UNRESOLVED')
+    """Normalize individual results from K3 while retaining every source token."""
+    finish,course,st = (row.get(k) for k in ('chakujun','shinnyu_course','st'))
+    token = finish.strip() if finish is not None else ''
+    finish_position = integer(token,1,6) if re.fullmatch(r'[0-9]+',token) else None
+    status = ('F' if token == 'F' else 'L' if token in ('L0','L1')
+              else 'NORMAL' if finish_position is not None else 'UNRESOLVED')
     start = None
     if status in ('F','L'):
         st_status = status
-    elif symbol not in (None,' ','','K','S'):
-        st_status = 'UNRESOLVED'
     elif st is None or not st.strip():
         st_status = 'MISSING'
     elif re.fullmatch(r'[0-9]{3}', st):
@@ -38,7 +35,7 @@ def normalize_result(row):
     unresolved = status == 'UNRESOLVED' or st_status == 'UNRESOLVED' or (
         course is not None and course.strip() and actual is None)
     return dict(actual_course_raw=course,actual_course=actual,finish_raw=finish,
-        finish_position=finish_position,result_status=status,result_symbol_raw=symbol,
+        finish_position=finish_position,result_status=status,result_symbol_raw=None,
         start_timing_raw=st,start_timing=start,start_timing_status=st_status,
         normalization_status='UNRESOLVED' if unresolved else 'NORMALIZED',
-        normalization_version=NORMALIZATION_VERSION)
+        normalization_version='k3-only-result-v1')

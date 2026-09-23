@@ -1,7 +1,31 @@
 # Boatrace foundation — Phase 2 through Phase 3D
 
-Twelve PostgreSQL tables, immutable source observations, explicit sample import,
-and frozen result datasets. No ratings, models, odds, or betting implementation.
+> **Current result-source policy (2026-09-24):**
+> K3 is the authoritative individual race-result source.
+> R3 is prohibited and must not be used by active project workflows.
+> R2 remains the race-state, cancellation, and payout source;
+> it never supplies a missing individual result. See the
+> [formal K3-only migration report](docs/k3_only_formal_migration_report.md) and
+> [K3-only impact audit](docs/k3_only_source_policy_impact_audit.md). The older
+> result-source descriptions and frozen snapshot commands below record historical
+> work and do not define the current result pipeline.
+
+Thirteen PostgreSQL foundation tables preserve source observations and result
+lineage. Frozen Rating, Entry Course Index, and Motor A methods are separate;
+this result-source migration does not change their definitions.
+
+## Current K3 result pipeline
+
+`scripts.k3_direct_lookup_gate` verifies the 2025 old-Canonical-only races
+directly in K3 before any Canonical replacement. `scripts.migrate_k3_results`
+preserves monthly K3 Raw observations and transactionally rebuilds the populated
+database's `core.race_result`, result-state views, and result dataset version.
+`scripts.import_history` uses K3 for a fresh build. The Raw K3 payload retains
+the original `chakujun`, `shinnyu_course`, `st`, registration, and boat tokens.
+Special finish codes have no invented numeric placement; F/L have no numeric ST.
+`scripts.audit_k3_canonical` checks coverage and lineage, and
+`scripts.reproduce_k3_empty_db` compares a fresh build with the populated DB.
+The regression guard is `tests.test_no_r3_runtime`.
 
 ## Phase 3D: C3 part changes
 

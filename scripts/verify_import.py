@@ -65,7 +65,7 @@ def verify_import():
     # Fault injection is a deterministic transaction test, not a real source change.
     original=extract_source()
     changed=deepcopy(original)
-    changed[0]['brd_r3'][0]['st']='FAULT_INJECTION'
+    changed[0]['brd_k3'][0]['st']='FAULT_INJECTION'
     with disposable_database() as connect:
         with patch('scripts.import_sample.target_connection',connect), patch(
                 'scripts.import_sample.extract_source',side_effect=[original,changed]):

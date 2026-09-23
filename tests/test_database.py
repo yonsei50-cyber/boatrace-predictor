@@ -1,4 +1,4 @@
-"""Opt-in real sample tests: BOATRACE_TEST_DB=1. Target changes always rollback."""
+"""Opt-in isolated 54-result sample tests. Target changes always rollback."""
 from datetime import date
 import os
 import unittest
@@ -14,6 +14,11 @@ class DatabaseTests(unittest.TestCase):
     def setUp(self):
         self.conn=target_connection()
         self.cur=self.conn.cursor()
+        self.cur.execute('SELECT count(*) FROM core.race_result')
+        if self.cur.fetchone()[0] != 54:
+            self.conn.rollback()
+            self.conn.close()
+            self.skipTest('sample-only tests require an isolated 54-result database')
         self.cur.execute('SELECT min(race_id) FROM core.race')
         self.first_race=self.cur.fetchone()[0]
 
@@ -34,7 +39,7 @@ class DatabaseTests(unittest.TestCase):
             'raw.source_batch','raw.source_record','core.venue','core.player',
             'core.race','core.motor','core.race_entry','core.race_result',
             'core.dataset_version','core.race_environment_preinfo','core.race_boat_preinfo',
-            'core.race_boat_part_change'})
+            'core.race_boat_part_change','core.result_dataset_version'})
         self.cur.execute('SELECT rolsuper FROM pg_roles WHERE rolname=current_user')
         self.assertFalse(self.cur.fetchone()[0])
 
@@ -111,7 +116,11 @@ class DatabaseTests(unittest.TestCase):
 
     def test_f_l_preservation_and_unknown_specials(self):
         self.cur.execute("SELECT result_status,finish_raw,result_symbol_raw,start_timing_raw,start_timing FROM core.race_result WHERE result_status IN ('F','L') ORDER BY result_status,start_timing_raw")
-        self.assertEqual(self.cur.fetchall(),[('F','Ｆ','F','001',None),('F','Ｆ','F','002',None),('L','Ｌ','L','   ',None)])
+        rows = self.cur.fetchall()
+        self.assertEqual([(status, symbol, value) for status,_,symbol,_,value in rows],
+                         [('F',None,None),('F',None,None),('L',None,None)])
+        self.assertEqual([finish.strip() for _,finish,_,_,_ in rows[:2]],['F','F'])
+        self.assertIn(rows[2][1].strip(),('L0','L1'))
         self.cur.execute("SELECT count(*) FROM core.race_result WHERE result_status='UNRESOLVED' AND finish_raw IS NOT NULL AND finish_position IS NULL")
         self.assertGreater(self.cur.fetchone()[0],0)
 
@@ -207,7 +216,7 @@ class DatabaseTests(unittest.TestCase):
             for record in manifest['records']:
                 h,p=actual[record['source_record_id']]
                 self.assertEqual(h,record['record_hash'])
-                if p['record_id']=='R3':
+                if p['record_id']=='K3':
                     self.assertLess(p['kaisai_nen']+p['kaisai_tsukihi'],day.strftime('%Y%m%d'))
         before,after=versions
         self.assertEqual(len(before[1]['race_result']),30)

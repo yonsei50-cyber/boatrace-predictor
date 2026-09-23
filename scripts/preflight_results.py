@@ -79,47 +79,48 @@ def inventory():
             out['source_read_only'] = cur.fetchone()[0]
             query = """SELECT z.kaisai_nen,z.kaisai_tsukihi,z.kyoteijo_code,z.race_no,
                 count(*) AS rows,array_agg(DISTINCT z.data_kubun),
-                array_agg(DISTINCT z.kigo),array_agg(DISTINCT r.data_kubun),
+                array_agg(DISTINCT r.data_kubun),
                 count(*) FILTER (WHERE nullif(btrim(z.toroku_bango),'') IS NULL
                   AND nullif(btrim(z.shinnyu_course),'') IS NULL
                   AND nullif(btrim(z.st),'') IS NULL)
-                FROM public.brd_r3 z LEFT JOIN public.brd_r2 r USING
+                FROM public.brd_k3 z LEFT JOIN public.brd_r2 r USING
                   (kaisai_nen,kaisai_tsukihi,kyoteijo_code,race_no)
                 WHERE z.kaisai_nen >= '2017' AND nullif(btrim(z.chakujun),'') IS NULL
                 GROUP BY 1,2,3,4 ORDER BY 1,2,3,4"""
             cur.execute(query)
             rows = cur.fetchall()
-            out['blank_r3'] = {'query': query, 'rows': sum(x[4] for x in rows),
+            out['blank_k3'] = {'query': query, 'rows': sum(x[4] for x in rows),
                 'races': len(rows), 'years': dict(Counter()), 'venues': dict(Counter()),
                 'race_state_groups': {}, 'details': rows}
             for key, index in [('years', 0), ('venues', 2)]:
                 counts = Counter()
                 for x in rows:
                     counts[x[index]] += x[4]
-                out['blank_r3'][key] = dict(counts)
-            out['blank_r3']['race_state_groups'] = dict(Counter(
-                json.dumps({'rows': x[4], 'r3_data_kubun': x[5], 'kigo': x[6],
-                            'r2_data_kubun': x[7], 'all_four_blank': x[8]}, ensure_ascii=False)
+                out['blank_k3'][key] = dict(counts)
+            out['blank_k3']['race_state_groups'] = dict(Counter(
+                json.dumps({'rows': x[4], 'k3_data_kubun': x[5],
+                            'r2_data_kubun': x[6], 'all_three_blank': x[7]}, ensure_ascii=False)
                 for x in rows))
             cur.execute("""SELECT z.kaisai_nen,z.kaisai_tsukihi,z.kyoteijo_code,z.race_no,
                 r.data_kubun,r.haraimodoshi_sanrentan_1a,
                 array_agg(z.chakujun ORDER BY z.teiban)
-                FROM public.brd_r3 z JOIN public.brd_r2 r USING
+                FROM public.brd_k3 z JOIN public.brd_r2 r USING
                   (kaisai_nen,kaisai_tsukihi,kyoteijo_code,race_no)
                 WHERE z.kaisai_nen >= '2017' AND EXISTS (
-                    SELECT 1 FROM public.brd_r3 u WHERE u.kaisai_nen=z.kaisai_nen
+                    SELECT 1 FROM public.brd_k3 u WHERE u.kaisai_nen=z.kaisai_nen
                     AND u.kaisai_tsukihi=z.kaisai_tsukihi AND u.kyoteijo_code=z.kyoteijo_code
-                    AND u.race_no=z.race_no AND u.chakujun='＿')
+                    AND u.race_no=z.race_no
+                    AND btrim(u.chakujun) IN ('K','K0','K1','S','S0','S1','S2','00','＿'))
                 GROUP BY 1,2,3,4,5,6 ORDER BY 1,2,3,4""")
-            out['underscore_r2_evidence'] = cur.fetchall()
+            out['special_r2_evidence'] = cur.fetchall()
             cur.execute("""SELECT r.data_kubun,r.haraimodoshi_sanrentan_1a,count(*)
                 FROM public.brd_r2 r WHERE r.kaisai_nen >= '2017' AND EXISTS (
-                    SELECT 1 FROM public.brd_r3 z WHERE z.kaisai_nen=r.kaisai_nen
+                    SELECT 1 FROM public.brd_k3 z WHERE z.kaisai_nen=r.kaisai_nen
                     AND z.kaisai_tsukihi=r.kaisai_tsukihi AND z.kyoteijo_code=r.kyoteijo_code
                     AND z.race_no=r.race_no AND nullif(btrim(z.chakujun),'') IS NULL)
                 GROUP BY 1,2 ORDER BY 1,2""")
             out['blank_r2_payout_states'] = cur.fetchall()
-            cur.execute("""SELECT teiban,toroku_bango,chakujun,kigo,st FROM public.brd_r3
+            cur.execute("""SELECT teiban,toroku_bango,chakujun,st FROM public.brd_k3
                 WHERE kaisai_nen='2026' AND kaisai_tsukihi='0531'
                 AND kyoteijo_code='06' AND race_no='07' ORDER BY teiban""")
             out['official_tie_sample'] = {
@@ -144,4 +145,4 @@ if __name__ == '__main__':
         ('rows', 'races', 'numeric_coexist_rows', 'numeric_coexist_races', 'statuses')}
         for k, s in result['symbols'].items()}, 'duplicate_groups': result['duplicate_numeric_finish']['groups'],
         'duplicate_races': result['duplicate_numeric_finish']['races'],
-        'blank_rows': result['blank_r3']['rows'], 'blank_races': result['blank_r3']['races']}, ensure_ascii=False))
+        'blank_rows': result['blank_k3']['rows'], 'blank_races': result['blank_k3']['races']}, ensure_ascii=False))

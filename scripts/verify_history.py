@@ -161,7 +161,7 @@ def replay(inventory_path):
             try:
                 with scratch.cursor() as cur:
                     cur.execute("SET statement_timeout='0'")
-                for table in ('brd_l1','brd_l2','brd_l3','brd_r3','brd_ki'):
+                for table in ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'):
                     rows_count=0
                     for partition in years if table=='brd_ki' else months:
                         with real.cursor() as cur:

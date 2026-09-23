@@ -1,4 +1,4 @@
-"""Phase 3B result-state views over immutable R2/R3 evidence."""
+"""Phase 3B result-state views over immutable R2/K3 evidence."""
 from datetime import date, datetime, timezone
 from pathlib import Path
 import os
@@ -21,12 +21,24 @@ class ResultStateTests(unittest.TestCase):
     def setUpClass(cls):
         cls.conn = target_connection()
         cls.cur = cls.conn.cursor()
+        cls.cur.execute("SET LOCAL statement_timeout='0'")
         cls.cur.execute('SELECT to_jsonb(z) FROM core.race_result z ORDER BY race_id,boat_no LIMIT 1')
         cls.existing_result = cls.cur.fetchone()[0]
         cls.cur.execute('SELECT canonical_content_hash FROM core.dataset_version ORDER BY dataset_version_id')
         cls.dataset_hashes = cls.cur.fetchall()
+        cls.cur.execute('DROP VIEW IF EXISTS core.boat_finish_state, '
+                        'core.race_result_state, core.result_source_evidence CASCADE')
         cls.cur.execute(MIGRATION.read_text(encoding='utf-8'))
         cls._build_fixtures()
+        fixture_races = list(cls.races.values())
+        cls.cur.execute('CREATE TEMP TABLE result_state_fixture ON COMMIT DROP AS '
+                        'SELECT * FROM core.race_result_state WHERE race_id=ANY(%s)',
+                        (fixture_races,))
+        cls.cur.execute('CREATE TEMP TABLE finish_state_fixture ON COMMIT DROP AS '
+                        'SELECT * FROM core.boat_finish_state WHERE race_id=ANY(%s)',
+                        (fixture_races,))
+        cls.cur.execute('CREATE UNIQUE INDEX ON result_state_fixture(race_id)')
+        cls.cur.execute('CREATE UNIQUE INDEX ON finish_state_fixture(race_id,boat_no)')
 
     @classmethod
     def tearDownClass(cls):
@@ -43,7 +55,7 @@ class ResultStateTests(unittest.TestCase):
             content_hash=digest(rows), row_count=len(rows), metadata={'test':True},
             status='TEST_FIXTURE'), 'source_batch_id')
         ids = []
-        keys = RACE_KEY + (('teiban',) if table in ('brd_l3','brd_r3') else ())
+        keys = RACE_KEY + (('teiban',) if table in ('brd_l3','brd_k3') else ())
         for position,row in enumerate(rows,1):
             ids.append(insert(cls.cur, 'raw.source_record', dict(
                 source_batch_id=batch, source_record_key={k:row[k] for k in keys},
@@ -70,14 +82,14 @@ class ResultStateTests(unittest.TestCase):
             'payout': (date(2099,1,3), [' ',' ',' ',' ',' ',' ']),
             'unresolved': (date(2099,1,4), [' ',' ',' ',' ',' ',' ']),
             'duplicate': (date(2099,1,5), ['01','02','02','04','05','06']),
-            'special': (date(2099,1,6), ['Ｆ','Ｌ','転','欠','落','失']),
-            'no_r3': (date(2099,1,7), None),
+            'special': (date(2099,1,6), ['F','L0','転','欠','落','失']),
+            'no_k3': (date(2099,1,7), None),
             'partial': (date(2099,1,8), ['01','02']),
             'r2_conflict': (date(2099,1,9), [' ',' ',' ',' ',' ',' ']),
-            'r3_conflict': (date(2099,1,10), ['01','02','03','04','05','06']),
+            'k3_conflict': (date(2099,1,10), ['01','02','03','04','05','06']),
         }
         l3_rows = []
-        r3_rows = []
+        k3_rows = []
         for name,(day,finishes) in scenarios.items():
             for boat,player in enumerate(players,1):
                 common = dict(kaisai_nen='2099', kaisai_tsukihi=day.strftime('%m%d'),
@@ -85,17 +97,17 @@ class ResultStateTests(unittest.TestCase):
                 l3_rows.append(dict(common, toroku_bango=str(player).zfill(4),
                                     zenkoku_ritsu_1='0500'))
                 if finishes is not None and boat <= len(finishes):
-                    symbol = 'F' if finishes[boat-1]=='Ｆ' else ('L' if finishes[boat-1]=='Ｌ' else ' ')
-                    r3_rows.append(dict(common, toroku_bango=str(player).zfill(4),
-                                        chakujun=finishes[boat-1], kigo=symbol,
-                                        st='002' if symbol=='F' else ('   ' if symbol=='L' else '014'),
+                    finish = finishes[boat-1]
+                    k3_rows.append(dict(common, toroku_bango=str(player).zfill(4),
+                                        chakujun=finish,
+                                        st='002' if finish=='F' else ('   ' if finish in ('L0','L1') else '014'),
                                         shinnyu_course=str(boat), data_kubun='0'))
         _,l3_ids = cls._batch('brd_l3',l3_rows,'phase3b-test-l3')
-        _,r3_ids = cls._batch('brd_r3',r3_rows,'phase3b-test-r3')
+        _,k3_ids = cls._batch('brd_k3',k3_rows,'phase3b-test-k3')
         l3_by_key = {tuple(row[k] for k in RACE_KEY+('teiban',)):rid
                      for row,rid in zip(l3_rows,l3_ids)}
-        r3_by_key = {tuple(row[k] for k in RACE_KEY+('teiban',)):(row,rid)
-                     for row,rid in zip(r3_rows,r3_ids)}
+        k3_by_key = {tuple(row[k] for k in RACE_KEY+('teiban',)):(row,rid)
+                     for row,rid in zip(k3_rows,k3_ids)}
 
         cls.races = {}
         for name,(day,_) in scenarios.items():
@@ -112,7 +124,7 @@ class ResultStateTests(unittest.TestCase):
                     f_count_current_term=None,l_count_current_term_raw=None,
                     source_record_id=l3_by_key[raw_key],provenance={'test':True}))
                 if name == 'special':
-                    raw,source = r3_by_key[raw_key]
+                    raw,source = k3_by_key[raw_key]
                     insert(cls.cur,'core.race_result',dict(
                         race_id=race_id,boat_no=boat,**normalize_result(raw),
                         source_record_id=source,provenance={'test':True}))
@@ -134,19 +146,19 @@ class ResultStateTests(unittest.TestCase):
 
         conflict = dict(r2_rows[-1],data_kubun='0',haraimodoshi_sanrentan_1a='123')
         cls._batch('brd_r2',[conflict],'phase3b-test-conflicting-revision')
-        r3_conflict = dict(r3_rows[-6],chakujun='02')
-        cls._batch('brd_r3',[r3_conflict],'phase3b-test-conflicting-r3-revision')
+        k3_conflict = dict(k3_rows[-6],chakujun='02')
+        cls._batch('brd_k3',[k3_conflict],'phase3b-test-conflicting-k3-revision')
         cls.cur.execute('SET CONSTRAINTS ALL IMMEDIATE')
         cls.cur.execute('SET CONSTRAINTS ALL DEFERRED')
 
     def state(self, name):
-        self.cur.execute('SELECT result_state FROM core.race_result_state WHERE race_id=%s',
+        self.cur.execute('SELECT result_state FROM result_state_fixture WHERE race_id=%s',
                          (self.races[name],))
         return self.cur.fetchone()[0]
 
     def finishes(self, name):
         self.cur.execute('SELECT boat_no,finish_raw,finish_position,finish_state '
-                         'FROM core.boat_finish_state WHERE race_id=%s ORDER BY boat_no',
+                         'FROM finish_state_fixture WHERE race_id=%s ORDER BY boat_no',
                          (self.races[name],))
         return self.cur.fetchall()
 
@@ -156,17 +168,17 @@ class ResultStateTests(unittest.TestCase):
         self.assertEqual([r[2] for r in rows],list(range(1,7)))
         self.assertEqual({r[3] for r in rows},{'NUMERIC_VALID'})
 
-    def test_blank_r3_r2_event_and_payout_evidence(self):
+    def test_blank_k3_r2_event_and_payout_evidence(self):
         self.assertEqual(self.state('event'),'R2_EVENT_STATE_PRESENT')
-        self.assertEqual(self.state('payout'),'R2_PAYOUT_PRESENT_R3_MISSING')
+        self.assertEqual(self.state('payout'),'R2_PAYOUT_PRESENT_K3_MISSING')
         self.assertEqual({r[3] for r in self.finishes('event')},{'NO_INDIVIDUAL_RESULT'})
 
-    def test_fully_unresolved_and_no_r3(self):
+    def test_fully_unresolved_and_no_k3(self):
         self.assertEqual(self.state('unresolved'),'UNRESOLVED')
-        self.assertEqual(self.state('no_r3'),'SOURCE_INCOMPLETE')
-        self.assertEqual({r[3] for r in self.finishes('no_r3')},{'NO_INDIVIDUAL_RESULT'})
+        self.assertEqual(self.state('no_k3'),'SOURCE_INCOMPLETE')
+        self.assertEqual({r[3] for r in self.finishes('no_k3')},{'NO_INDIVIDUAL_RESULT'})
 
-    def test_partial_r3_is_source_incomplete(self):
+    def test_partial_k3_is_source_incomplete(self):
         self.assertEqual(self.state('partial'),'SOURCE_INCOMPLETE')
         states = [r[3] for r in self.finishes('partial')]
         self.assertEqual(states.count('NUMERIC_VALID'),2)
@@ -180,24 +192,24 @@ class ResultStateTests(unittest.TestCase):
         self.assertEqual({r[3] for r in self.finishes('duplicate') if r[2]!=2},
                          {'NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED'})
 
-    def test_r3_conflict_invalidates_race_without_selecting_a_revision(self):
-        self.assertEqual(self.state('r3_conflict'),'UNRESOLVED')
-        self.assertEqual({r[3] for r in self.finishes('r3_conflict')},
+    def test_k3_conflict_invalidates_race_without_selecting_a_revision(self):
+        self.assertEqual(self.state('k3_conflict'),'UNRESOLVED')
+        self.assertEqual({r[3] for r in self.finishes('k3_conflict')},
                          {'UNRESOLVED_SOURCE_CONFLICT'})
-        self.cur.execute('SELECT finish_raw,finish_raw_values,r3_distinct_revision_count '
-                         'FROM core.boat_finish_state WHERE race_id=%s AND boat_no=1',
-                         (self.races['r3_conflict'],))
+        self.cur.execute('SELECT finish_raw,finish_raw_values,k3_distinct_revision_count '
+                         'FROM finish_state_fixture WHERE race_id=%s AND boat_no=1',
+                         (self.races['k3_conflict'],))
         self.assertEqual(self.cur.fetchone(),(None,['01','02'],2))
 
     def test_special_finish_and_f_l_independence(self):
         self.assertEqual(self.state('special'),'RESULT_RECORDS_PRESENT')
         self.assertEqual({r[3] for r in self.finishes('special')},{'UNRESOLVED_SPECIAL'})
         self.cur.execute('SELECT boat_no,finish_state,start_symbol_raw,start_timing_status,start_timing '
-                         'FROM core.boat_finish_state WHERE race_id=%s AND boat_no IN (1,2) ORDER BY boat_no',
+                         'FROM finish_state_fixture WHERE race_id=%s AND boat_no IN (1,2) ORDER BY boat_no',
                          (self.races['special'],))
         self.assertEqual(self.cur.fetchall(),[
-            (1,'UNRESOLVED_SPECIAL','F','F',None),
-            (2,'UNRESOLVED_SPECIAL','L','L',None)])
+            (1,'UNRESOLVED_SPECIAL',None,'F',None),
+            (2,'UNRESOLVED_SPECIAL',None,'L',None)])
 
     def test_r2_lineage_idempotency_and_hash(self):
         self.assertTrue(self.assert_preserved_new)
@@ -245,7 +257,7 @@ class ResultStateTests(unittest.TestCase):
     def test_conflicting_r2_revision_not_silently_selected(self):
         self.cur.execute('SELECT result_state,r2_source_record_count,r2_distinct_revision_count,'
                          'r2_revision_conflict,array_length(r2_source_record_ids,1) '
-                         'FROM core.race_result_state WHERE race_id=%s',(self.races['r2_conflict'],))
+                         'FROM result_state_fixture WHERE race_id=%s',(self.races['r2_conflict'],))
         self.assertEqual(self.cur.fetchone(),('UNRESOLVED',2,2,True,2))
 
     def test_migration_reapply_and_existing_state_preserved(self):

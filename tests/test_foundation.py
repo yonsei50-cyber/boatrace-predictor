@@ -49,12 +49,24 @@ class RuleTests(unittest.TestCase):
         self.assertIsNone(identity_observation([later],'2025'))
         self.assertEqual(identity_observation([later],'2026'),later)
 
-    def test_conflicting_result_codes_block_normalization(self):
-        with self.assertRaises(ValueError):
-            normalize_result(dict(chakujun='01',shinnyu_course='1',st='003',kigo='F'))
+    def test_k3_finish_token_controls_result_status(self):
+        result = normalize_result(dict(chakujun='F ',shinnyu_course='1',st='003'))
+        self.assertEqual(result['result_status'],'F')
+        self.assertEqual(result['start_timing_status'],'F')
+        self.assertEqual(result['finish_raw'],'F ')
+        self.assertIsNone(result['start_timing'])
+
+    def test_k3_nonfinish_codes_stay_raw_and_unresolved(self):
+        for token in ('K0','K1','S0','S1','S2','00'):
+            with self.subTest(token=token):
+                result = normalize_result(dict(chakujun=token,shinnyu_course='1',st='014'))
+                self.assertEqual(result['finish_raw'],token)
+                self.assertIsNone(result['finish_position'])
+                self.assertEqual(result['result_status'],'UNRESOLVED')
+                self.assertEqual(result['normalization_status'],'UNRESOLVED')
 
     def test_normal_st_and_raw_preservation(self):
-        row=dict(shinnyu_course='2',chakujun='01',st='014',kigo=' ')
+        row=dict(shinnyu_course='2',chakujun='01',st='014')
         result=normalize_result(row)
         self.assertEqual(result['start_timing_raw'],'014')
         self.assertEqual(result['start_timing'],Decimal('0.14'))
@@ -63,25 +75,25 @@ class RuleTests(unittest.TestCase):
         self.assertEqual(result['actual_course'],2)
 
     def test_f_l_raw_preserved_without_invented_numeric_st(self):
-        for finish,symbol,st,status in [('Ｆ','F','002','F'),('Ｌ','L','   ','L')]:
+        for finish,st,status in [('F','002','F'),('L0','   ','L'),('L1','   ','L')]:
             with self.subTest(status=status):
-                result=normalize_result(dict(shinnyu_course='4',chakujun=finish,st=st,kigo=symbol))
+                result=normalize_result(dict(shinnyu_course='4',chakujun=finish,st=st))
                 self.assertEqual(result['result_status'],status)
                 self.assertEqual(result['start_timing_status'],status)
                 self.assertEqual(result['finish_raw'],finish)
-                self.assertEqual(result['result_symbol_raw'],symbol)
+                self.assertIsNone(result['result_symbol_raw'])
                 self.assertEqual(result['start_timing_raw'],st)
                 self.assertIsNone(result['start_timing'])
                 self.assertIsNone(result['finish_position'])
 
     def test_actual_course_not_filled_from_boat(self):
         for course in [' ','0','9',None]:
-            result=normalize_result(dict(shinnyu_course=course,chakujun='欠',st='   ',kigo=' ',teiban='3'))
+            result=normalize_result(dict(shinnyu_course=course,chakujun='欠',st='   ',teiban='3'))
             self.assertIsNone(result['actual_course'])
             self.assertEqual(result['actual_course_raw'],course)
 
     def test_unknown_result_is_not_normal(self):
-        result=normalize_result(dict(shinnyu_course='1',chakujun='?',st='abc',kigo='?'))
+        result=normalize_result(dict(shinnyu_course='1',chakujun='?',st='abc'))
         self.assertIsNone(result['finish_position'])
         self.assertIsNone(result['start_timing'])
         self.assertNotEqual(result['normalization_status'],'NORMALIZED')

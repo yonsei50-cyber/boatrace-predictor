@@ -14,7 +14,7 @@ from scripts.db import target_connection
 
 
 YEARS = (2023, 2024, 2025)
-SPECIALS = ('転', '欠', '落', 'エ', '妨', '不', '沈', '失', '＿', 'Ｆ', 'Ｌ')
+SPECIALS = ('転', '欠', '落', 'エ', '妨', '不', '沈', '失', '＿', 'K', 'S', '00', 'F', 'L0', 'L1')
 
 
 def add(table, year, key, value=1):
@@ -133,7 +133,7 @@ def run():
             if db != 'boatrace_predictor' or ro != 'on':
                 raise RuntimeError('expected target read-only snapshot')
             cur.execute("SET LOCAL statement_timeout='0'")
-            cur.execute("SELECT source_table,count(*),min(extraction_condition->>'partition'),max(extraction_condition->>'partition') FROM raw.source_batch WHERE source_table IN ('brd_l2','brd_l3','brd_r3') AND extraction_condition->>'partition' BETWEEN '2017-01' AND '2025-12' GROUP BY 1 ORDER BY 1")
+            cur.execute("SELECT source_table,count(*),min(extraction_condition->>'partition'),max(extraction_condition->>'partition') FROM raw.source_batch WHERE source_table IN ('brd_l2','brd_l3','brd_k3') AND extraction_condition->>'partition' BETWEEN '2017-01' AND '2025-12' GROUP BY 1 ORDER BY 1")
             source_months = [dict(source_table=t, months=n, first=lo, last=hi) for t,n,lo,hi in cur.fetchall()]
             cur.execute("SELECT player_id,training_class,training_class_raw FROM core.player")
             classes = {p:(c,raw) for p,c,raw in cur.fetchall()}

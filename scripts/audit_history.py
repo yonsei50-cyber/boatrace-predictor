@@ -11,7 +11,7 @@ from psycopg2.extras import RealDictCursor
 from scripts.db import DEFAULT_CONFIG, target_connection
 from scripts.foundation import motor_generation, MOTOR_RULE_VERSION
 
-HISTORY_VERSION = 'phase2.5-stored-history-v1'
+HISTORY_VERSIONS = ('phase2.5-stored-history-v1', 'phase2.5-k3-only-history-v1')
 
 
 def _json_value(value):
@@ -70,7 +70,7 @@ def audit(connection, progress=None):
             'audit_version': 'PHASE_2_5_HISTORY_AUDIT_V1',
             'history_scope': {
                 'race_date_start': '2017-01-01',
-                'batch_version': HISTORY_VERSION,
+                'batch_versions': list(HISTORY_VERSIONS),
                 'ki_exception': 'identity-before-2017 selected subset only',
             },
             'transaction_read_only': read_only,
@@ -251,7 +251,7 @@ def audit(connection, progress=None):
                 SELECT count(*) AS count FROM (
                     SELECT s.source_batch_id,s.source_position
                     FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                    WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((b.source_table<>'brd_ki'
                             AND b.extraction_condition->>'partition'>='2017-01')
                         OR (b.source_table='brd_ki' AND
@@ -272,38 +272,39 @@ def audit(connection, progress=None):
         report['raw_sources'] = {
             'declared_inventory': _row(cur, '''
                 SELECT count(*) AS total_batches,coalesce(sum(row_count),0) AS total_declared_records,
-                    count(*) FILTER (WHERE extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    count(*) FILTER (WHERE (extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((source_table<>'brd_ki' AND extraction_condition->>'partition'>='2017-01')
                         OR (source_table='brd_ki' AND
                             (extraction_condition->>'partition'>='2017'
                              OR extraction_condition->>'partition'='identity-before-2017')))) AS scoped_batches,
                     coalesce(sum(row_count) FILTER
-                      (WHERE extraction_condition->>'version'='phase2.5-stored-history-v1'
+                      (WHERE (extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((source_table<>'brd_ki' AND extraction_condition->>'partition'>='2017-01')
                         OR (source_table='brd_ki' AND
                             (extraction_condition->>'partition'>='2017'
                              OR extraction_condition->>'partition'='identity-before-2017')))),0)
                         AS scoped_declared_records,
                     coalesce(sum(row_count) FILTER
-                      (WHERE (extraction_condition->>'version'='phase2.5-stored-history-v1'
+                      (WHERE ((extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((source_table<>'brd_ki' AND extraction_condition->>'partition'>='2017-01')
                         OR (source_table='brd_ki' AND
                             (extraction_condition->>'partition'>='2017'
                              OR extraction_condition->>'partition'='identity-before-2017')))) IS NOT TRUE),0)
                         AS retained_out_of_scope_declared_records,
                     count(*) FILTER
-                      (WHERE (extraction_condition->>'version'='phase2.5-stored-history-v1'
+                      (WHERE ((extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((source_table<>'brd_ki' AND extraction_condition->>'partition'>='2017-01')
                         OR (source_table='brd_ki' AND
                             (extraction_condition->>'partition'>='2017'
                              OR extraction_condition->>'partition'='identity-before-2017')))) IS NOT TRUE)
                         AS retained_out_of_scope_batches
-                FROM raw.source_batch'''),
+                FROM raw.source_batch
+                WHERE source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki')'''),
             'phase_2_5_batches': _row(cur, '''
                 SELECT count(*) AS batches,coalesce(sum(row_count),0) AS declared_rows,
                     count(*) FILTER (WHERE status<>'PRESERVED') AS non_preserved_batches
                 FROM raw.source_batch b
-                WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                     OR (b.source_table='brd_ki' AND
                         (b.extraction_condition->>'partition'>='2017'
@@ -312,7 +313,7 @@ def audit(connection, progress=None):
                 SELECT source_table,count(*) AS batches,sum(row_count) AS declared_rows,
                     min(extracted_at) AS first_extracted_at,max(extracted_at) AS last_extracted_at
                 FROM raw.source_batch b
-                WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                     OR (b.source_table='brd_ki' AND
                         (b.extraction_condition->>'partition'>='2017'
@@ -323,7 +324,7 @@ def audit(connection, progress=None):
                     count(*) AS batches,sum(row_count) AS declared_rows,
                     count(DISTINCT content_hash) AS content_versions
                 FROM raw.source_batch b
-                WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                     OR (b.source_table='brd_ki' AND
                         (b.extraction_condition->>'partition'>='2017'
@@ -334,7 +335,7 @@ def audit(connection, progress=None):
                 SELECT count(*) AS count FROM (
                     SELECT source_table,extraction_condition
                     FROM raw.source_batch b
-                    WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                         OR (b.source_table='brd_ki' AND
                             (b.extraction_condition->>'partition'>='2017'
@@ -343,7 +344,7 @@ def audit(connection, progress=None):
             'incomplete_batches': _row(cur, '''
                 WITH scoped AS (
                     SELECT * FROM raw.source_batch b
-                    WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                         OR (b.source_table='brd_ki' AND
                             (b.extraction_condition->>'partition'>='2017'
@@ -359,7 +360,7 @@ def audit(connection, progress=None):
                     SELECT b.source_table,s.source_record_key,count(*) AS observations,
                         count(DISTINCT s.record_hash) AS versions
                     FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                    WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                         OR (b.source_table='brd_ki' AND
                             (b.extraction_condition->>'partition'>='2017'
@@ -372,7 +373,7 @@ def audit(connection, progress=None):
                 SELECT b.source_table,s.source_record_key,count(*) AS observations,
                     count(DISTINCT s.record_hash) AS versions
                 FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                     OR (b.source_table='brd_ki' AND
                         (b.extraction_condition->>'partition'>='2017'
@@ -398,7 +399,7 @@ def audit(connection, progress=None):
                         (r.source_record_id IS NOT NULL) AS referenced
                     FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
                     LEFT JOIN refs r USING(source_record_id)
-                    WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                         OR (b.source_table='brd_ki' AND
                             (b.extraction_condition->>'partition'>='2017'
@@ -426,43 +427,43 @@ def audit(connection, progress=None):
                     ('brd_l3','kaisai_nen'),('brd_l3','kaisai_tsukihi'),
                     ('brd_l3','kyoteijo_code'),('brd_l3','race_no'),
                     ('brd_l3','teiban'),('brd_l3','toroku_bango'),
-                    ('brd_r3','kaisai_nen'),('brd_r3','kaisai_tsukihi'),
-                    ('brd_r3','kyoteijo_code'),('brd_r3','race_no'),
-                    ('brd_r3','teiban'),('brd_r3','toroku_bango'),
+                    ('brd_k3','kaisai_nen'),('brd_k3','kaisai_tsukihi'),
+                    ('brd_k3','kyoteijo_code'),('brd_k3','race_no'),
+                    ('brd_k3','teiban'),('brd_k3','toroku_bango'),
                     ('brd_ki','toroku_bango'),('brd_ki','kaisai_nen'),('brd_ki','ki')
                 )
                 SELECT q.source_table,q.field,count(*) AS rows
                 FROM required q JOIN raw.source_batch b USING(source_table)
                 JOIN raw.source_record s USING(source_batch_id)
-                WHERE b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND ((b.source_table<>'brd_ki' AND b.extraction_condition->>'partition'>='2017-01')
                     OR (b.source_table='brd_ki' AND
                         (b.extraction_condition->>'partition'>='2017'
                          OR b.extraction_condition->>'partition'='identity-before-2017')))
                   AND nullif(btrim(s.raw_payload->>q.field),'') IS NULL
                 GROUP BY q.source_table,q.field ORDER BY q.source_table,q.field'''),
-            'l3_r3_key_reconciliation': _row(cur, '''
+            'l3_k3_key_reconciliation': _row(cur, '''
                 WITH l AS (SELECT DISTINCT s.source_record_key,s.raw_payload->>'toroku_bango' AS player
                     FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
                     WHERE b.source_table='brd_l3'
-                      AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                      AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND b.extraction_condition->>'partition'>='2017-01'),
                 z AS (SELECT DISTINCT s.source_record_key,s.raw_payload->>'toroku_bango' AS player
                     FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                    WHERE b.source_table='brd_r3'
-                      AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                    WHERE b.source_table='brd_k3'
+                      AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                       AND b.extraction_condition->>'partition'>='2017-01'),
                 lk AS (SELECT DISTINCT source_record_key FROM l),
                 zk AS (SELECT DISTINCT source_record_key FROM z)
                 SELECT (SELECT count(*) FROM zk LEFT JOIN lk USING(source_record_key)
-                            WHERE lk.source_record_key IS NULL) AS unmatched_r3_keys,
+                            WHERE lk.source_record_key IS NULL) AS unmatched_k3_keys,
                     (SELECT count(*) FROM lk LEFT JOIN zk USING(source_record_key)
                             WHERE zk.source_record_key IS NULL) AS unmatched_l3_keys,
                     (SELECT count(DISTINCT l.source_record_key) FROM l JOIN z USING(source_record_key)
                             WHERE l.player IS DISTINCT FROM z.player) AS registration_conflict_keys,
                     (SELECT count(DISTINCT l.source_record_key) FROM l JOIN z USING(source_record_key)
                             WHERE l.player IS DISTINCT FROM z.player AND nullif(btrim(z.player),'') IS NULL)
-                        AS missing_r3_registration_keys,
+                        AS missing_k3_registration_keys,
                     (SELECT count(DISTINCT l.source_record_key) FROM l JOIN z USING(source_record_key)
                             WHERE l.player IS DISTINCT FROM z.player AND nullif(btrim(z.player),'') IS NOT NULL)
                         AS nonempty_registration_disagreement_keys'''),
@@ -478,35 +479,35 @@ def audit(connection, progress=None):
             count(*) FILTER (WHERE nullif(btrim(s.raw_payload->>'st'),'') IS NULL) AS st_blank,
             count(*) FILTER (WHERE s.raw_payload->>'st' ~ '^[0-9]{3}$') AS three_digit_st_text
             FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-            WHERE b.source_table='brd_r3' AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+            WHERE b.source_table='brd_k3' AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
               AND b.extraction_condition->>'partition'>='2017-01' ''')
         report['raw_finish_codes'] = _rows(cur, '''SELECT s.raw_payload->>'chakujun' AS finish_raw,
-            s.raw_payload->>'kigo' AS symbol_raw,count(*) AS rows
+            count(*) AS rows
             FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-            WHERE b.source_table='brd_r3' AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+            WHERE b.source_table='brd_k3' AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
               AND b.extraction_condition->>'partition'>='2017-01'
-            GROUP BY 1,2 ORDER BY 1,2''')
+            GROUP BY 1 ORDER BY 1''')
         report['source_codes'] = {
             'ki_sex_codes': _rows(cur, '''SELECT s.raw_payload->>'seibetsu_code' AS code,count(*) AS rows
                 FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                WHERE b.source_table='brd_ki' AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE b.source_table='brd_ki' AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND b.extraction_condition->>'partition'>='2017'
                 GROUP BY 1 ORDER BY 1'''),
             'ki_conflicting_known_sexes': _rows(cur, '''SELECT s.raw_payload->>'toroku_bango' AS player,
                     array_agg(DISTINCT s.raw_payload->>'seibetsu_code') AS codes,count(*) AS observations
                 FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                WHERE b.source_table='brd_ki' AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE b.source_table='brd_ki' AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND b.extraction_condition->>'partition'>='2017'
                   AND s.raw_payload->>'seibetsu_code' IN ('1','2')
                 GROUP BY 1 HAVING count(DISTINCT s.raw_payload->>'seibetsu_code')>1 ORDER BY 1'''),
             'grade_codes_by_year': _rows(cur, '''SELECT s.raw_payload->>'kaisai_nen' AS year,
                     s.raw_payload->>'grade_code' AS code,count(*) AS rows
                 FROM raw.source_record s JOIN raw.source_batch b USING(source_batch_id)
-                WHERE b.source_table='brd_l1' AND b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE b.source_table='brd_l1' AND (b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND b.extraction_condition->>'partition'>='2017-01'
                 GROUP BY 1,2 ORDER BY 1,2'''),
-            'finish_and_symbol_by_year': _rows(cur, '''SELECT extract(year FROM r.race_date)::int AS year,
-                    z.finish_raw,z.result_symbol_raw,count(*) AS rows
+            'finish_and_status_by_year': _rows(cur, '''SELECT extract(year FROM r.race_date)::int AS year,
+                    z.finish_raw,z.result_status,count(*) AS rows
                 FROM core.race_result z JOIN core.race r USING(race_id)
                 GROUP BY 1,2,3 ORDER BY 1,2,3'''),
             'l2_flags_by_year': _rows(cur, '''SELECT extract(year FROM race_date)::int AS year,
@@ -562,7 +563,7 @@ def audit(connection, progress=None):
                   (SELECT count(*) FROM core.race_entry c JOIN raw.source_record s USING(source_record_id)
                      JOIN raw.source_batch b USING(source_batch_id) WHERE b.source_table<>'brd_l3') AS race_entry,
                   (SELECT count(*) FROM core.race_result c JOIN raw.source_record s USING(source_record_id)
-                     JOIN raw.source_batch b USING(source_batch_id) WHERE b.source_table<>'brd_r3') AS race_result,
+                     JOIN raw.source_batch b USING(source_batch_id) WHERE b.source_table<>'brd_k3') AS race_result,
                   (SELECT count(*) FROM core.motor c JOIN raw.source_record s USING(source_record_id)
                      JOIN raw.source_batch b USING(source_batch_id) WHERE b.source_table<>'brd_l3') AS motor,
                   (SELECT count(*) FROM core.player c JOIN raw.source_record s USING(source_record_id)
@@ -615,7 +616,7 @@ def audit(connection, progress=None):
                 JOIN raw.source_record s USING(source_record_id)
                 WHERE s.raw_payload->>'shinnyu_course' IS DISTINCT FROM c.actual_course_raw
                    OR s.raw_payload->>'chakujun' IS DISTINCT FROM c.finish_raw
-                   OR s.raw_payload->>'kigo' IS DISTINCT FROM c.result_symbol_raw
+                   OR c.result_symbol_raw IS NOT NULL
                    OR s.raw_payload->>'st' IS DISTINCT FROM c.start_timing_raw
                    OR CASE WHEN btrim(s.raw_payload->>'teiban') ~ '^[0-9]+$'
                                 AND (btrim(s.raw_payload->>'teiban'))::int BETWEEN 1 AND 6
@@ -659,7 +660,7 @@ def audit(connection, progress=None):
                 SELECT count(*) AS count FROM core.player c
                 JOIN raw.source_record s ON s.source_record_id=c.sex_source_record_id
                 JOIN raw.source_batch b USING(source_batch_id)
-                WHERE (b.extraction_condition->>'version'='phase2.5-stored-history-v1'
+                WHERE ((b.extraction_condition->>'version' IN ('phase2.5-stored-history-v1','phase2.5-k3-only-history-v1') AND b.source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki'))
                   AND b.source_table='brd_ki'
                   AND (b.extraction_condition->>'partition'>='2017'
                        OR b.extraction_condition->>'partition'='identity-before-2017')) IS NOT TRUE''')['count'],

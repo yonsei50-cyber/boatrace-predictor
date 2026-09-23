@@ -13,8 +13,9 @@ from scripts.foundation import (canonical_json, digest, integer, motor_generatio
 from scripts.import_sample import KEYS, key, race_date, insert, snapshot_before
 from scripts.normalize import normalize_result, normalize_sex, normalize_grade, source_boolean
 from scripts.history_source import TABLES, IDENTITY_SUPPORT, inventory, extract
+from scripts.result_dataset_version import record_k3_result_dataset_version
 
-VERSION = 'phase2.5-stored-history-v1'
+VERSION = 'phase2.5-k3-only-history-v1'
 
 
 def extraction_condition(table, partition):
@@ -172,7 +173,7 @@ def canonical_month(cur, partition, sexes):
     for canonical, source_table, join in (
         ('race','brd_l2','JOIN core.race r ON r.race_id=c.race_id'),
         ('race_entry','brd_l3','JOIN core.race r ON r.race_id=c.race_id'),
-        ('race_result','brd_r3','JOIN core.race r ON r.race_id=c.race_id')):
+        ('race_result','brd_k3','JOIN core.race r ON r.race_id=c.race_id')):
         cur.execute('SELECT s.raw_payload,s.record_hash FROM core.'+canonical+' c '+join+
                     " JOIN raw.source_record s ON s.source_record_id=c.source_record_id "
                     "WHERE r.race_date >= %s AND r.race_date < %s",(month_start,month_end))
@@ -220,7 +221,7 @@ def canonical_month(cur, partition, sexes):
             entry_fixed_source=fixed, entry_fixed_effective=True if venue==3 else fixed,
             entry_fixed_basis='EDOGAWA_MODEL_RULE' if venue==3 else 'SOURCE_L2',
             stabilizer_source=source_boolean(r['anteiban_shiyo']), stabilizer_available_for_prediction=None,
-            race_status='RESULT_RECORDS_PRESENT' if len(valid)==6 and all(key('brd_l3',e) in maps['brd_r3'] for _,e in valid)
+            race_status='RESULT_RECORDS_PRESENT' if len(valid)==6 and all(key('brd_l3',e) in maps['brd_k3'] for _,e in valid)
                         else 'SOURCE_INCOMPLETE', source_record_id=raw_id, grade_source_record_id=gi,
             provenance={'normalization_version':NORMALIZATION_VERSION,
                 'stabilizer_prediction_availability':'UNKNOWN; extraction is retrospective'}))
@@ -273,9 +274,9 @@ def canonical_month(cur, partition, sexes):
             f_count_current_term=integer(e['f_kaisu']),l_count_current_term_raw=e['l_kaisu'],
             source_record_id=ei,provenance={'boat_field':'teiban',
                 'boat_no_source_field':'hull number, not lane','f_suspension_state':'NOT_CALCULATED'}))
-        if ek not in maps['brd_r3']:
+        if ek not in maps['brd_k3']:
             issue('ENTRY_WITHOUT_RESULT',ei); continue
-        ri,r=maps['brd_r3'][ek]
+        ri,r=maps['brd_k3'][ek]
         adopted.add(ek)
         if e['toroku_bango'] != r['toroku_bango']:
             issue('REGISTRATION_CONFLICT',ri); continue
@@ -284,11 +285,12 @@ def canonical_month(cur, partition, sexes):
         except ValueError:
             issue('RESULT_CODE_CONFLICT',ri); continue
         results.append(dict(race_id=race_id,boat_no=int(e['teiban']),**normalized,
-            source_record_id=ri,provenance={'normalization_version':NORMALIZATION_VERSION,
-                'actual_course_field':'shinnyu_course','st_fields':['st','kigo']}))
-    for ek,(i,r) in maps['brd_r3'].items():
+            source_record_id=ri,provenance={'source':'brd_k3',
+                'normalization_version':normalized['normalization_version'],
+                'actual_course_field':'shinnyu_course','start_timing_field':'st'}))
+    for ek,(i,r) in maps['brd_k3'].items():
         if ek not in adopted:
-            issue('R3_WITHOUT_VALID_ENTRY',i)
+            issue('K3_WITHOUT_VALID_ENTRY',i)
     bulk(cur,'core.race_entry',entry_rows,'ON CONFLICT (race_id,boat_no) DO NOTHING')
     bulk(cur,'core.race_result',results,'ON CONFLICT (race_id,boat_no) DO NOTHING')
     cur.execute('''UPDATE core.race r SET race_status=CASE WHEN
@@ -379,6 +381,12 @@ def run(raw_only=False, canonical_only=False, inventory_path=None):
                     report['canonical'][month]=canonical_month(cur,month,sexes)
                 target.commit()
                 print(json.dumps({'stage':'canonical','partition':month,**report['canonical'][month]}),flush=True)
+            with target.cursor() as cur:
+                report['result_dataset_version'] = record_k3_result_dataset_version(
+                    cur, date_start=date.fromisoformat(report['scope_start']),
+                    date_end=date.fromisoformat(report['source_inventory']['brd_k3']['latest']),
+                    extraction_version=VERSION)
+            target.commit()
         report['status']='RAW_COMPLETE' if raw_only else 'CANONICAL_COMPLETE'
         return report
     except Exception:

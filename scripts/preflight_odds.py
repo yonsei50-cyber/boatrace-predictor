@@ -91,7 +91,7 @@ def inventory(preserved):
                             'csv_values': sorted(csv_values[csv_key]),
                             'interpretation': 'different timing/source; discrepancy is not same-snapshot conflict'})
         with conn.cursor() as cur:
-            cur.execute("SELECT DISTINCT kaisai_nen||kaisai_tsukihi||kyoteijo_code||race_no FROM public.brd_r3 WHERE kaisai_nen >= '2017'")
+            cur.execute("SELECT DISTINCT kaisai_nen||kaisai_tsukihi||kyoteijo_code||race_no FROM public.brd_k3 WHERE kaisai_nen >= '2017'")
             result_keys = {r[0] for r in cur.fetchall()}
         missing = result_keys - hashes.keys()
         missing_by_day = Counter(k[:8] for k in missing)
@@ -108,13 +108,13 @@ def inventory(preserved):
             'length_distribution': dict(lengths), 'combination_order_invalid_rows': invalid_order,
             'odds_token_counts': dict(tokens), 'duplicate_race_rows': duplicate_rows,
             'conflicting_race_rows': conflicting_rows, 'calendar_missing_dates': calendar_missing,
-            'r3_races': len(result_keys), 'r3_matched': len(result_keys & hashes.keys()),
-            'r3_missing': len(missing), 'missing_by_day': dict(sorted(missing_by_day.items())),
+            'k3_races': len(result_keys), 'k3_matched': len(result_keys & hashes.keys()),
+            'k3_missing': len(missing), 'missing_by_day': dict(sorted(missing_by_day.items())),
             'missing_by_venue': dict(Counter(k[8:10] for k in missing)),
             'missing_before_o6_start': sum(k[:8]<min(days) for k in missing),
             'missing_within_o6_range': sum(min(days)<=k[:8]<=max(days) for k in missing),
             'retrieved_at': None, 'historical_snapshot_timestamp': None,
-            'coverage_denominator': 'observed R3 keys, not proof of official scheduled races'}
+            'coverage_denominator': 'observed K3 keys, not proof of official scheduled races'}
         out['o6_vs_csv'] = csv_comparison
     finally:
         conn.rollback()
@@ -131,4 +131,4 @@ if __name__ == '__main__':
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps({k:v for k,v in out['o6'].items() if k in ('rows','races','date_min','date_max',
-        'combination_order_invalid_rows','odds_token_counts','r3_missing')}, ensure_ascii=False))
+        'combination_order_invalid_rows','odds_token_counts','k3_missing')}, ensure_ascii=False))

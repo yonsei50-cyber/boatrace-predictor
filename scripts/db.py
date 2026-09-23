@@ -26,13 +26,13 @@ def source_connection(config=DEFAULT_CONFIG):
             raise RuntimeError('source must be read-only')
     return connection
 
-def target_connection(config=DEFAULT_CONFIG):
-    connection = psycopg2.connect(**settings(config), dbname=TARGET_DATABASE,
+def target_connection(config=DEFAULT_CONFIG, database=TARGET_DATABASE):
+    connection = psycopg2.connect(**settings(config), dbname=database,
         connect_timeout=5, application_name='boatrace_phase2_target',
         options='-c statement_timeout=30000 -c lock_timeout=2000')
     with connection.cursor() as cursor:
         cursor.execute('SET ROLE itgakko')
         cursor.execute('SELECT current_database(),current_user')
-        if cursor.fetchone() != (TARGET_DATABASE, TARGET_ROLE):
+        if cursor.fetchone() != (database, TARGET_ROLE):
             raise RuntimeError('unexpected target identity')
     return connection

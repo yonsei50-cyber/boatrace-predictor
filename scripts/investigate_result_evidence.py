@@ -47,12 +47,12 @@ def run():
         with conn.cursor() as cur:
             cur.execute("SET LOCAL statement_timeout='180s'")
             cur.execute("""SELECT kaisai_nen,kaisai_tsukihi,kyoteijo_code,race_no
-                FROM public.brd_r3 WHERE kaisai_nen >= '2017'
+                FROM public.brd_k3 WHERE kaisai_nen >= '2017'
                 AND chakujun ~ '^0?[1-6]$' GROUP BY 1,2,3,4,chakujun
                 HAVING count(*)>1 ORDER BY 1,2,3,4""")
             duplicate_keys = cur.fetchall()
             cur.execute("""SELECT z.kaisai_nen,z.kaisai_tsukihi,z.kyoteijo_code,z.race_no
-                FROM public.brd_r3 z JOIN public.brd_r2 r USING
+                FROM public.brd_k3 z JOIN public.brd_r2 r USING
                   (kaisai_nen,kaisai_tsukihi,kyoteijo_code,race_no)
                 WHERE z.kaisai_nen >= '2017' AND r.data_kubun='0'
                   AND nullif(btrim(r.haraimodoshi_sanrentan_1a),'') IS NULL
@@ -61,12 +61,12 @@ def run():
                 ORDER BY 1,2,3,4""")
             unresolved_keys = cur.fetchall()
         r2 = {tuple(r[k] for k in RACE_KEY):r for r in selected(conn,'brd_r2',duplicate_keys)}
-        r3 = {}
-        for row in selected(conn,'brd_r3',duplicate_keys):
-            r3.setdefault(tuple(row[k] for k in RACE_KEY),[]).append(row)
+        k3 = {}
+        for row in selected(conn,'brd_k3',duplicate_keys):
+            k3.setdefault(tuple(row[k] for k in RACE_KEY),[]).append(row)
         details=[]
         for key in duplicate_keys:
-            boats=sorted(r3[key],key=lambda r:r['teiban'])
+            boats=sorted(k3[key],key=lambda r:r['teiban'])
             payout = r2.get(key,{})
             slots={k:v for k,v in payout.items() if k.startswith('haraimodoshi_sanrentan_')}
             combinations=[v for k,v in slots.items() if k.endswith('a') and v and
@@ -78,7 +78,7 @@ def run():
             # Comparison hypothesis only; no tie/finish normalization is inferred.
             expected={''.join(p) for p in permutations(ranks,3)
                       if [ranks[b] for b in p]==top}
-            details.append({'natural_key':key,'r3':boats,'r2':payout,
+            details.append({'natural_key':key,'k3':boats,'r2':payout,
                 'r2_hash':digest(payout) if payout else None,
                 'finish_by_boat':[r['chakujun'] for r in boats],
                 'duplicate_positions':[p for p,n in numeric.items() if n>1],
@@ -89,7 +89,7 @@ def run():
                 'reason':'Payout repetition supports source comparison, not universal tie certification.'})
         unresolved=[]
         for key in unresolved_keys:
-            sources={t:selected(conn,t,[key]) for t in ('brd_l1','brd_l2','brd_l3','brd_r2','brd_r3')}
+            sources={t:selected(conn,t,[key]) for t in ('brd_l1','brd_l2','brd_l3','brd_r2','brd_k3')}
             unresolved.append({'natural_key':key,'sources':sources,
                 'source_locations':{t:'pckyotei.public.'+t for t in sources},
                 'record_hashes':{t:[digest(r) for r in rows] for t,rows in sources.items()},

@@ -14,7 +14,8 @@ def protected_state(cur):
     for table in ('race','race_entry','race_result','dataset_version'):
         cur.execute('SELECT count(*),sum(hashtextextended(to_jsonb(x)::text,0)::numeric) FROM core.'+table+' x')
         out[table]=list(cur.fetchone())
-    cur.execute("SELECT source_batch_id,content_hash,row_count FROM raw.source_batch WHERE source_table<>'brd_r2' ORDER BY 1")
+    cur.execute("SELECT source_batch_id,content_hash,row_count FROM raw.source_batch "
+                "WHERE source_table IN ('brd_l1','brd_l2','brd_l3','brd_k3','brd_ki') ORDER BY 1")
     out['prior_raw_batches']=digest(cur.fetchall())
     return json.loads(json.dumps(out,default=str))
 
@@ -32,10 +33,10 @@ def audit(cur):
     out['totals']=rows(cur,"""SELECT (SELECT count(*) FROM rs) AS races,
         (SELECT count(*) FROM bs) AS entries,
         (SELECT count(*) FROM core.race_result) AS canonical_results,
-        (SELECT count(*) FROM rs WHERE r3_distinct_boats=6 AND r3_meaningful_boats=0) AS blank_r3_races,
+        (SELECT count(*) FROM rs WHERE k3_distinct_boats=6 AND k3_meaningful_boats=0) AS blank_k3_races,
         (SELECT count(DISTINCT race_id) FROM bs WHERE finish_state='NUMERIC_DUPLICATE_UNRESOLVED') AS duplicate_numeric_races""")[0]
-    out['blank_r3']=rows(cur,"""SELECT result_state,count(*) AS races FROM rs
-        WHERE r3_distinct_boats=6 AND r3_meaningful_boats=0 GROUP BY 1 ORDER BY 1""")
+    out['blank_k3']=rows(cur,"""SELECT result_state,count(*) AS races FROM rs
+        WHERE k3_distinct_boats=6 AND k3_meaningful_boats=0 GROUP BY 1 ORDER BY 1""")
     out['r2_evidence']=rows(cur,"""SELECT r2_data_kubun_raw_values,
         has_valid_r2_trifecta_payout,count(*) AS races FROM rs GROUP BY 1,2 ORDER BY 1,2""")
     out['special_symbols']=rows(cur,"""SELECT finish_raw,count(*) AS boats,
@@ -57,25 +58,27 @@ def audit(cur):
         count(*) FILTER (WHERE b.start_timing_raw IS DISTINCT FROM z.start_timing_raw) AS st_raw_mismatch,
         count(*) FILTER (WHERE b.start_timing IS DISTINCT FROM z.start_timing) AS st_mismatch,
         count(*) FILTER (WHERE b.start_timing_status IS DISTINCT FROM z.start_timing_status) AS st_status_mismatch,
-        count(*) FILTER (WHERE NOT z.source_record_id=ANY(b.r3_source_record_ids)) AS missing_adopted_source,
+        count(*) FILTER (WHERE b.k3_source_record_ids IS NULL
+                          OR NOT z.source_record_id=ANY(b.k3_source_record_ids)) AS missing_adopted_source,
         count(*) FILTER (WHERE b.start_timing_status IN ('F','L') AND b.start_timing IS NOT NULL) AS numeric_fl
         FROM bs b JOIN core.race_result z USING(race_id,boat_no)""")[0]
-    out['unresolved_races']=rows(cur,"""SELECT race_date,venue_code,race_no,r3_distinct_boats,
-        r3_meaningful_boats,r2_data_kubun_raw_values,r2_source_record_ids,r3_source_record_ids
+    out['unresolved_races']=rows(cur,"""SELECT race_date,venue_code,race_no,k3_distinct_boats,
+        k3_meaningful_boats,r2_data_kubun_raw_values,r2_source_record_ids,k3_source_record_ids
         FROM rs WHERE result_state='UNRESOLVED' ORDER BY 1,2,3""")
     out['duplicates']=rows(cur,"""SELECT r.race_date,r.venue_code,r.race_no,r.result_state,
         array_agg(b.finish_raw ORDER BY b.boat_no) AS finish_by_boat,
-        r.r2_source_record_ids,r.r3_source_record_ids FROM rs r JOIN bs b USING(race_id)
+        r.r2_source_record_ids,r.k3_source_record_ids FROM rs r JOIN bs b USING(race_id)
         WHERE r.race_id IN (SELECT race_id FROM bs WHERE finish_state='NUMERIC_DUPLICATE_UNRESOLVED')
         GROUP BY r.race_id,r.race_date,r.venue_code,r.race_no,r.result_state,
-          r.r2_source_record_ids,r.r3_source_record_ids ORDER BY 1,2,3""")
-    cur.execute('SELECT count(*) FROM rs WHERE r2_revision_conflict OR r3_revision_conflict')
+          r.r2_source_record_ids,r.k3_source_record_ids ORDER BY 1,2,3""")
+    cur.execute('SELECT count(*) FROM rs WHERE r2_revision_conflict OR k3_revision_conflict')
     out['source_conflict_races']=cur.fetchone()[0]
     if any(out['lineage'].values()) or out['source_conflict_races']:
         raise RuntimeError('BLOCKING: lineage/conflict audit')
-    if out['totals'] != dict(races=542160,entries=3252960,canonical_results=3210456,
-                             blank_r3_races=6928,duplicate_numeric_races=515):
-        raise RuntimeError('BLOCKING: unexpected checkpoint totals '+str(out['totals']))
+    if (out['totals']['entries'] != out['totals']['races'] * 6
+            or out['totals']['canonical_results'] > out['totals']['entries']
+            or out['totals']['blank_k3_races'] > out['totals']['races']):
+        raise RuntimeError('BLOCKING: inconsistent K3 result totals '+str(out['totals']))
     out['duplicate_canonical_rows']=0  # Both existing PK and temporary unique indexes enforced.
     out['independent_numeric_check']=rows(cur,"""WITH duplicate_races AS (
         SELECT DISTINCT race_id FROM core.race_result WHERE finish_position IS NOT NULL

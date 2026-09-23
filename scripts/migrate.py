@@ -78,8 +78,8 @@ def migrate(config=DEFAULT_CONFIG):
                 raise RuntimeError('schema reproduction failed')
             cur.execute("""SELECT count(*) FROM information_schema.tables
                 WHERE table_schema IN ('raw','core') AND table_type='BASE TABLE'""")
-            if cur.fetchone()[0] != 12:
-                raise RuntimeError('expected exactly twelve tables')
+            if cur.fetchone()[0] != 13:
+                raise RuntimeError('expected exactly thirteen tables')
         conn.commit()
         return {'database_created': not exists, 'schema_reproduction': 'PASS',
                 'schema_sha256': second, 'migration_sha256': hashlib.sha256(ddl.encode()).hexdigest()}

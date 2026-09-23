@@ -13,7 +13,7 @@ from scripts.normalize import normalize_result, normalize_sex, normalize_grade, 
 
 RACE_KEY = ('kaisai_nen','kaisai_tsukihi','kyoteijo_code','race_no')
 KEYS = {'brd_l1': RACE_KEY[:3], 'brd_l2': RACE_KEY,
-        'brd_l3': RACE_KEY + ('teiban',), 'brd_r3': RACE_KEY + ('teiban',),
+        'brd_l3': RACE_KEY + ('teiban',), 'brd_k3': RACE_KEY + ('teiban',),
         'brd_ki': ('toroku_bango','kaisai_nen','ki')}
 
 def key(table, row):
@@ -30,7 +30,7 @@ def extract_source(config=DEFAULT_CONFIG):
             session = dict(cur.fetchone())
             records = {}
             conditions = {}
-            for table in ('brd_l1','brd_l2','brd_l3','brd_r3'):
+            for table in ('brd_l1','brd_l2','brd_l3','brd_k3'):
                 fields = RACE_KEY[:3] if table == 'brd_l1' else RACE_KEY
                 values = sorted(set(r[:len(fields)] for r in SAMPLE_RACES))
                 query = sql.SQL('SELECT * FROM public.{} WHERE ({}) IN ({}) ORDER BY {}').format(
@@ -132,7 +132,7 @@ def import_sample(config=DEFAULT_CONFIG):
     # Fail before writing if entry/result keys or player identities disagree.
     l2 = {key('brd_l2',r):r for r in records['brd_l2']}
     entries = {key('brd_l3',r):r for r in records['brd_l3']}
-    results = {key('brd_r3',r):r for r in records['brd_r3']}
+    results = {key('brd_k3',r):r for r in records['brd_k3']}
     if set(l2) != set(SAMPLE_RACES) or set(entries) != set(results):
         raise ValueError('BLOCKING: missing/conflicting source race/entry/result set')
     if len(entries) != len(SAMPLE_RACES)*6:
@@ -236,9 +236,10 @@ def import_sample(config=DEFAULT_CONFIG):
                                     'f_suspension_state':'NOT_CALCULATED'}))
                     result = normalize_result(results[ek])
                     insert(cur,'core.race_result',dict(race_id=race_id,boat_no=int(entry['teiban']),
-                        **result,source_record_id=raw_ids[('brd_r3',ek)],
-                        provenance={'normalization_version':NORMALIZATION_VERSION,
-                                    'actual_course_field':'shinnyu_course','st_fields':['st','kigo']}))
+                        **result,source_record_id=raw_ids[('brd_k3',ek)],
+                        provenance={'source':'brd_k3',
+                                    'normalization_version':result['normalization_version'],
+                                    'actual_course_field':'shinnyu_course','start_timing_field':'st'}))
             versions = [freeze_dataset(cur,date(2026,9,1)),freeze_dataset(cur,date(2026,9,2))]
         # A failed source check must leave the entire target sample uncommitted.
         again,_,_,after = extract_source(config)

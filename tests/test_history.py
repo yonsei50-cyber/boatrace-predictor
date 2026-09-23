@@ -227,8 +227,8 @@ class CanonicalMappingTests(unittest.TestCase):
         self.sources = {t: [] for t in history_source.TABLES}
         self.sources['brd_l2'] = [(1, dict(entry(), shinnyukotei='0', anteiban_shiyo='0'))]
         self.sources['brd_l3'] = [(10 + b, entry(b)) for b in range(1, 7)]
-        self.sources['brd_r3'] = [(20 + b, dict(entry(b), shinnyu_course=str(b),
-            chakujun=f'{b:02}', st='014', kigo=' ')) for b in range(1, 7)]
+        self.sources['brd_k3'] = [(20 + b, dict(entry(b), shinnyu_course=str(b),
+            chakujun=f'{b:02}', st='014')) for b in range(1, 7)]
         self.sexes = {4000 + b: 'FEMALE' for b in range(1, 7)}
 
     def canonical(self, existing=None):
@@ -267,8 +267,8 @@ class CanonicalMappingTests(unittest.TestCase):
             self.canonical()
 
     def test_course_not_replaced_by_boat_or_edogawa_rule(self):
-        self.sources['brd_r3'][0][1]['shinnyu_course'] = '3'
-        self.sources['brd_r3'][1][1]['shinnyu_course'] = ' '
+        self.sources['brd_k3'][0][1]['shinnyu_course'] = '3'
+        self.sources['brd_k3'][1][1]['shinnyu_course'] = ' '
         report, written = self.canonical()
         race = written['core.race'][0]
         self.assertTrue(race['entry_fixed_effective'])
@@ -282,7 +282,7 @@ class CanonicalMappingTests(unittest.TestCase):
         self.assertEqual(report['eligible_rows']['result'], 6)
 
     def test_unknown_result_preserved_without_normal_rank(self):
-        self.sources['brd_r3'][0][1].update(chakujun='転', kigo='?', st='abc')
+        self.sources['brd_k3'][0][1].update(chakujun='転', st='abc')
         _, written = self.canonical()
         result = written['core.race_result'][0]
         self.assertEqual(result['finish_raw'], '転')
@@ -291,7 +291,7 @@ class CanonicalMappingTests(unittest.TestCase):
         self.assertEqual(result['normalization_status'], 'UNRESOLVED')
 
     def test_registration_conflict_excludes_result_but_preserves_entry(self):
-        self.sources['brd_r3'][0][1]['toroku_bango'] = '4999'
+        self.sources['brd_k3'][0][1]['toroku_bango'] = '4999'
         report, written = self.canonical()
         self.assertEqual(report['issues']['REGISTRATION_CONFLICT'], 1)
         self.assertEqual(report['example_raw_ids']['REGISTRATION_CONFLICT'], 21)
@@ -299,15 +299,19 @@ class CanonicalMappingTests(unittest.TestCase):
         self.assertEqual(len(written['core.race_result']), 5)
         self.assertNotIn(1, [r['boat_no'] for r in written['core.race_result']])
 
-    def test_conflicting_finish_and_symbol_excludes_result_with_evidence(self):
-        self.sources['brd_r3'][0][1]['kigo'] = 'F'
+    def test_k3_f_finish_is_preserved_without_numeric_start_timing(self):
+        self.sources['brd_k3'][0][1].update(chakujun='F', st='002')
         report, written = self.canonical()
-        self.assertEqual(report['issues']['RESULT_CODE_CONFLICT'], 1)
-        self.assertEqual(report['example_raw_ids']['RESULT_CODE_CONFLICT'], 21)
-        self.assertEqual(len(written['core.race_result']), 5)
+        result = written['core.race_result'][0]
+        self.assertEqual(report['eligible_rows']['result'], 6)
+        self.assertEqual(result['result_status'], 'F')
+        self.assertIsNone(result['finish_position'])
+        self.assertEqual(result['start_timing_status'], 'F')
+        self.assertIsNone(result['start_timing'])
+        self.assertIsNone(result['result_symbol_raw'])
 
     def test_missing_result_and_orphan_rows_are_distinguished(self):
-        self.sources['brd_r3'] = self.sources['brd_r3'][1:]
+        self.sources['brd_k3'] = self.sources['brd_k3'][1:]
         self.sources['brd_l3'].append((99, entry(race_no='02')))
         report, written = self.canonical()
         self.assertEqual(report['issues']['ENTRY_WITHOUT_RESULT'], 1)
