@@ -1,0 +1,104 @@
+{
+  "freeze_id": "RATING_METHOD_FREEZE_V1",
+  "status": "RATING_METHOD_FROZEN",
+  "frozen_on_jst": "2026-09-23",
+  "scope": "Retrospective development method and parameter specification, not historical publication-time or live-readiness certification",
+  "development_data_cutoff": "2024-12-31",
+  "independent_holdout_2025": "SEALED_NOT_EVALUATED",
+  "rating_series": {
+    "FIRST_COURSE_1_TO_6": {
+      "count": 6,
+      "candidate_id": "A-lr16-WARMUP_2017_2022-STRICT",
+      "target": "exactly first",
+      "update_course": "observed actual_course only after D",
+      "prediction_course": "D-1 Dirichlet(1)-smoothed venue by boat_no to actual_course frequencies; weighted rating score then six-boat softmax"
+    },
+    "EXACT_SECOND_COURSE_1_TO_6": {
+      "count": 6,
+      "candidate_id": "A-lr16-WARMUP_2017_2022-STRICT",
+      "target": "exactly second, not top two",
+      "update_course": "observed actual_course only after D",
+      "prediction_course": "same D-1 course mixture; separate six-boat softmax"
+    },
+    "OVERALL": {
+      "count": 1,
+      "candidate_id": "B-k120-RACE_NORMALIZED-WARMUP_2017_2022-STRICT",
+      "update": "exp-logistic pairwise Elo, 15 valid pairs divided by 15 per strict race; all D deltas from D-1 state",
+      "probability_diagnostic": "six-boat first softmax and Plackett-Luce exact-second marginal"
+    },
+    "SHORT_50": {
+      "count": 1,
+      "candidate_id": "SHORT50-VALID_RESULT-AVAILABLE_HISTORY",
+      "window": "maximum 50 prior STRICT eligible numeric-finish results per player, excluding every D result",
+      "value": "1000 + 100 times mean of (3.5 - original_finish_position) / 2.5 in the window",
+      "fewer_than_50": "use only available prior valid results; with zero use the series initializer",
+      "status": "frozen as a rating feature definition; standalone predictive value does not establish incremental value in a later multifeature model"
+    }
+  },
+  "series_count": 14,
+  "eligibility": {
+    "selected": "STRICT for A, B, and SHORT_50 numeric updates",
+    "strict": "RESULT_RECORDS_PRESENT; six canonical results; six unique NUMERIC_VALID finishes; no unresolved; for course updates actual_course is a permutation of 1..6",
+    "row_safe": "B pairwise-only candidate tested, not selected because its small improvement over STRICT did not justify a broader update population",
+    "partial": "UNSUPPORTED; no pseudo rank for special, F, or L boats"
+  },
+  "initialization": {
+    "historical_warmup": "Use eligible 2017-01-01 through 2022-12-31 results only to build the 2023-01-01 D-1 state",
+    "ordinary_unknown_player_base": 1000,
+    "confirmed_newcomer": "For every series use the pre-insertion mean of existing players with an effective rating times 0.8; same-day confirmed newcomers share that frozen mean",
+    "newcomer_uncertain": "No 0.8 discount; use ordinary unknown-player initializer until eligible history is available",
+    "non_newcomer": "Previously observed players retain their result-derived D-1 state; no newcomer reinitialization",
+    "runtime_confirmed_newcomers_2017_2024": 0,
+    "short_initial_value_replacement": "First eligible STRICT result replaces the SHORT_50 initializer under AVAILABLE_HISTORY; until then the assigned initial value persists"
+  },
+  "daily_boundary": "All predictions on D use one immutable D-1 result-derived state; compute all D update deltas from that same state and apply after D. Actual course of a race is never its own prediction input.",
+  "parameters": {
+    "rating_scale": 400.0,
+    "A_learning_rate": 16.0,
+    "A_course_prior_pseudocount_each": 1,
+    "B_k_factor": 120.0,
+    "B_pair_weight": "RACE_NORMALIZED",
+    "B_effective_strict_pair_k": 8.0,
+    "short_window_size": 50,
+    "short_value_scale": 100.0,
+    "decay": "none beyond the SHORT_50 window",
+    "additional_calibration": "none in this rating-only comparison"
+  },
+  "selection_evidence": {
+    "common_strict_scoring_races_2023": 51246,
+    "common_strict_scoring_races_2024": 51392,
+    "A_2023_q2_q4_combined_log_loss": 1.494430,
+    "A_2024_combined_log_loss": 1.489451,
+    "B_selected_2023_q2_q4_combined_log_loss": 1.666262,
+    "B_selected_2024_combined_log_loss": 1.668118,
+    "C_best_2024_combined_log_loss": 1.672600,
+    "B_row_safe_best_2024_combined_log_loss": 1.667638,
+    "short_selected_2023_q2_q4_combined_log_loss": 1.771079,
+    "short_selected_2024_combined_log_loss": 1.771368,
+    "short_entry_available_history_2024_combined_log_loss": 1.771360
+  },
+  "versions_and_hashes": {
+    "rating_prep_checkpoint_commit": "2192d97cb7aab2f51f0d27f6bee6d412cd9e1983",
+    "comparison_version": "rating-method-comparison-2017-2024-v2",
+    "comparison_artifact": "artifacts/rating_method_comparison_2023_2024_v2.json",
+    "comparison_artifact_sha256": "a3f9c3144b902b12c03ad6310e188d2090dd6a498084c9e28d4dd64a1eaa08bd",
+    "comparison_extract_ordered_rows": 2671344,
+    "comparison_extract_sha256": "2177eb4df8b64dcc0c28b46d940f3770be7742538ff86c4932a83861fe4d0c8c",
+    "comparison_extract_hash_includes_query_version_preamble": true,
+    "historical_dataset_shards": 96,
+    "historical_dataset_shard_chain_sha256": "ae4075eeff72db3b66ce68d6f06ee5c62c00cc74b8df7a886c1d21c1209a6ed8",
+    "current_comparison_code_sha256": "10fb2db5c6b97ce0e6e2d968e783ca5fcbd35b77314bc5817561f146f9703271",
+    "current_comparison_tests_sha256": "79cb518be68ad8cd4ffaaf176f3d7ac814e3e20b6bd8ef439bdb222c87e160b4",
+    "post_run_branch_note": "Only the previously unexercised CONFIRMED_NEWCOMER SHORT_50 initializer branch was added after the v2 run; runtime confirmed count was zero and its behavior is covered by a targeted test. All observed-case comparison paths are unchanged."
+  },
+  "limitations": [
+    "Historical result publication timestamps and as-of availability are unverified; D-1 date ordering is mechanically verified but does not certify live readiness.",
+    "2017 is left-truncated; first observed entry is not proven career debut.",
+    "No 2023-2024 confirmed newcomer exercised the conditional 0.8 rule in the real-data comparison.",
+    "All reported predictive metrics are conditional on complete six-boat numeric-finish races; F/L and other special-outcome calibration is not established.",
+    "A mixes player course ratings using a historical pre-race course estimator and is not a pure racer-strength ablation or an exact probability marginal over courses.",
+    "The SHORT_50 standalone diagnostic is weak; incremental value alongside the other 13 series remains untested.",
+    "No production rating-state migration or 2025 performance evaluation is included."
+  ],
+  "revision_rule": "After any 2025 outcome performance is inspected, do not change this v1; all later changes require v2 with a new evaluation protocol."
+}
