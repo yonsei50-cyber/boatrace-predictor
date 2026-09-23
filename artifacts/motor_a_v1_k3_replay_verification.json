@@ -1,0 +1,11 @@
+{
+  "freeze_sha256": "cc5b1b690919871897a625b910bbd7fef9f2247ac65e8e779073c9fb39d43779",
+  "holdout_sha256": "e47c6409eae186536dec58722035b5fc8e9f8dfbd464c66b579f6ca648a342a8",
+  "metric_sha256": "63405fa8fe0ce39c7512e86d748d7d6d50011edb99cb9946a2b9113ae933f581",
+  "ordered_input_sha256": "9207c4bcf56b0217b4a9ed45e57aa8d5a96d4de9204a1fa84cd96d75d9dd653f",
+  "protocol_sha256": "84a2256e0cccf5ddba49b2729bcf97a20abf7d16dc79c160c056cc9260714996",
+  "residual_dataset_sha256": "809a8265249f9e07ec013a61c34a1160c005e35d8cec962726e4f3f5e49f8993",
+  "same_input_and_output_as_first_replay": true,
+  "state_features_sha256": "03496bae6478509de71c4e4f0f5c11c6d8614f5575511b12715712d9f8db4e85",
+  "status": "PASS"
+}

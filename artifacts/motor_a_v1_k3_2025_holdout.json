@@ -1,0 +1,257 @@
+{
+  "counts": {
+    "base3_evaluable": 309164,
+    "base3_not_evaluable": 15923,
+    "both_observed": 251574,
+    "candidate_uses": 335448,
+    "current_evaluable": 264011,
+    "current_not_evaluable": 61076,
+    "eligible_meeting_count": 852,
+    "eligible_meeting_unknown": 712,
+    "eligible_residuals": 325087,
+    "excluded": 10361,
+    "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 106,
+    "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 211,
+    "excluded_FINISH_UNRESOLVED_SPECIAL": 4624,
+    "excluded_RATE_UNRESOLVED": 644,
+    "excluded_RESULT_MISSING": 4776,
+    "group1_eligible": 286665,
+    "group2_eligible": 35977,
+    "group3_eligible": 273208,
+    "motor_generation_count": 2988,
+    "neither_observed": 3486
+  },
+  "freeze_sha256": "cc5b1b690919871897a625b910bbd7fef9f2247ac65e8e779073c9fb39d43779",
+  "known_2025_08_12_k3_absent": {
+    "entries": 360,
+    "races": 60,
+    "results": 0
+  },
+  "meeting_identity": {
+    "certified_venue_days": 41515,
+    "map_sha256": "289ddc716b15151b8d181e28a56b15a2e59ed3f0d2615b181e042bfccfafc3dc",
+    "meeting_count": 7550,
+    "period_end_exclusive": "2026-01-01",
+    "source_rows": {
+      "brd_b1": 41855,
+      "brd_k1": 41761,
+      "brd_l1": 41761
+    },
+    "venue_days": 41761
+  },
+  "metrics": {
+    "both_observed": {
+      "mse_base3_plus_current": 8.882576760767847,
+      "mse_base_only": 8.944894090600096,
+      "mse_current_only": 8.897265601980349,
+      "mse_race5_comparator": 8.886173888553847,
+      "n": 251574
+    },
+    "groups": {
+      "group1_current": {
+        "high_minus_low": 0.7508186936022264,
+        "mse_constant": 8.956597146031227,
+        "mse_score": 8.890506519263337,
+        "n": 264011,
+        "pearson": 0.08591045182712745,
+        "quintiles_low_to_high": [
+          {
+            "n": 52803,
+            "next_residual_mean": -0.4814037088161681,
+            "score_mean": -2.54592337526476
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": -0.11138214534960275,
+            "score_mean": -0.8627325703583361
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": 0.04402484730193521,
+            "score_mean": 0.00416068376077948
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": 0.18636566707115493,
+            "score_mean": 0.8586401344186623
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": 0.2694149847860583,
+            "score_mean": 2.4762769980501225
+          }
+        ],
+        "spearman": 0.08328925593515392
+      },
+      "group2_base3": {
+        "high_minus_low": 0.5316722272440361,
+        "mse_constant": 8.826048472258616,
+        "mse_score": 8.789739211342932,
+        "n": 35970,
+        "pearson": 0.06424971768879525,
+        "quintiles_low_to_high": [
+          {
+            "n": 7194,
+            "next_residual_mean": -0.11613149871086002,
+            "score_mean": -1.2608115300639722
+          },
+          {
+            "n": 7194,
+            "next_residual_mean": 0.008383374882580789,
+            "score_mean": -0.49777081041641624
+          },
+          {
+            "n": 7194,
+            "next_residual_mean": 0.15022518703559182,
+            "score_mean": -0.06190378677099696
+          },
+          {
+            "n": 7194,
+            "next_residual_mean": 0.20040450274270086,
+            "score_mean": 0.3575425016563536
+          },
+          {
+            "n": 7194,
+            "next_residual_mean": 0.41554072853317603,
+            "score_mean": 1.063225227601004
+          }
+        ],
+        "spearman": 0.06348745228322766
+      },
+      "group3_current": {
+        "high_minus_low": 0.7629100940348286,
+        "mse_constant": 8.964715192510745,
+        "mse_score": 8.89651984619798,
+        "n": 251592,
+        "pearson": 0.08722910481738075,
+        "quintiles_low_to_high": [
+          {
+            "n": 50319,
+            "next_residual_mean": -0.48995091392557205,
+            "score_mean": -2.551302248392204
+          },
+          {
+            "n": 50319,
+            "next_residual_mean": -0.11747332105427183,
+            "score_mean": -0.8658864528196017
+          },
+          {
+            "n": 50318,
+            "next_residual_mean": 0.043364203463650663,
+            "score_mean": 0.003673478729062563
+          },
+          {
+            "n": 50318,
+            "next_residual_mean": 0.1896448578373687,
+            "score_mean": 0.8612845989148583
+          },
+          {
+            "n": 50318,
+            "next_residual_mean": 0.27295918010925646,
+            "score_mean": 2.479347484032373
+          }
+        ],
+        "spearman": 0.08473426519139
+      },
+      "group4_base3": {
+        "high_minus_low": 0.43620118888429105,
+        "mse_constant": 8.978242694577727,
+        "mse_score": 8.955203102599809,
+        "n": 309164,
+        "pearson": 0.050727958942580954,
+        "quintiles_low_to_high": [
+          {
+            "n": 61833,
+            "next_residual_mean": -0.23808176856246216,
+            "score_mean": -1.2485823328515886
+          },
+          {
+            "n": 61833,
+            "next_residual_mean": -0.1256041278621285,
+            "score_mean": -0.48665951418355724
+          },
+          {
+            "n": 61833,
+            "next_residual_mean": -0.03403894455937974,
+            "score_mean": -0.05285635786501825
+          },
+          {
+            "n": 61833,
+            "next_residual_mean": 0.02885142197309546,
+            "score_mean": 0.36542770877636427
+          },
+          {
+            "n": 61832,
+            "next_residual_mean": 0.1981194203218289,
+            "score_mean": 1.071182428926773
+          }
+        ],
+        "spearman": 0.051037104621094884
+      },
+      "group4_current": {
+        "high_minus_low": 0.7508186936022264,
+        "mse_constant": 8.956597146031227,
+        "mse_score": 8.890506519263337,
+        "n": 264011,
+        "pearson": 0.08591045182712745,
+        "quintiles_low_to_high": [
+          {
+            "n": 52803,
+            "next_residual_mean": -0.4814037088161681,
+            "score_mean": -2.54592337526476
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": -0.11138214534960275,
+            "score_mean": -0.8627325703583361
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": 0.04402484730193521,
+            "score_mean": 0.00416068376077948
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": 0.18636566707115493,
+            "score_mean": 0.8586401344186623
+          },
+          {
+            "n": 52802,
+            "next_residual_mean": 0.2694149847860583,
+            "score_mean": 2.4762769980501225
+          }
+        ],
+        "spearman": 0.08328925593515392
+      }
+    }
+  },
+  "metrics_sha256": "63405fa8fe0ce39c7512e86d748d7d6d50011edb99cb9946a2b9113ae933f581",
+  "period": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "protocol_sha256": "84a2256e0cccf5ddba49b2729bcf97a20abf7d16dc79c160c056cc9260714996",
+  "replay_hashes": {
+    "ordered_input_sha256": "9207c4bcf56b0217b4a9ed45e57aa8d5a96d4de9204a1fa84cd96d75d9dd653f",
+    "residual_dataset_sha256": "809a8265249f9e07ec013a61c34a1160c005e35d8cec962726e4f3f5e49f8993",
+    "state_features_sha256": "03496bae6478509de71c4e4f0f5c11c6d8614f5575511b12715712d9f8db4e85"
+  },
+  "source_guards": {
+    "core_races": 501132,
+    "core_venue_days": 41761,
+    "non_k3_result_boats": 0,
+    "result_boats": 2969286
+  },
+  "source_identity": {
+    "authoritative_source": "brd_k3",
+    "date_end": "2026-09-18",
+    "date_start": "2017-01-01",
+    "normalization_version": "k3-only-result-v1",
+    "result_boats": 3211650,
+    "result_races": 535275,
+    "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+    "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602"
+  },
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "status": "MOTOR_A_V1_FIRST_INDEPENDENT_2025_K3_HOLDOUT"
+}

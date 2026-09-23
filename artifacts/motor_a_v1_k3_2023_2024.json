@@ -1,0 +1,631 @@
+{
+  "coefficients": {
+    "both_base": [
+      -0.0009369040354459927,
+      0.1832612766967871
+    ],
+    "both_current": [
+      -0.010174767168027421,
+      0.14391035331850202
+    ],
+    "both_joint": [
+      0.00013719260129780905,
+      0.156363092000727,
+      0.13689723587906247
+    ],
+    "both_race5": [
+      -0.0036327887799811514,
+      0.2019329764547958
+    ],
+    "group1_current": [
+      -0.008660540344875308,
+      0.14294587759477215
+    ],
+    "group2_base3": [
+      0.16729885700605454,
+      0.21439769250074955
+    ],
+    "group3_current": [
+      -0.010098344437020363,
+      0.1438685408982833
+    ],
+    "group4_base3": [
+      -0.015452923775029954,
+      0.1919318083614238
+    ],
+    "group4_current": [
+      -0.008660540344875308,
+      0.14294587759477215
+    ]
+  },
+  "counts_by_year": {
+    "2017": {
+      "base3_evaluable": 293159,
+      "base3_not_evaluable": 28398,
+      "both_observed": 237325,
+      "candidate_uses": 330192,
+      "current_evaluable": 256884,
+      "current_not_evaluable": 64673,
+      "eligible_meeting_count": 834,
+      "eligible_meeting_unknown": 4040,
+      "eligible_residuals": 321557,
+      "excluded": 8635,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 118,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 235,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 4784,
+      "excluded_RATE_UNRESOLVED": 522,
+      "excluded_RESULT_MISSING": 2976,
+      "group1_eligible": 279864,
+      "group2_eligible": 34692,
+      "group3_eligible": 258502,
+      "motor_generation_count": 2970,
+      "neither_observed": 8839
+    },
+    "2018": {
+      "base3_evaluable": 307206,
+      "base3_not_evaluable": 14038,
+      "both_observed": 249517,
+      "candidate_uses": 331992,
+      "current_evaluable": 260618,
+      "current_not_evaluable": 60626,
+      "eligible_meeting_count": 844,
+      "eligible_residuals": 321244,
+      "excluded": 10748,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 130,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 259,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 4835,
+      "excluded_RATE_UNRESOLVED": 598,
+      "excluded_RESULT_MISSING": 4926,
+      "group1_eligible": 283835,
+      "group2_eligible": 35633,
+      "group3_eligible": 271550,
+      "motor_generation_count": 2970,
+      "neither_observed": 2937
+    },
+    "2019": {
+      "base3_evaluable": 309817,
+      "base3_not_evaluable": 11783,
+      "both_observed": 252440,
+      "candidate_uses": 331056,
+      "current_evaluable": 261750,
+      "current_not_evaluable": 59850,
+      "eligible_meeting_count": 834,
+      "eligible_residuals": 321600,
+      "excluded": 9456,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 130,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 259,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 4620,
+      "excluded_RATE_UNRESOLVED": 637,
+      "excluded_RESULT_MISSING": 3810,
+      "group1_eligible": 284461,
+      "group2_eligible": 35604,
+      "group3_eligible": 274197,
+      "motor_generation_count": 2969,
+      "neither_observed": 2473
+    },
+    "2020": {
+      "base3_evaluable": 312533,
+      "base3_not_evaluable": 10918,
+      "both_observed": 254065,
+      "candidate_uses": 332784,
+      "current_evaluable": 262430,
+      "current_not_evaluable": 61021,
+      "eligible_meeting_count": 848,
+      "eligible_residuals": 323451,
+      "excluded": 9333,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 108,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 215,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 4886,
+      "excluded_RATE_UNRESOLVED": 638,
+      "excluded_RESULT_MISSING": 3486,
+      "group1_eligible": 285777,
+      "group2_eligible": 36124,
+      "group3_eligible": 276459,
+      "motor_generation_count": 2985,
+      "neither_observed": 2553
+    },
+    "2021": {
+      "base3_evaluable": 310000,
+      "base3_not_evaluable": 13714,
+      "both_observed": 252121,
+      "candidate_uses": 334368,
+      "current_evaluable": 262956,
+      "current_not_evaluable": 60758,
+      "eligible_meeting_count": 842,
+      "eligible_residuals": 323714,
+      "excluded": 10654,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 104,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 207,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 4974,
+      "excluded_RATE_UNRESOLVED": 737,
+      "excluded_RESULT_MISSING": 4632,
+      "group1_eligible": 286446,
+      "group2_eligible": 35487,
+      "group3_eligible": 274526,
+      "motor_generation_count": 2989,
+      "neither_observed": 2879
+    },
+    "2022": {
+      "base3_evaluable": 314275,
+      "base3_not_evaluable": 13094,
+      "both_observed": 254874,
+      "candidate_uses": 338616,
+      "current_evaluable": 265093,
+      "current_not_evaluable": 62276,
+      "eligible_meeting_count": 860,
+      "eligible_residuals": 327369,
+      "excluded": 11247,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 104,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 206,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 5221,
+      "excluded_RATE_UNRESOLVED": 604,
+      "excluded_RESULT_MISSING": 5112,
+      "group1_eligible": 289354,
+      "group2_eligible": 36319,
+      "group3_eligible": 277889,
+      "motor_generation_count": 2989,
+      "neither_observed": 2875
+    },
+    "2023": {
+      "base3_evaluable": 314277,
+      "base3_not_evaluable": 12097,
+      "both_observed": 255181,
+      "candidate_uses": 335952,
+      "current_evaluable": 264824,
+      "current_not_evaluable": 61550,
+      "eligible_meeting_count": 857,
+      "eligible_residuals": 326374,
+      "excluded": 9578,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 100,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 200,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 5045,
+      "excluded_RATE_UNRESOLVED": 621,
+      "excluded_RESULT_MISSING": 3612,
+      "group1_eligible": 288392,
+      "group2_eligible": 36468,
+      "group3_eligible": 277402,
+      "motor_generation_count": 2997,
+      "neither_observed": 2454
+    },
+    "2024": {
+      "base3_evaluable": 313587,
+      "base3_not_evaluable": 12844,
+      "both_observed": 254720,
+      "candidate_uses": 336384,
+      "current_evaluable": 264782,
+      "current_not_evaluable": 61649,
+      "eligible_meeting_count": 857,
+      "eligible_residuals": 326431,
+      "excluded": 9953,
+      "excluded_FINISH_NUMERIC_DUPLICATE_UNRESOLVED": 78,
+      "excluded_FINISH_NUMERIC_IN_DUPLICATE_RACE_UNRESOLVED": 156,
+      "excluded_FINISH_UNRESOLVED_SPECIAL": 4866,
+      "excluded_RATE_UNRESOLVED": 677,
+      "excluded_RESULT_MISSING": 4176,
+      "group1_eligible": 288372,
+      "group2_eligible": 36301,
+      "group3_eligible": 276813,
+      "motor_generation_count": 3001,
+      "neither_observed": 2782
+    }
+  },
+  "evaluation_years": [
+    2023,
+    2024
+  ],
+  "freeze_sha256": "cc5b1b690919871897a625b910bbd7fef9f2247ac65e8e779073c9fb39d43779",
+  "meeting_identity": {
+    "certified_venue_days": 36889,
+    "map_sha256": "42c6f5eb5400087f49bc0f6c3dce8fb1814a200e670fa3eb3b809524fc132204",
+    "meeting_count": 6709,
+    "period_end_exclusive": "2025-01-01",
+    "source_rows": {
+      "brd_b1": 37196,
+      "brd_k1": 37102,
+      "brd_l1": 37102
+    },
+    "venue_days": 37102
+  },
+  "metrics": {
+    "2023": {
+      "both_observed": {
+        "mse_base3_plus_current": 8.933428325013265,
+        "mse_base_only": 9.001064154328539,
+        "mse_current_only": 8.946654669969265,
+        "mse_race5_comparator": 8.938484895192992,
+        "n": 255181
+      },
+      "groups": {
+        "group1_current": {
+          "high_minus_low": 0.7673439389850063,
+          "mse_constant": 9.009541892407107,
+          "mse_score": 8.937487513887996,
+          "n": 264824,
+          "pearson": 0.0895023596887304,
+          "quintiles_low_to_high": [
+            {
+              "n": 52965,
+              "next_residual_mean": -0.47569772595223003,
+              "score_mean": -2.552037887826223
+            },
+            {
+              "n": 52965,
+              "next_residual_mean": -0.13032870853071307,
+              "score_mean": -0.8591744787770899
+            },
+            {
+              "n": 52965,
+              "next_residual_mean": 0.06796374986792049,
+              "score_mean": 0.0011458471581263523
+            },
+            {
+              "n": 52965,
+              "next_residual_mean": 0.1999006875650601,
+              "score_mean": 0.8592721824350927
+            },
+            {
+              "n": 52964,
+              "next_residual_mean": 0.2916462130327762,
+              "score_mean": 2.4711579960212364
+            }
+          ],
+          "spearman": 0.08676355959137357
+        },
+        "group2_base3": {
+          "high_minus_low": 0.5477279584896216,
+          "mse_constant": 8.88570967518377,
+          "mse_score": 8.852761202983599,
+          "n": 36465,
+          "pearson": 0.06089678004456187,
+          "quintiles_low_to_high": [
+            {
+              "n": 7293,
+              "next_residual_mean": -0.11352804142215052,
+              "score_mean": -1.273956683606224
+            },
+            {
+              "n": 7293,
+              "next_residual_mean": 0.0715439449096742,
+              "score_mean": -0.4973281741787929
+            },
+            {
+              "n": 7293,
+              "next_residual_mean": 0.10142602393347205,
+              "score_mean": -0.0635581246026595
+            },
+            {
+              "n": 7293,
+              "next_residual_mean": 0.21217331710406517,
+              "score_mean": 0.36858546911820156
+            },
+            {
+              "n": 7293,
+              "next_residual_mean": 0.43419991706747113,
+              "score_mean": 1.0788561696053598
+            }
+          ],
+          "spearman": 0.06180437614816039
+        },
+        "group3_current": {
+          "high_minus_low": 0.7708461007879988,
+          "mse_constant": 9.016544587406534,
+          "mse_score": 8.943255207607168,
+          "n": 254848,
+          "pearson": 0.09023022148363302,
+          "quintiles_low_to_high": [
+            {
+              "n": 50970,
+              "next_residual_mean": -0.4751750060474277,
+              "score_mean": -2.5487926398091676
+            },
+            {
+              "n": 50970,
+              "next_residual_mean": -0.1288169521210967,
+              "score_mean": -0.8561193057402972
+            },
+            {
+              "n": 50970,
+              "next_residual_mean": 0.07333117556707612,
+              "score_mean": 0.004361638767436554
+            },
+            {
+              "n": 50969,
+              "next_residual_mean": 0.20296748857542116,
+              "score_mean": 0.8628527272203432
+            },
+            {
+              "n": 50969,
+              "next_residual_mean": 0.295671094740571,
+              "score_mean": 2.47583961061378
+            }
+          ],
+          "spearman": 0.0872126463819657
+        },
+        "group4_base3": {
+          "high_minus_low": 0.4482677397499011,
+          "mse_constant": 9.026306493778893,
+          "mse_score": 9.003564795507982,
+          "n": 314277,
+          "pearson": 0.050326440408839074,
+          "quintiles_low_to_high": [
+            {
+              "n": 62856,
+              "next_residual_mean": -0.22124745520033878,
+              "score_mean": -1.2606277037333695
+            },
+            {
+              "n": 62856,
+              "next_residual_mean": -0.11255377516949039,
+              "score_mean": -0.48756352441893425
+            },
+            {
+              "n": 62855,
+              "next_residual_mean": -0.03924174682846853,
+              "score_mean": -0.05521410634570359
+            },
+            {
+              "n": 62855,
+              "next_residual_mean": 0.033270383472807384,
+              "score_mean": 0.3777143838667147
+            },
+            {
+              "n": 62855,
+              "next_residual_mean": 0.2270202845495623,
+              "score_mean": 1.0899054303439324
+            }
+          ],
+          "spearman": 0.05082540774798435
+        },
+        "group4_current": {
+          "high_minus_low": 0.7673439389850063,
+          "mse_constant": 9.009541892407107,
+          "mse_score": 8.937487513887996,
+          "n": 264824,
+          "pearson": 0.0895023596887304,
+          "quintiles_low_to_high": [
+            {
+              "n": 52965,
+              "next_residual_mean": -0.47569772595223003,
+              "score_mean": -2.552037887826223
+            },
+            {
+              "n": 52965,
+              "next_residual_mean": -0.13032870853071307,
+              "score_mean": -0.8591744787770899
+            },
+            {
+              "n": 52965,
+              "next_residual_mean": 0.06796374986792049,
+              "score_mean": 0.0011458471581263523
+            },
+            {
+              "n": 52965,
+              "next_residual_mean": 0.1999006875650601,
+              "score_mean": 0.8592721824350927
+            },
+            {
+              "n": 52964,
+              "next_residual_mean": 0.2916462130327762,
+              "score_mean": 2.4711579960212364
+            }
+          ],
+          "spearman": 0.08676355959137357
+        }
+      }
+    },
+    "2024": {
+      "both_observed": {
+        "mse_base3_plus_current": 8.937880785539832,
+        "mse_base_only": 9.002242120808205,
+        "mse_current_only": 8.951864380039229,
+        "mse_race5_comparator": 8.937672382628348,
+        "n": 254720
+      },
+      "groups": {
+        "group1_current": {
+          "high_minus_low": 0.7641862703584887,
+          "mse_constant": 9.024058389711373,
+          "mse_score": 8.954732018904389,
+          "n": 264782,
+          "pearson": 0.08764311083667187,
+          "quintiles_low_to_high": [
+            {
+              "n": 52957,
+              "next_residual_mean": -0.4619432763926768,
+              "score_mean": -2.5521203096889398
+            },
+            {
+              "n": 52957,
+              "next_residual_mean": -0.13211794555354506,
+              "score_mean": -0.8579744173015359
+            },
+            {
+              "n": 52956,
+              "next_residual_mean": 0.09154033488429736,
+              "score_mean": 0.006754704593745676
+            },
+            {
+              "n": 52956,
+              "next_residual_mean": 0.17712251601101406,
+              "score_mean": 0.8752092905998212
+            },
+            {
+              "n": 52956,
+              "next_residual_mean": 0.30224299396581195,
+              "score_mean": 2.5022342331942156
+            }
+          ],
+          "spearman": 0.08470023578870152
+        },
+        "group2_base3": {
+          "high_minus_low": 0.42710634438012485,
+          "mse_constant": 8.918258445589814,
+          "mse_score": 8.896758560119377,
+          "n": 36296,
+          "pearson": 0.050298795090075996,
+          "quintiles_low_to_high": [
+            {
+              "n": 7260,
+              "next_residual_mean": -0.05505371997671679,
+              "score_mean": -1.2843768394683017
+            },
+            {
+              "n": 7259,
+              "next_residual_mean": 0.0016600066168049772,
+              "score_mean": -0.5015674363500997
+            },
+            {
+              "n": 7259,
+              "next_residual_mean": 0.12763603759834852,
+              "score_mean": -0.06308678064921634
+            },
+            {
+              "n": 7259,
+              "next_residual_mean": 0.2072764835283848,
+              "score_mean": 0.36400746660983696
+            },
+            {
+              "n": 7259,
+              "next_residual_mean": 0.3720526244034081,
+              "score_mean": 1.0820872870616831
+            }
+          ],
+          "spearman": 0.05247396311049776
+        },
+        "group3_current": {
+          "high_minus_low": 0.7660020460776616,
+          "mse_constant": 9.022497664644046,
+          "mse_score": 8.95253247675847,
+          "n": 254330,
+          "pearson": 0.08803324170418987,
+          "quintiles_low_to_high": [
+            {
+              "n": 50866,
+              "next_residual_mean": -0.4615625386529035,
+              "score_mean": -2.5450908844963975
+            },
+            {
+              "n": 50866,
+              "next_residual_mean": -0.1311591246854828,
+              "score_mean": -0.8526763720055952
+            },
+            {
+              "n": 50866,
+              "next_residual_mean": 0.09538414603007607,
+              "score_mean": 0.01140569369364082
+            },
+            {
+              "n": 50866,
+              "next_residual_mean": 0.18373569699312403,
+              "score_mean": 0.8805325684563408
+            },
+            {
+              "n": 50866,
+              "next_residual_mean": 0.30443950742475817,
+              "score_mean": 2.5014896969791853
+            }
+          ],
+          "spearman": 0.08517555030499588
+        },
+        "group4_base3": {
+          "high_minus_low": 0.4262559519540381,
+          "mse_constant": 9.043126740598636,
+          "mse_score": 9.022159899966388,
+          "n": 313587,
+          "pearson": 0.04850978646040773,
+          "quintiles_low_to_high": [
+            {
+              "n": 62718,
+              "next_residual_mean": -0.2155081487396096,
+              "score_mean": -1.2700973320824254
+            },
+            {
+              "n": 62718,
+              "next_residual_mean": -0.1007819136379194,
+              "score_mean": -0.4897657960388155
+            },
+            {
+              "n": 62717,
+              "next_residual_mean": -0.02426758426024431,
+              "score_mean": -0.05215026458658316
+            },
+            {
+              "n": 62717,
+              "next_residual_mean": 0.0460066646605099,
+              "score_mean": 0.37349324401072503
+            },
+            {
+              "n": 62717,
+              "next_residual_mean": 0.21074780321442846,
+              "score_mean": 1.0900708906736114
+            }
+          ],
+          "spearman": 0.048565187700720394
+        },
+        "group4_current": {
+          "high_minus_low": 0.7641862703584887,
+          "mse_constant": 9.024058389711373,
+          "mse_score": 8.954732018904389,
+          "n": 264782,
+          "pearson": 0.08764311083667187,
+          "quintiles_low_to_high": [
+            {
+              "n": 52957,
+              "next_residual_mean": -0.4619432763926768,
+              "score_mean": -2.5521203096889398
+            },
+            {
+              "n": 52957,
+              "next_residual_mean": -0.13211794555354506,
+              "score_mean": -0.8579744173015359
+            },
+            {
+              "n": 52956,
+              "next_residual_mean": 0.09154033488429736,
+              "score_mean": 0.006754704593745676
+            },
+            {
+              "n": 52956,
+              "next_residual_mean": 0.17712251601101406,
+              "score_mean": 0.8752092905998212
+            },
+            {
+              "n": 52956,
+              "next_residual_mean": 0.30224299396581195,
+              "score_mean": 2.5022342331942156
+            }
+          ],
+          "spearman": 0.08470023578870152
+        }
+      }
+    }
+  },
+  "metrics_sha256": "68d6f31090a6175cda2c271575129bf40cfba329428ddf761579fd72343ed1b3",
+  "period": [
+    "2017-01-01",
+    "2024-12-31"
+  ],
+  "replay_hashes": {
+    "ordered_input_sha256": "5902608a2929935d3921cf4ceb3e60a4793a144e83db71a8023ce2df7b098291",
+    "residual_dataset_sha256": "e188729d5929c05fdf1965e83d2b9bf64ecf797bcae7ace5b6dee54c1e199fdf",
+    "state_features_sha256": "2e786a26512057d4fc579644638bad8e963c8f3861bc2bdfc9a4ca36f84289a0"
+  },
+  "source_guards": {
+    "core_races": 445224,
+    "core_venue_days": 37102,
+    "non_k3_result_boats": 0,
+    "result_boats": 2638614
+  },
+  "source_identity": {
+    "authoritative_source": "brd_k3",
+    "date_end": "2026-09-18",
+    "date_start": "2017-01-01",
+    "normalization_version": "k3-only-result-v1",
+    "result_boats": 3211650,
+    "result_races": 535275,
+    "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+    "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602"
+  },
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "status": "K3_ONLY_DEVELOPMENT_REEVALUATED"
+}

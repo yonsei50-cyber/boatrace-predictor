@@ -1,0 +1,226 @@
+{
+  "base3": {
+    "base_n_meetings": "number of selected meetings, 0..3",
+    "base_n_uses": "sum of eligible uses across the selected meetings",
+    "base_residual_sum": "sum of all eligible residuals in the selected meetings; companion quantity, not an additional v1 score",
+    "definition": "arithmetic mean of the per-meeting mean residuals for the most recent at most three completed, certified, eligible-used meetings of the same motor generation before the current meeting",
+    "meeting_weight": "EQUAL; do not pool all races across meetings",
+    "selection": "only meetings with one or more eligible uses; require source final-day 9 before D",
+    "zero_history": {
+      "base_n_meetings": 0,
+      "base_n_uses": 0,
+      "base_residual_sum": 0,
+      "score": null,
+      "status": "NOT_EVALUABLE"
+    }
+  },
+  "cohorts": {
+    "both_observed": "group4 rows where Base3 and Current are both observed",
+    "group1_current": "same-player following entry in current meeting with Current observed",
+    "group2_base3": "new user's first entry after prior certified motor-meeting owner, with Base3 observed",
+    "group3_current": "new user's following entry in current meeting with Current observed",
+    "group4": "all eligible residual rows"
+  },
+  "constant_baseline": "mean of frozen 2017-2022 cohort training residuals",
+  "current": {
+    "current_n_uses": "number of those eligible uses",
+    "definition": "mean residual of eligible uses of the same motor generation in the current source-identified meeting with race_date < D",
+    "zero_history": {
+      "current_n_uses": 0,
+      "score": null,
+      "status": "NOT_EVALUABLE"
+    }
+  },
+  "development_artifact_sha256": "c25b90244fa77e45acceea3dfb9c38627552b0bac7d27a508968434d9e92897e",
+  "development_comparison_sha256": "da0f39b9206e22d3f0ed0734e0b89e266b6b1d6706c512cb5198ab5aa1dd5d5f",
+  "diagnostic_coefficients_2017_2022_frozen": {
+    "both_base": [
+      -0.0009369040354459927,
+      0.1832612766967871
+    ],
+    "both_current": [
+      -0.010174767168027421,
+      0.14391035331850202
+    ],
+    "both_joint": [
+      0.00013719260129780905,
+      0.156363092000727,
+      0.13689723587906247
+    ],
+    "both_race5": [
+      -0.0036327887799811514,
+      0.2019329764547958
+    ],
+    "group1_current": [
+      -0.008660540344875308,
+      0.14294587759477215
+    ],
+    "group2_base3": [
+      0.16729885700605454,
+      0.21439769250074955
+    ],
+    "group3_current": [
+      -0.010098344437020363,
+      0.1438685408982833
+    ],
+    "group4_base3": [
+      -0.015452923775029954,
+      0.1919318083614238
+    ],
+    "group4_current": [
+      -0.008660540344875308,
+      0.14294587759477215
+    ]
+  },
+  "eligibility": {
+    "ineligible_entry_visit": "still participates in meeting/motor continuity tracking, but adds no residual",
+    "missing_individual_result": "EXCLUDE",
+    "ordered_conditions": [
+      "motor identity present",
+      "player identity present",
+      "canonical individual result present and finish_state is not NO_INDIVIDUAL_RESULT",
+      "core.boat_finish_state.finish_state = NUMERIC_VALID and finish_position in 1..6",
+      "core.race_entry.national_win_rate_status = VALID and national_win_rate is non-NULL"
+    ],
+    "rating_strict_reused": false,
+    "special_or_duplicate_unresolved_finish": "EXCLUDE",
+    "unit": "canonical race entry",
+    "unresolved_national_win_rate": "EXCLUDE"
+  },
+  "evaluation_period": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "freeze_sha256": "cc5b1b690919871897a625b910bbd7fef9f2247ac65e8e779073c9fb39d43779",
+  "history_policy": "K3-only Canonical; no prior R3 state/cache",
+  "history_start": "2017-01-01",
+  "holdout_interpretation": "direction, effect size, metric difference, and evaluable coverage; no post hoc PASS threshold",
+  "k3_canonical_identity": {
+    "direct_ordered_result_hash": "COMPUTED_AFTER_PROTOCOL_FREEZE",
+    "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+    "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602"
+  },
+  "meeting_identity": {
+    "algorithm": "scripts/motor_a_v1.py build_meeting_days, ported from development motor_a_meeting_supported.py build",
+    "canonical_mapping": "core.race venue_code x race_date must match L1 venue-day",
+    "certified": "no reconstruction reason; final 9 confirmed",
+    "date_gap_inference": false,
+    "end": "L1 final-day marker 9",
+    "key": [
+      "venue_code",
+      "source_confirmed_meeting_start_date"
+    ],
+    "other_unknown_reasons": "Current is unknown unless the sole reason is NO_FINAL_9; never append to completed Base history",
+    "repeated_blank_start": "same title and consecutive blank L1 / B1 day-1 signals stay in one meeting, as in development",
+    "source_grain": "venue_code x race_date",
+    "source_tables": [
+      "brd_l1",
+      "brd_b1",
+      "brd_k1"
+    ],
+    "start": "L1 day marker 1, or blank L1 marker with same-day B1/K1 day marker 1 agreement",
+    "uncertain_intervening_meeting": "clear earlier completed Base history when its start is unknown, or when the next meeting follows a noncertified prior meeting",
+    "unknown_no_final_9": "start known: Current is scored through D-1; this meeting is never appended to completed Base history",
+    "unknown_no_start_1": "start unknown: Base and Current are NOT_EVALUABLE on its rows",
+    "validation": "same-day B1/K1 agreement, L1 nonblank day agreement except final 9, stable L1 title, supported day-number transitions"
+  },
+  "metrics": {
+    "both_observed": [
+      "n",
+      "mse_base_only",
+      "mse_current_only",
+      "mse_base3_plus_current",
+      "mse_race5_comparator"
+    ],
+    "coverage": [
+      "candidate_uses",
+      "eligible_residuals",
+      "base3_evaluable",
+      "base3_not_evaluable",
+      "current_evaluable",
+      "current_not_evaluable",
+      "both_observed",
+      "neither_observed"
+    ],
+    "group1_current": [
+      "n",
+      "pearson",
+      "spearman",
+      "mse_constant",
+      "mse_score",
+      "quintiles_low_to_high",
+      "high_minus_low"
+    ],
+    "group2_base3": [
+      "n",
+      "pearson",
+      "spearman",
+      "mse_constant",
+      "mse_score",
+      "quintiles_low_to_high",
+      "high_minus_low"
+    ],
+    "group3_current": [
+      "n",
+      "pearson",
+      "spearman",
+      "mse_constant",
+      "mse_score",
+      "quintiles_low_to_high",
+      "high_minus_low"
+    ],
+    "group4_base3_current": [
+      "n",
+      "pearson",
+      "spearman",
+      "mse_score"
+    ]
+  },
+  "motor_identity": {
+    "canonical_join": "core.race_entry.motor_id -> core.motor",
+    "cross_generation_or_cross_venue_pooling": false,
+    "generation_rule": "existing venue-specific user-fixed-month-day-v1; unchanged",
+    "key": [
+      "venue_code",
+      "generation_start_year",
+      "motor_no"
+    ]
+  },
+  "no_retuning": "No changes to method, cohort, eligibility, window, coefficients, or comparator after viewing 2025",
+  "pass_threshold": null,
+  "prediction_formula": "intercept + slope*score; joint intercept + base_slope*Base3 + current_slope*Current",
+  "protocol_id": "MOTOR_A_V1_FIRST_2025_K3_HOLDOUT",
+  "race5_comparator": "historical development comparator only; same both-observed cohort; no method selection",
+  "residual": {
+    "finish_points": {
+      "1": 10,
+      "2": 8,
+      "3": 6,
+      "4": 4,
+      "5": 2,
+      "6": 1
+    },
+    "formula": "finish_point[finish_position] - core.race_entry.national_win_rate",
+    "national_win_rate_band_adjustment": "NONE",
+    "national_win_rate_source": "brd_l3.zenkoku_ritsu_1, carried as core.race_entry.national_win_rate with VALID status and raw lineage",
+    "rating_adjustment": "NONE"
+  },
+  "source_identity": {
+    "authoritative_source": "brd_k3",
+    "date_end": "2026-09-18",
+    "date_start": "2017-01-01",
+    "normalization_version": "k3-only-result-v1",
+    "result_boats": 3211650,
+    "result_races": 535275,
+    "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+    "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602"
+  },
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "status": "FROZEN_BEFORE_2025_RESULTS",
+  "time_boundary": {
+    "base_finalization": "a certified meeting becomes completed only after its final-day D results are committed; first available for Base after D",
+    "common_state": "every D race uses the same D-1 residual state",
+    "prediction_date": "D",
+    "result_update": "apply all D eligible results only after all D entries are scored; usable from D+1"
+  }
+}

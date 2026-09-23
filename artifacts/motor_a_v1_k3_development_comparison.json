@@ -1,0 +1,579 @@
+{
+  "comparison_basis": "frozen 2017-2024 development artifact, hash-verified",
+  "years": {
+    "2023": {
+      "counts": {
+        "base3_evaluable": {
+          "delta": 0,
+          "new": 314277,
+          "old": 314277
+        },
+        "both_observed": {
+          "delta": 0,
+          "new": 255181,
+          "old": 255181
+        },
+        "candidate_uses": {
+          "delta": 0,
+          "new": 335952,
+          "old": 335952
+        },
+        "current_evaluable": {
+          "delta": 0,
+          "new": 264824,
+          "old": 264824
+        },
+        "eligible_residuals": {
+          "delta": 0,
+          "new": 326374,
+          "old": 326374
+        },
+        "meeting_count": {
+          "delta": 0,
+          "new": 857,
+          "old": 857
+        },
+        "motor_generation_count": {
+          "delta": null,
+          "new": 2997,
+          "old": null
+        }
+      },
+      "metrics": {
+        "both_observed": {
+          "new": {
+            "mse_base3_plus_current": 8.933428325013265,
+            "mse_base_only": 9.001064154328539,
+            "mse_current_only": 8.946654669969265,
+            "mse_race5_comparator": 8.938484895192992,
+            "n": 255181
+          },
+          "old": {
+            "mse_base3_plus_current": 8.933428325013265,
+            "mse_current_only": 8.946654669969265,
+            "mse_race5_comparator": 8.938484895192992,
+            "n": 255181
+          }
+        },
+        "group1_current": {
+          "new": {
+            "high_minus_low": 0.7673439389850063,
+            "mse_constant": 9.009541892407107,
+            "mse_score": 8.937487513887996,
+            "n": 264824,
+            "pearson": 0.0895023596887304,
+            "quintiles_low_to_high": [
+              {
+                "n": 52965,
+                "next_residual_mean": -0.47569772595223003,
+                "score_mean": -2.552037887826223
+              },
+              {
+                "n": 52965,
+                "next_residual_mean": -0.13032870853071307,
+                "score_mean": -0.8591744787770899
+              },
+              {
+                "n": 52965,
+                "next_residual_mean": 0.06796374986792049,
+                "score_mean": 0.0011458471581263523
+              },
+              {
+                "n": 52965,
+                "next_residual_mean": 0.1999006875650601,
+                "score_mean": 0.8592721824350927
+              },
+              {
+                "n": 52964,
+                "next_residual_mean": 0.2916462130327762,
+                "score_mean": 2.4711579960212364
+              }
+            ],
+            "spearman": 0.08676355959137357
+          },
+          "old": {
+            "fit_2017_2022": [
+              -0.008660540344875308,
+              0.14294587759477215
+            ],
+            "high_minus_low": 0.7673439389850063,
+            "mse_constant": 9.009541892407107,
+            "mse_score": 8.937487513887996,
+            "n": 264824,
+            "pearson": 0.0895023596887304,
+            "quintiles_low_to_high": [
+              {
+                "n": 52965,
+                "next_residual_mean": -0.47569772595223003,
+                "score_mean": -2.552037887826223
+              },
+              {
+                "n": 52965,
+                "next_residual_mean": -0.13032870853071307,
+                "score_mean": -0.8591744787770899
+              },
+              {
+                "n": 52965,
+                "next_residual_mean": 0.06796374986792049,
+                "score_mean": 0.0011458471581263523
+              },
+              {
+                "n": 52965,
+                "next_residual_mean": 0.1999006875650601,
+                "score_mean": 0.8592721824350927
+              },
+              {
+                "n": 52964,
+                "next_residual_mean": 0.2916462130327762,
+                "score_mean": 2.4711579960212364
+              }
+            ],
+            "spearman": 0.08676355959137357,
+            "train_n": 1569688
+          }
+        },
+        "group2_base3": {
+          "new": {
+            "high_minus_low": 0.5477279584896216,
+            "mse_constant": 8.88570967518377,
+            "mse_score": 8.852761202983599,
+            "n": 36465,
+            "pearson": 0.06089678004456187,
+            "quintiles_low_to_high": [
+              {
+                "n": 7293,
+                "next_residual_mean": -0.11352804142215052,
+                "score_mean": -1.273956683606224
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.0715439449096742,
+                "score_mean": -0.4973281741787929
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.10142602393347205,
+                "score_mean": -0.0635581246026595
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.21217331710406517,
+                "score_mean": 0.36858546911820156
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.43419991706747113,
+                "score_mean": 1.0788561696053598
+              }
+            ],
+            "spearman": 0.06180437614816039
+          },
+          "old": {
+            "fit_2017_2022": [
+              0.16729885700605454,
+              0.21439769250074955
+            ],
+            "high_minus_low": 0.5477279584896216,
+            "mse_constant": 8.88570967518377,
+            "mse_score": 8.852761202983599,
+            "n": 36465,
+            "pearson": 0.06089678004456187,
+            "quintiles_low_to_high": [
+              {
+                "n": 7293,
+                "next_residual_mean": -0.11352804142215052,
+                "score_mean": -1.273956683606224
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.0715439449096742,
+                "score_mean": -0.4973281741787929
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.10142602393347205,
+                "score_mean": -0.0635581246026595
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.21217331710406517,
+                "score_mean": 0.36858546911820156
+              },
+              {
+                "n": 7293,
+                "next_residual_mean": 0.43419991706747113,
+                "score_mean": 1.0788561696053598
+              }
+            ],
+            "spearman": 0.06180437614816039,
+            "train_n": 213798
+          }
+        },
+        "group3_current": {
+          "new": {
+            "high_minus_low": 0.7708461007879988,
+            "mse_constant": 9.016544587406534,
+            "mse_score": 8.943255207607168,
+            "n": 254848,
+            "pearson": 0.09023022148363302,
+            "quintiles_low_to_high": [
+              {
+                "n": 50970,
+                "next_residual_mean": -0.4751750060474277,
+                "score_mean": -2.5487926398091676
+              },
+              {
+                "n": 50970,
+                "next_residual_mean": -0.1288169521210967,
+                "score_mean": -0.8561193057402972
+              },
+              {
+                "n": 50970,
+                "next_residual_mean": 0.07333117556707612,
+                "score_mean": 0.004361638767436554
+              },
+              {
+                "n": 50969,
+                "next_residual_mean": 0.20296748857542116,
+                "score_mean": 0.8628527272203432
+              },
+              {
+                "n": 50969,
+                "next_residual_mean": 0.295671094740571,
+                "score_mean": 2.47583961061378
+              }
+            ],
+            "spearman": 0.0872126463819657
+          },
+          "old": {
+            "fit_2017_2022": [
+              -0.010098344437020363,
+              0.1438685408982833
+            ],
+            "high_minus_low": 0.7708461007879988,
+            "mse_constant": 9.016544587406534,
+            "mse_score": 8.943255207607168,
+            "n": 254848,
+            "pearson": 0.09023022148363302,
+            "quintiles_low_to_high": [
+              {
+                "n": 50970,
+                "next_residual_mean": -0.4751750060474277,
+                "score_mean": -2.5487926398091676
+              },
+              {
+                "n": 50970,
+                "next_residual_mean": -0.1288169521210967,
+                "score_mean": -0.8561193057402972
+              },
+              {
+                "n": 50970,
+                "next_residual_mean": 0.07333117556707612,
+                "score_mean": 0.004361638767436554
+              },
+              {
+                "n": 50969,
+                "next_residual_mean": 0.20296748857542116,
+                "score_mean": 0.8628527272203432
+              },
+              {
+                "n": 50969,
+                "next_residual_mean": 0.295671094740571,
+                "score_mean": 2.47583961061378
+              }
+            ],
+            "spearman": 0.0872126463819657,
+            "train_n": 1500298
+          }
+        }
+      }
+    },
+    "2024": {
+      "counts": {
+        "base3_evaluable": {
+          "delta": 0,
+          "new": 313587,
+          "old": 313587
+        },
+        "both_observed": {
+          "delta": 0,
+          "new": 254720,
+          "old": 254720
+        },
+        "candidate_uses": {
+          "delta": 0,
+          "new": 336384,
+          "old": 336384
+        },
+        "current_evaluable": {
+          "delta": 0,
+          "new": 264782,
+          "old": 264782
+        },
+        "eligible_residuals": {
+          "delta": 0,
+          "new": 326431,
+          "old": 326431
+        },
+        "meeting_count": {
+          "delta": 0,
+          "new": 857,
+          "old": 857
+        },
+        "motor_generation_count": {
+          "delta": null,
+          "new": 3001,
+          "old": null
+        }
+      },
+      "metrics": {
+        "both_observed": {
+          "new": {
+            "mse_base3_plus_current": 8.937880785539832,
+            "mse_base_only": 9.002242120808205,
+            "mse_current_only": 8.951864380039229,
+            "mse_race5_comparator": 8.937672382628348,
+            "n": 254720
+          },
+          "old": {
+            "mse_base3_plus_current": 8.937880785539832,
+            "mse_current_only": 8.951864380039229,
+            "mse_race5_comparator": 8.937672382628348,
+            "n": 254720
+          }
+        },
+        "group1_current": {
+          "new": {
+            "high_minus_low": 0.7641862703584887,
+            "mse_constant": 9.024058389711373,
+            "mse_score": 8.954732018904389,
+            "n": 264782,
+            "pearson": 0.08764311083667187,
+            "quintiles_low_to_high": [
+              {
+                "n": 52957,
+                "next_residual_mean": -0.4619432763926768,
+                "score_mean": -2.5521203096889398
+              },
+              {
+                "n": 52957,
+                "next_residual_mean": -0.13211794555354506,
+                "score_mean": -0.8579744173015359
+              },
+              {
+                "n": 52956,
+                "next_residual_mean": 0.09154033488429736,
+                "score_mean": 0.006754704593745676
+              },
+              {
+                "n": 52956,
+                "next_residual_mean": 0.17712251601101406,
+                "score_mean": 0.8752092905998212
+              },
+              {
+                "n": 52956,
+                "next_residual_mean": 0.30224299396581195,
+                "score_mean": 2.5022342331942156
+              }
+            ],
+            "spearman": 0.08470023578870152
+          },
+          "old": {
+            "fit_2017_2022": [
+              -0.008660540344875308,
+              0.14294587759477215
+            ],
+            "high_minus_low": 0.7641862703584887,
+            "mse_constant": 9.024058389711373,
+            "mse_score": 8.954732018904389,
+            "n": 264782,
+            "pearson": 0.08764311083667187,
+            "quintiles_low_to_high": [
+              {
+                "n": 52957,
+                "next_residual_mean": -0.4619432763926768,
+                "score_mean": -2.5521203096889398
+              },
+              {
+                "n": 52957,
+                "next_residual_mean": -0.13211794555354506,
+                "score_mean": -0.8579744173015359
+              },
+              {
+                "n": 52956,
+                "next_residual_mean": 0.09154033488429736,
+                "score_mean": 0.006754704593745676
+              },
+              {
+                "n": 52956,
+                "next_residual_mean": 0.17712251601101406,
+                "score_mean": 0.8752092905998212
+              },
+              {
+                "n": 52956,
+                "next_residual_mean": 0.30224299396581195,
+                "score_mean": 2.5022342331942156
+              }
+            ],
+            "spearman": 0.08470023578870152,
+            "train_n": 1569688
+          }
+        },
+        "group2_base3": {
+          "new": {
+            "high_minus_low": 0.42710634438012485,
+            "mse_constant": 8.918258445589814,
+            "mse_score": 8.896758560119377,
+            "n": 36296,
+            "pearson": 0.050298795090075996,
+            "quintiles_low_to_high": [
+              {
+                "n": 7260,
+                "next_residual_mean": -0.05505371997671679,
+                "score_mean": -1.2843768394683017
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.0016600066168049772,
+                "score_mean": -0.5015674363500997
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.12763603759834852,
+                "score_mean": -0.06308678064921634
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.2072764835283848,
+                "score_mean": 0.36400746660983696
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.3720526244034081,
+                "score_mean": 1.0820872870616831
+              }
+            ],
+            "spearman": 0.05247396311049776
+          },
+          "old": {
+            "fit_2017_2022": [
+              0.16729885700605454,
+              0.21439769250074955
+            ],
+            "high_minus_low": 0.42710634438012485,
+            "mse_constant": 8.918258445589814,
+            "mse_score": 8.896758560119377,
+            "n": 36296,
+            "pearson": 0.050298795090075996,
+            "quintiles_low_to_high": [
+              {
+                "n": 7260,
+                "next_residual_mean": -0.05505371997671679,
+                "score_mean": -1.2843768394683017
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.0016600066168049772,
+                "score_mean": -0.5015674363500997
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.12763603759834852,
+                "score_mean": -0.06308678064921634
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.2072764835283848,
+                "score_mean": 0.36400746660983696
+              },
+              {
+                "n": 7259,
+                "next_residual_mean": 0.3720526244034081,
+                "score_mean": 1.0820872870616831
+              }
+            ],
+            "spearman": 0.05247396311049776,
+            "train_n": 213798
+          }
+        },
+        "group3_current": {
+          "new": {
+            "high_minus_low": 0.7660020460776616,
+            "mse_constant": 9.022497664644046,
+            "mse_score": 8.95253247675847,
+            "n": 254330,
+            "pearson": 0.08803324170418987,
+            "quintiles_low_to_high": [
+              {
+                "n": 50866,
+                "next_residual_mean": -0.4615625386529035,
+                "score_mean": -2.5450908844963975
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": -0.1311591246854828,
+                "score_mean": -0.8526763720055952
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": 0.09538414603007607,
+                "score_mean": 0.01140569369364082
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": 0.18373569699312403,
+                "score_mean": 0.8805325684563408
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": 0.30443950742475817,
+                "score_mean": 2.5014896969791853
+              }
+            ],
+            "spearman": 0.08517555030499588
+          },
+          "old": {
+            "fit_2017_2022": [
+              -0.010098344437020363,
+              0.1438685408982833
+            ],
+            "high_minus_low": 0.7660020460776616,
+            "mse_constant": 9.022497664644046,
+            "mse_score": 8.95253247675847,
+            "n": 254330,
+            "pearson": 0.08803324170418987,
+            "quintiles_low_to_high": [
+              {
+                "n": 50866,
+                "next_residual_mean": -0.4615625386529035,
+                "score_mean": -2.5450908844963975
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": -0.1311591246854828,
+                "score_mean": -0.8526763720055952
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": 0.09538414603007607,
+                "score_mean": 0.01140569369364082
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": 0.18373569699312403,
+                "score_mean": 0.8805325684563408
+              },
+              {
+                "n": 50866,
+                "next_residual_mean": 0.30443950742475817,
+                "score_mean": 2.5014896969791853
+              }
+            ],
+            "spearman": 0.08517555030499588,
+            "train_n": 1500298
+          }
+        }
+      }
+    }
+  }
+}
