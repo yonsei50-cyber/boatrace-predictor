@@ -1,0 +1,351 @@
+{
+  "position": "historical aggregate comparison only; no selection or retuning",
+  "old_development_artifact_sha256": "a3f9c3144b902b12c03ad6310e188d2090dd6a498084c9e28d4dd64a1eaa08bd",
+  "old_2025_artifact_sha256": "5ca4feb2600891f4212a2b619f7d4608696b497864a843f94b13be7332861ce0",
+  "new_replay_deterministic_sha256": "7663c3e050f3e4214c0c73e2bdb927b9289bf9f79472c5531656fe8cd7771025",
+  "old_state_checkpoint_comparison": "UNAVAILABLE: historical aggregate artifacts do not contain full per-player rating state; retired-source inputs are not replayed",
+  "warmup_strict_counts": {
+    "2017": {
+      "old_strict_races": 50668,
+      "new_strict_races": 50668,
+      "difference": 0
+    },
+    "2018": {
+      "old_strict_races": 50584,
+      "new_strict_races": 50584,
+      "difference": 0
+    },
+    "2019": {
+      "old_strict_races": 50766,
+      "new_strict_races": 50766,
+      "difference": 0
+    },
+    "2020": {
+      "old_strict_races": 50923,
+      "new_strict_races": 50923,
+      "difference": 0
+    },
+    "2021": {
+      "old_strict_races": 50864,
+      "new_strict_races": 50864,
+      "difference": 0
+    },
+    "2022": {
+      "old_strict_races": 51257,
+      "new_strict_races": 51264,
+      "difference": 7
+    }
+  },
+  "years": {
+    "2023": {
+      "strict_races": {
+        "old": 51246,
+        "new": 51246,
+        "signed_difference": 0,
+        "absolute_difference": 0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      },
+      "strict_boats": {
+        "old": 307476,
+        "new": 307476,
+        "signed_difference": 0,
+        "absolute_difference": 0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      },
+      "course_mean_log_loss": {
+        "old": 1.4888296816403583,
+        "new": 1.4888273151159401,
+        "signed_difference": -2.36652441820695e-06,
+        "absolute_difference": 2.36652441820695e-06,
+        "relative_difference": -1.589519907743623e-06,
+        "absolute_relative_difference": 1.589519907743623e-06
+      },
+      "p1_log_loss": {
+        "old": 1.2809334506324395,
+        "new": 1.2809271323802165,
+        "signed_difference": -6.318252222969889e-06,
+        "absolute_difference": 6.318252222969889e-06,
+        "relative_difference": -4.932537455283377e-06,
+        "absolute_relative_difference": 4.932537455283377e-06
+      },
+      "p1_brier": {
+        "old": 0.6079887788245428,
+        "new": 0.6079868395131758,
+        "signed_difference": -1.939311367049612e-06,
+        "absolute_difference": 1.939311367049612e-06,
+        "relative_difference": -3.1897157227128208e-06,
+        "absolute_relative_difference": 3.1897157227128208e-06
+      },
+      "p1_ece": {
+        "old": 0.024439470411284664,
+        "new": 0.02443721076841938,
+        "signed_difference": -2.2596428652828238e-06,
+        "absolute_difference": 2.2596428652828238e-06,
+        "relative_difference": -9.245874919775094e-05,
+        "absolute_relative_difference": 9.245874919775094e-05
+      },
+      "p1_top1": {
+        "old": 0.563439097685673,
+        "new": 0.563439097685673,
+        "signed_difference": 0.0,
+        "absolute_difference": 0.0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      },
+      "exact_p2_log_loss": {
+        "old": 1.6967259126482777,
+        "new": 1.696727497851664,
+        "signed_difference": 1.5852033863339443e-06,
+        "absolute_difference": 1.5852033863339443e-06,
+        "relative_difference": 9.3427192601764e-07,
+        "absolute_relative_difference": 9.3427192601764e-07
+      },
+      "exact_p2_brier": {
+        "old": 0.8017048028489508,
+        "new": 0.8017052395329722,
+        "signed_difference": 4.366840213876344e-07,
+        "absolute_difference": 4.366840213876344e-07,
+        "relative_difference": 5.446942812813734e-07,
+        "absolute_relative_difference": 5.446942812813734e-07
+      },
+      "exact_p2_ece": {
+        "old": 0.01077622656576017,
+        "new": 0.01075648623660163,
+        "signed_difference": -1.9740329158539696e-05,
+        "absolute_difference": 1.9740329158539696e-05,
+        "relative_difference": -0.0018318405833505401,
+        "absolute_relative_difference": 0.0018318405833505401
+      },
+      "overall_log_loss": {
+        "old": 1.6646831063367875,
+        "new": 1.6646829188923578,
+        "signed_difference": -1.8744442975560105e-07,
+        "absolute_difference": 1.8744442975560105e-07,
+        "relative_difference": -1.1260066798423949e-07,
+        "absolute_relative_difference": 1.1260066798423949e-07
+      },
+      "short50_log_loss": {
+        "old": 1.7710677229818341,
+        "new": 1.7710677229818341,
+        "signed_difference": 0.0,
+        "absolute_difference": 0.0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      }
+    },
+    "2024": {
+      "strict_races": {
+        "old": 51392,
+        "new": 51392,
+        "signed_difference": 0,
+        "absolute_difference": 0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      },
+      "strict_boats": {
+        "old": 308352,
+        "new": 308352,
+        "signed_difference": 0,
+        "absolute_difference": 0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      },
+      "course_mean_log_loss": {
+        "old": 1.4894507590304824,
+        "new": 1.4894520221144478,
+        "signed_difference": 1.2630839654192982e-06,
+        "absolute_difference": 1.2630839654192982e-06,
+        "relative_difference": 8.480199548466231e-07,
+        "absolute_relative_difference": 8.480199548466231e-07
+      },
+      "p1_log_loss": {
+        "old": 1.2813312593913901,
+        "new": 1.2813322008437429,
+        "signed_difference": 9.414523527428997e-07,
+        "absolute_difference": 9.414523527428997e-07,
+        "relative_difference": 7.347454811881145e-07,
+        "absolute_relative_difference": 7.347454811881145e-07
+      },
+      "p1_brier": {
+        "old": 0.6091204771495066,
+        "new": 0.6091213715193682,
+        "signed_difference": 8.94369861614841e-07,
+        "absolute_difference": 8.94369861614841e-07,
+        "relative_difference": 1.4682971516574396e-06,
+        "absolute_relative_difference": 1.4682971516574396e-06
+      },
+      "p1_ece": {
+        "old": 0.02114499432531861,
+        "new": 0.021149218407310218,
+        "signed_difference": 4.224081991608536e-06,
+        "absolute_difference": 4.224081991608536e-06,
+        "relative_difference": 0.00019976746867936973,
+        "absolute_relative_difference": 0.00019976746867936973
+      },
+      "p1_top1": {
+        "old": 0.5613908779576587,
+        "new": 0.5613908779576587,
+        "signed_difference": 0.0,
+        "absolute_difference": 0.0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      },
+      "exact_p2_log_loss": {
+        "old": 1.697570258669575,
+        "new": 1.6975718433851528,
+        "signed_difference": 1.5847155778736521e-06,
+        "absolute_difference": 1.5847155778736521e-06,
+        "relative_difference": 9.335198762940335e-07,
+        "absolute_relative_difference": 9.335198762940335e-07
+      },
+      "exact_p2_brier": {
+        "old": 0.8021350270304402,
+        "new": 0.8021357372936598,
+        "signed_difference": 7.102632196831493e-07,
+        "absolute_difference": 7.102632196831493e-07,
+        "relative_difference": 8.854659075450094e-07,
+        "absolute_relative_difference": 8.854659075450094e-07
+      },
+      "exact_p2_ece": {
+        "old": 0.008575568916700698,
+        "new": 0.008579817508208989,
+        "signed_difference": 4.248591508290364e-06,
+        "absolute_difference": 4.248591508290364e-06,
+        "relative_difference": 0.0004954296968002137,
+        "absolute_relative_difference": 0.0004954296968002137
+      },
+      "overall_log_loss": {
+        "old": 1.6681176554053343,
+        "new": 1.668117614058756,
+        "signed_difference": -4.134657838328337e-08,
+        "absolute_difference": 4.134657838328337e-08,
+        "relative_difference": -2.4786368185304414e-08,
+        "absolute_relative_difference": 2.4786368185304414e-08
+      },
+      "short50_log_loss": {
+        "old": 1.771368256451876,
+        "new": 1.771368256451876,
+        "signed_difference": 0.0,
+        "absolute_difference": 0.0,
+        "relative_difference": 0.0,
+        "absolute_relative_difference": 0.0
+      }
+    },
+    "2025": {
+      "strict_races": {
+        "old": 51137,
+        "new": 51311,
+        "signed_difference": 174,
+        "absolute_difference": 174,
+        "relative_difference": 0.003402624322897315,
+        "absolute_relative_difference": 0.003402624322897315
+      },
+      "strict_boats": {
+        "old": 306822,
+        "new": 307866,
+        "signed_difference": 1044,
+        "absolute_difference": 1044,
+        "relative_difference": 0.003402624322897315,
+        "absolute_relative_difference": 0.003402624322897315
+      },
+      "course_mean_log_loss": {
+        "old": 1.4886540805227542,
+        "new": 1.488789139937389,
+        "signed_difference": 0.0001350594146347639,
+        "absolute_difference": 0.0001350594146347639,
+        "relative_difference": 9.07258552553301e-05,
+        "absolute_relative_difference": 9.07258552553301e-05
+      },
+      "p1_log_loss": {
+        "old": 1.2807733847888272,
+        "new": 1.2808031550710453,
+        "signed_difference": 2.9770282218066768e-05,
+        "absolute_difference": 2.9770282218066768e-05,
+        "relative_difference": 2.3243988805229012e-05,
+        "absolute_relative_difference": 2.3243988805229012e-05
+      },
+      "p1_brier": {
+        "old": 0.6099035229532801,
+        "new": 0.6099258870910649,
+        "signed_difference": 2.2364137784780524e-05,
+        "absolute_difference": 2.2364137784780524e-05,
+        "relative_difference": 3.666832038695022e-05,
+        "absolute_relative_difference": 3.666832038695022e-05
+      },
+      "p1_ece": {
+        "old": 0.018622695599333577,
+        "new": 0.01858141790412104,
+        "signed_difference": -4.127769521253613e-05,
+        "absolute_difference": 4.127769521253613e-05,
+        "relative_difference": -0.002216526334351579,
+        "absolute_relative_difference": 0.002216526334351579
+      },
+      "p1_top1": {
+        "old": 0.5593601501847977,
+        "new": 0.5593147668141334,
+        "signed_difference": -4.538337066428699e-05,
+        "absolute_difference": 4.538337066428699e-05,
+        "relative_difference": -8.113443664031758e-05,
+        "absolute_relative_difference": 8.113443664031758e-05
+      },
+      "exact_p2_log_loss": {
+        "old": 1.696534776256681,
+        "new": 1.6967751248037322,
+        "signed_difference": 0.00024034854705123898,
+        "absolute_difference": 0.00024034854705123898,
+        "relative_difference": 0.00014167027426431896,
+        "absolute_relative_difference": 0.00014167027426431896
+      },
+      "exact_p2_brier": {
+        "old": 0.8017137542354417,
+        "new": 0.801809255127,
+        "signed_difference": 9.550089155829777e-05,
+        "absolute_difference": 9.550089155829777e-05,
+        "relative_difference": 0.00011912093444046332,
+        "absolute_relative_difference": 0.00011912093444046332
+      },
+      "exact_p2_ece": {
+        "old": 0.007407079950080236,
+        "new": 0.007295553855816442,
+        "signed_difference": -0.0001115260942637945,
+        "absolute_difference": 0.0001115260942637945,
+        "relative_difference": -0.015056688332706116,
+        "absolute_relative_difference": 0.015056688332706116
+      },
+      "overall_log_loss": {
+        "old": 1.6628965569180505,
+        "new": 1.6631056507076771,
+        "signed_difference": 0.00020909378962663538,
+        "absolute_difference": 0.00020909378962663538,
+        "relative_difference": 0.00012574070753634963,
+        "absolute_relative_difference": 0.00012574070753634963
+      },
+      "short50_log_loss": {
+        "old": 1.7702906465198194,
+        "new": 1.7703351902800972,
+        "signed_difference": 4.4543760277848676e-05,
+        "absolute_difference": 4.4543760277848676e-05,
+        "relative_difference": 2.5161834507467125e-05,
+        "absolute_relative_difference": 2.5161834507467125e-05
+      }
+    }
+  },
+  "eligibility_2025": {
+    "old_result_records_absent": 986,
+    "new_result_records_absent": 796,
+    "old_result_present_but_nonstrict": 3785,
+    "new_result_present_but_nonstrict": 3801
+  },
+  "source_change_context": {
+    "document": "docs/k3_only_source_policy_impact_audit.md",
+    "known_2022_new_k3_result_boats": 54,
+    "known_2023_actual_course_corrected_boats": 2,
+    "known_2025_new_k3_result_boats": 1500,
+    "known_2025_old_only_boats_removed": 360,
+    "known_2025_old_only_races_removed": 60,
+    "status": "Migration evidence gives source-change scope, not per-change metric attribution"
+  },
+  "attribution_limit": "Aggregate differences are observed; separate causal effects of warm-up, course correction, and other source changes are not identified by this replay."
+}

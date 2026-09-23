@@ -1,0 +1,3085 @@
+{
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "freeze_sha256": "c7fbd2af725f2c9d62491923a5a411350a33076b8b1b305798c5ed07d23136fb",
+  "frozen_code_sha256": "10fb2db5c6b97ce0e6e2d968e783ca5fcbd35b77314bc5817561f146f9703271",
+  "source": {
+    "result_dataset_version": {
+      "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602",
+      "authoritative_source": "brd_k3",
+      "date_start": "2017-01-01",
+      "date_end": "2026-09-18",
+      "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+      "normalization_version": "k3-only-result-v1",
+      "result_races": 535275,
+      "result_boats": 3211650
+    },
+    "result_boats_before_2026": 2969286,
+    "foreign_source_boats": 0,
+    "known_2025_k3_absent": {
+      "races": 60,
+      "entries": 360,
+      "individual_results": 0
+    }
+  },
+  "extract_version": "rating-v1-k3-source-corrected-2017-2025-v1",
+  "extract_rows": 3006792,
+  "extract_rows_by_year": {
+    "2017": 330192,
+    "2018": 331992,
+    "2019": 331056,
+    "2020": 332784,
+    "2021": 334368,
+    "2022": 338616,
+    "2023": 335952,
+    "2024": 336384,
+    "2025": 335448
+  },
+  "extract_sha256": "f71d5f77b83b7671331bb16629765cbec04e40ba57d4a7c28f471fc0a8faea8d",
+  "replay_start": "2017-01-01",
+  "warmup_end": "2022-12-31",
+  "state_checkpoints": {
+    "2023": {
+      "before_first_race_date": "2023-01-01",
+      "sha256": "a5790e8bd92775ce50771dbdbd1630a298795bc739bd187f7006f2606a2008a4",
+      "course_players": 1901,
+      "overall_players": 1901,
+      "short_known_players": 1901,
+      "seen_players": 1901
+    },
+    "2024": {
+      "before_first_race_date": "2024-01-01",
+      "sha256": "387e2ceb90464095aa6e01bc4704b27a7a13c27fea5c7e3934f7716eef5aae6a",
+      "course_players": 1954,
+      "overall_players": 1954,
+      "short_known_players": 1954,
+      "seen_players": 1954
+    },
+    "2025": {
+      "before_first_race_date": "2025-01-01",
+      "sha256": "be6e9a65e585a83bd696b2d678a5929e3c665f4090573a1d029925856132ed44",
+      "course_players": 2009,
+      "overall_players": 2009,
+      "short_known_players": 2009,
+      "seen_players": 2009
+    },
+    "after_2025": {
+      "sha256": "f582fe625f4cce9824891195709b353c220224545bb8b7d5d3c952f0ee0a0ef5",
+      "course_players": 2062,
+      "overall_players": 2062,
+      "short_known_players": 2062,
+      "seen_players": 2062
+    }
+  },
+  "deterministic_sha256": "7663c3e050f3e4214c0c73e2bdb927b9289bf9f79472c5531656fe8cd7771025",
+  "executed_at_utc": "2026-09-23T17:37:28.936194+00:00",
+  "counts": {
+    "2017": {
+      "excluded_boats": 26184,
+      "excluded_non_numeric_or_incomplete": 3868,
+      "excluded_races": 4364,
+      "excluded_result_records_absent": 496,
+      "strict_boats": 304008,
+      "strict_races": 50668,
+      "total_boats": 330192,
+      "total_races": 55032
+    },
+    "2018": {
+      "excluded_boats": 28488,
+      "excluded_non_numeric_or_incomplete": 3927,
+      "excluded_races": 4748,
+      "excluded_result_records_absent": 821,
+      "strict_boats": 303504,
+      "strict_races": 50584,
+      "total_boats": 331992,
+      "total_races": 55332
+    },
+    "2019": {
+      "excluded_boats": 26460,
+      "excluded_non_numeric_or_incomplete": 3775,
+      "excluded_races": 4410,
+      "excluded_result_records_absent": 635,
+      "strict_boats": 304596,
+      "strict_races": 50766,
+      "total_boats": 331056,
+      "total_races": 55176
+    },
+    "2020": {
+      "excluded_boats": 27246,
+      "excluded_non_numeric_or_incomplete": 3960,
+      "excluded_races": 4541,
+      "excluded_result_records_absent": 581,
+      "strict_boats": 305538,
+      "strict_races": 50923,
+      "total_boats": 332784,
+      "total_races": 55464
+    },
+    "2021": {
+      "excluded_boats": 29184,
+      "excluded_non_numeric_or_incomplete": 4092,
+      "excluded_races": 4864,
+      "excluded_result_records_absent": 772,
+      "strict_boats": 305184,
+      "strict_races": 50864,
+      "total_boats": 334368,
+      "total_races": 55728
+    },
+    "2022": {
+      "excluded_boats": 31032,
+      "excluded_non_numeric_or_incomplete": 4320,
+      "excluded_races": 5172,
+      "excluded_result_records_absent": 852,
+      "strict_boats": 307584,
+      "strict_races": 51264,
+      "total_boats": 338616,
+      "total_races": 56436
+    },
+    "2023": {
+      "course_update_races": 51246,
+      "excluded_boats": 28476,
+      "excluded_non_numeric_or_incomplete": 4144,
+      "excluded_races": 4746,
+      "excluded_result_records_absent": 602,
+      "overall_update_races": 51246,
+      "strict_boats": 307476,
+      "strict_races": 51246,
+      "total_boats": 335952,
+      "total_races": 55992
+    },
+    "2024": {
+      "course_update_races": 51392,
+      "excluded_boats": 28032,
+      "excluded_non_numeric_or_incomplete": 3976,
+      "excluded_races": 4672,
+      "excluded_result_records_absent": 696,
+      "overall_update_races": 51392,
+      "strict_boats": 308352,
+      "strict_races": 51392,
+      "total_boats": 336384,
+      "total_races": 56064
+    }
+  },
+  "metrics": {
+    "2023": {
+      "course": {
+        "races": 51246,
+        "combined_log_loss": 1.4888273151159401,
+        "ranking": {
+          "pl_full_ranking_log_loss_per_race": 6.020394610497963,
+          "pairwise_log_loss": 0.5936149160415682,
+          "pairwise_comparisons": 768690,
+          "spearman_mean": 0.43588740027096584,
+          "spearman_evaluable_races": 51246,
+          "spearman_undefined_tied_races": 0
+        },
+        "first": {
+          "log_loss": 1.2809271323802165,
+          "brier": 0.6079868395131758,
+          "top1_hit_rate": 0.563439097685673,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 148787,
+              "mean_probability": 0.06549702682124607,
+              "event_rate": 0.045555055213157065
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 96962,
+              "mean_probability": 0.13604114786681912,
+              "event_rate": 0.12789546420247108
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 18352,
+              "mean_probability": 0.2408664889222959,
+              "event_rate": 0.32699433304272013
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 8887,
+              "mean_probability": 0.3475718652621182,
+              "event_rate": 0.4292787217283673
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 7527,
+              "mean_probability": 0.4501670926767955,
+              "event_rate": 0.516141889198884
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 8784,
+              "mean_probability": 0.5513560764331096,
+              "event_rate": 0.5903916211293261
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 10644,
+              "mean_probability": 0.6510628887918344,
+              "event_rate": 0.6805712138293875
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 6787,
+              "mean_probability": 0.7409221986265473,
+              "event_rate": 0.782378075733019
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 746,
+              "mean_probability": 0.8186960955133785,
+              "event_rate": 0.839142091152815
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.02443721076841938
+        },
+        "exact_second": {
+          "log_loss": 1.696727497851664,
+          "brier": 0.8017052395329722,
+          "top1_hit_rate": 0.27959255356515633,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 31304,
+              "mean_probability": 0.08708743626640221,
+              "event_rate": 0.055424226935854845
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 197825,
+              "mean_probability": 0.14777487584181243,
+              "event_rate": 0.14444584860356374
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 70565,
+              "mean_probability": 0.23710347019935948,
+              "event_rate": 0.2588818819528095
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 7657,
+              "mean_probability": 0.32690517752894294,
+              "event_rate": 0.3421705628836359
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 125,
+              "mean_probability": 0.4154461020179192,
+              "event_rate": 0.384
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.01075648623660163
+        }
+      },
+      "overall": {
+        "races": 51246,
+        "combined_log_loss": 1.6646829188923578,
+        "ranking": {
+          "pl_full_ranking_log_loss_per_race": 6.106070410270437,
+          "pairwise_log_loss": 0.6164492711915149,
+          "pairwise_comparisons": 768690,
+          "spearman_mean": 0.3932739001232232,
+          "spearman_evaluable_races": 51246,
+          "spearman_undefined_tied_races": 0
+        },
+        "first": {
+          "log_loss": 1.6013284554882254,
+          "brier": 0.7690691068334483,
+          "top1_hit_rate": 0.3457440580728252,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 80229,
+              "mean_probability": 0.06762547248085912,
+              "event_rate": 0.05650076655573421
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 137275,
+              "mean_probability": 0.14602698194533625,
+              "event_rate": 0.14103806228373703
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 60302,
+              "mean_probability": 0.24128344312758238,
+              "event_rate": 0.26481708732712017
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 20775,
+              "mean_probability": 0.341527394771425,
+              "event_rate": 0.36163658243080626
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 6926,
+              "mean_probability": 0.4391904823721714,
+              "event_rate": 0.4125036095870632
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 1664,
+              "mean_probability": 0.5367676138112045,
+              "event_rate": 0.4933894230769231
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 289,
+              "mean_probability": 0.632558462827359,
+              "event_rate": 0.6262975778546713
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 15,
+              "mean_probability": 0.7260840069257192,
+              "event_rate": 0.6666666666666666
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 1,
+              "mean_probability": 0.8009617788915487,
+              "event_rate": 1.0
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.011949506461417018
+        },
+        "exact_second": {
+          "log_loss": 1.72803738229649,
+          "brier": 0.8153107404458225,
+          "top1_hit_rate": 0.22715919291261757,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 50220,
+              "mean_probability": 0.06990511339630638,
+              "event_rate": 0.07407407407407407
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 159882,
+              "mean_probability": 0.15030802287138395,
+              "event_rate": 0.15934251510488986
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 95310,
+              "mean_probability": 0.24187317623920493,
+              "event_rate": 0.22522295666771588
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 2054,
+              "mean_probability": 0.3148407223086693,
+              "event_rate": 0.28140214216163584
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 10,
+              "mean_probability": 0.4202621534216237,
+              "event_rate": 0.6
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.010769069917526236
+        }
+      },
+      "short50": {
+        "races": 51246,
+        "combined_log_loss": 1.7710677229818341,
+        "ranking": {
+          "pl_full_ranking_log_loss_per_race": 6.478894713125091,
+          "pairwise_log_loss": 0.6784083002715077,
+          "pairwise_comparisons": 768690,
+          "spearman_mean": 0.35934820277640006,
+          "spearman_evaluable_races": 51246,
+          "spearman_undefined_tied_races": 0
+        },
+        "first": {
+          "log_loss": 1.7633784147791418,
+          "brier": 0.8238875891163394,
+          "top1_hit_rate": 0.3176052765093861,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 307431,
+              "mean_probability": 0.16666151408461358,
+              "event_rate": 0.1665902267500675
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 45,
+              "mean_probability": 0.2018680767513316,
+              "event_rate": 0.6888888888888889
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.00014255380287576464
+        },
+        "exact_second": {
+          "log_loss": 1.7787570311845267,
+          "brier": 0.8290658845471657,
+          "top1_hit_rate": 0.2234906139015728,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 307476,
+              "mean_probability": 0.16666666666666852,
+              "event_rate": 0.16666666666666666
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 1.8596235662471372e-15
+        }
+      }
+    },
+    "2024": {
+      "course": {
+        "races": 51392,
+        "combined_log_loss": 1.4894520221144478,
+        "ranking": {
+          "pl_full_ranking_log_loss_per_race": 6.028040514851509,
+          "pairwise_log_loss": 0.5935773233389119,
+          "pairwise_comparisons": 770880,
+          "spearman_mean": 0.4366227094823043,
+          "spearman_evaluable_races": 51392,
+          "spearman_undefined_tied_races": 0
+        },
+        "first": {
+          "log_loss": 1.2813322008437429,
+          "brier": 0.6091213715193682,
+          "top1_hit_rate": 0.5613908779576587,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 153327,
+              "mean_probability": 0.06438644345953061,
+              "event_rate": 0.046671492952969795
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 92301,
+              "mean_probability": 0.13608218416751663,
+              "event_rate": 0.1301827715842732
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 18299,
+              "mean_probability": 0.24149621713404384,
+              "event_rate": 0.3200721350893491
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 9230,
+              "mean_probability": 0.346987346566659,
+              "event_rate": 0.4221018418201517
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 7483,
+              "mean_probability": 0.4507811610225574,
+              "event_rate": 0.5028731792062007
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 8907,
+              "mean_probability": 0.5514621233818621,
+              "event_rate": 0.5856068260918379
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 10643,
+              "mean_probability": 0.6509916424201392,
+              "event_rate": 0.6696420182279432
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 7226,
+              "mean_probability": 0.7410772898636988,
+              "event_rate": 0.7722114586216441
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 936,
+              "mean_probability": 0.821440714702649,
+              "event_rate": 0.8344017094017094
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.021149218407310218
+        },
+        "exact_second": {
+          "log_loss": 1.6975718433851528,
+          "brier": 0.8021357372936598,
+          "top1_hit_rate": 0.2772805105853051,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 36267,
+              "mean_probability": 0.08585654822759053,
+              "event_rate": 0.05961342267074751
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 191533,
+              "mean_probability": 0.14769216106898259,
+              "event_rate": 0.14581299306124793
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 71509,
+              "mean_probability": 0.23793066848504835,
+              "event_rate": 0.255576221174957
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 8899,
+              "mean_probability": 0.3276788271892681,
+              "event_rate": 0.33453196988425665
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 144,
+              "mean_probability": 0.41749877465562296,
+              "event_rate": 0.3402777777777778
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.008579817508208989
+        }
+      },
+      "overall": {
+        "races": 51392,
+        "combined_log_loss": 1.668117614058756,
+        "ranking": {
+          "pl_full_ranking_log_loss_per_race": 6.122104289466449,
+          "pairwise_log_loss": 0.6189741987670292,
+          "pairwise_comparisons": 770880,
+          "spearman_mean": 0.3862880270414612,
+          "spearman_evaluable_races": 51392,
+          "spearman_undefined_tied_races": 0
+        },
+        "first": {
+          "log_loss": 1.608541723207264,
+          "brier": 0.7713667728267594,
+          "top1_hit_rate": 0.34375,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 77659,
+              "mean_probability": 0.06810205315064559,
+              "event_rate": 0.05831906153826343
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 140716,
+              "mean_probability": 0.145757198690577,
+              "event_rate": 0.13918104551010546
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 60823,
+              "mean_probability": 0.2411200158818101,
+              "event_rate": 0.26560676060043076
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 20914,
+              "mean_probability": 0.3410260525189817,
+              "event_rate": 0.36262790475279716
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 6559,
+              "mean_probability": 0.43847795422823205,
+              "event_rate": 0.4157645982619302
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 1495,
+              "mean_probability": 0.5361468196012504,
+              "event_rate": 0.4816053511705686
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 178,
+              "mean_probability": 0.6280254115886995,
+              "event_rate": 0.4943820224719101
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 8,
+              "mean_probability": 0.7157718399945863,
+              "event_rate": 0.5
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.01259040584551904
+        },
+        "exact_second": {
+          "log_loss": 1.7276935049102478,
+          "brier": 0.8152176999886716,
+          "top1_hit_rate": 0.22559931506849315,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 48495,
+              "mean_probability": 0.07011971316692013,
+              "event_rate": 0.07134756160428911
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 163476,
+              "mean_probability": 0.15040970251862926,
+              "event_rate": 0.15954023832244488
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 94524,
+              "mean_probability": 0.24142912251454315,
+              "event_rate": 0.22566755532986332
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 1853,
+              "mean_probability": 0.3133758162332689,
+              "event_rate": 0.28062601187263897
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 4,
+              "mean_probability": 0.40905424753298986,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.010067507141415742
+        }
+      },
+      "short50": {
+        "races": 51392,
+        "combined_log_loss": 1.771368256451876,
+        "ranking": {
+          "pl_full_ranking_log_loss_per_race": 6.480002836730121,
+          "pairwise_log_loss": 0.678615286588734,
+          "pairwise_comparisons": 770880,
+          "spearman_mean": 0.35015907153450504,
+          "spearman_evaluable_races": 51392,
+          "spearman_undefined_tied_races": 0
+        },
+        "first": {
+          "log_loss": 1.763840017659076,
+          "brier": 0.824051441309304,
+          "top1_hit_rate": 0.31598303237858033,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 308335,
+              "mean_probability": 0.16666473772874807,
+              "event_rate": 0.1666369370976373
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 17,
+              "mean_probability": 0.20165249447516864,
+              "event_rate": 0.7058823529411765
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 5.559819682525546e-05
+        },
+        "exact_second": {
+          "log_loss": 1.7788964952446762,
+          "brier": 0.8291177524464995,
+          "top1_hit_rate": 0.21985912204234123,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 308352,
+              "mean_probability": 0.16666666666666555,
+              "event_rate": 0.16666666666666666
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 1.1102230246251565e-15
+        }
+      }
+    }
+  },
+  "course_strata": {
+    "2023": {
+      "first": {
+        "1": {
+          "boats": 51246,
+          "events": 28472,
+          "binary_log_loss": 0.6440831681000355,
+          "binary_brier": 0.2260232090166364,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 80,
+              "mean_probability": 0.07737256204861036,
+              "event_rate": 0.2375
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 2259,
+              "mean_probability": 0.1750691644726772,
+              "event_rate": 0.23992917220008853
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 7254,
+              "mean_probability": 0.2506952807316877,
+              "event_rate": 0.3531844499586435
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 7454,
+              "mean_probability": 0.3504430634041953,
+              "event_rate": 0.430775422591897
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 7360,
+              "mean_probability": 0.4505577569269688,
+              "event_rate": 0.5172554347826087
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 8729,
+              "mean_probability": 0.5513839816648811,
+              "event_rate": 0.59273685416428
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 10591,
+              "mean_probability": 0.6510798169111353,
+              "event_rate": 0.6825606647153243
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 6773,
+              "mean_probability": 0.7409247750524802,
+              "event_rate": 0.7828141148678577
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 746,
+              "mean_probability": 0.8186960955133785,
+              "event_rate": 0.839142091152815
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.05826464104369705
+        },
+        "2": {
+          "boats": 51246,
+          "events": 7026,
+          "binary_log_loss": 0.371150216476541,
+          "binary_brier": 0.111322525875159,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 19486,
+              "mean_probability": 0.0731336867287219,
+              "event_rate": 0.060607615724109616
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 25395,
+              "mean_probability": 0.14072509198994865,
+              "event_rate": 0.14904508761567237
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 5310,
+              "mean_probability": 0.23600111408710245,
+              "event_rate": 0.30621468926553674
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 837,
+              "mean_probability": 0.33442020952654017,
+              "event_rate": 0.4241338112305854
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 118,
+              "mean_probability": 0.4348174479484532,
+              "event_rate": 0.4576271186440678
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 39,
+              "mean_probability": 0.5475492799902125,
+              "event_rate": 0.1282051282051282
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 48,
+              "mean_probability": 0.6498950287380644,
+              "event_rate": 0.25
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 13,
+              "mean_probability": 0.7393929761058697,
+              "event_rate": 0.6153846153846154
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.01840429907632606
+        },
+        "3": {
+          "boats": 51246,
+          "events": 6410,
+          "binary_log_loss": 0.35321526339284626,
+          "binary_brier": 0.10385953984393,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 23421,
+              "mean_probability": 0.07089710149482947,
+              "event_rate": 0.06656419452627983
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 23746,
+              "mean_probability": 0.13833656103599368,
+              "event_rate": 0.14718268339930934
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 3583,
+              "mean_probability": 0.23447650235717707,
+              "event_rate": 0.31956461066145686
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 446,
+              "mean_probability": 0.33068217632493396,
+              "event_rate": 0.4260089686098655
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 36,
+              "mean_probability": 0.4329112425570829,
+              "event_rate": 0.4722222222222222
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 11,
+              "mean_probability": 0.5394793838072208,
+              "event_rate": 0.2727272727272727
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 2,
+              "mean_probability": 0.6126101467526583,
+              "event_rate": 0.5
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 1,
+              "mean_probability": 0.743351958553071,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.012961899814715133
+        },
+        "4": {
+          "boats": 51246,
+          "events": 5424,
+          "binary_log_loss": 0.3193524873506402,
+          "binary_brier": 0.09081461412772371,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 28348,
+              "mean_probability": 0.06828144156242098,
+              "event_rate": 0.06374347396641739
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 20919,
+              "mean_probability": 0.1347275638042609,
+              "event_rate": 0.1420239973230078
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 1827,
+              "mean_probability": 0.23240376533761556,
+              "event_rate": 0.31746031746031744
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 136,
+              "mean_probability": 0.32778956728327246,
+              "event_rate": 0.4117647058823529
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 11,
+              "mean_probability": 0.41470520808078537,
+              "event_rate": 0.6363636363636364
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 2,
+              "mean_probability": 0.5727960035908701,
+              "event_rate": 0.5
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 3,
+              "mean_probability": 0.6356219071723282,
+              "event_rate": 0.6666666666666666
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.008796243741259879
+        },
+        "5": {
+          "boats": 51246,
+          "events": 3029,
+          "binary_log_loss": 0.22004583666762584,
+          "binary_brier": 0.055117003444091664,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 36943,
+              "mean_probability": 0.06259739438557141,
+              "event_rate": 0.044230300733562516
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 14007,
+              "mean_probability": 0.12702843036673447,
+              "event_rate": 0.09373884486328264
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 283,
+              "mean_probability": 0.22402187274594432,
+              "event_rate": 0.2756183745583039
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 9,
+              "mean_probability": 0.33074507881247817,
+              "event_rate": 0.1111111111111111
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.40617176853824893,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 3,
+              "mean_probability": 0.5489040956695076,
+              "event_rate": 1.0
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.022697590839026543
+        },
+        "6": {
+          "boats": 51246,
+          "events": 885,
+          "binary_log_loss": 0.11913232515417822,
+          "binary_brier": 0.02084994720564148,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 40509,
+              "mean_probability": 0.0593738291437653,
+              "event_rate": 0.014268434175121579
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 10636,
+              "mean_probability": 0.1258963629282877,
+              "event_rate": 0.027735990974050394
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 95,
+              "mean_probability": 0.21624363439059394,
+              "event_rate": 0.10526315789473684
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 5,
+              "mean_probability": 0.3437038190186932,
+              "event_rate": 0.4
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.4414229483487624,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.05624778929107478
+        }
+      },
+      "exact_second": {
+        "1": {
+          "boats": 51246,
+          "events": 9038,
+          "binary_log_loss": 0.464051450970056,
+          "binary_brier": 0.14473280640253605,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 2983,
+              "mean_probability": 0.08779258359560152,
+              "event_rate": 0.11733154542406973
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 37714,
+              "mean_probability": 0.15439904934486104,
+              "event_rate": 0.1704141698043167
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 10375,
+              "mean_probability": 0.22707177624433353,
+              "event_rate": 0.2156144578313253
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 173,
+              "mean_probability": 0.31797947109034375,
+              "event_rate": 0.13872832369942195
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.4013270137187211,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.016438169421799556
+        },
+        "2": {
+          "boats": 51246,
+          "events": 12898,
+          "binary_log_loss": 0.5561184571584987,
+          "binary_brier": 0.18534425384675302,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 110,
+              "mean_probability": 0.08940630575971271,
+              "event_rate": 0.12727272727272726
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 18236,
+              "mean_probability": 0.1674441138915884,
+              "event_rate": 0.18638955911384075
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 26976,
+              "mean_probability": 0.24514769928932112,
+              "event_rate": 0.27479982206405695
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 5821,
+              "mean_probability": 0.32881719392548436,
+              "event_rate": 0.34942449750901905
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 103,
+              "mean_probability": 0.4145993921956657,
+              "event_rate": 0.36893203883495146
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.0248645545206769
+        },
+        "3": {
+          "boats": 51246,
+          "events": 11064,
+          "binary_log_loss": 0.5137345457014282,
+          "binary_brier": 0.16664305167469176,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 177,
+              "mean_probability": 0.0926703119157981,
+              "event_rate": 0.15254237288135594
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 28330,
+              "mean_probability": 0.16265884017136667,
+              "event_rate": 0.17469114013413342
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 21327,
+              "mean_probability": 0.2371401135695687,
+              "event_rate": 0.2629530641909317
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 1391,
+              "mean_probability": 0.32189400327915374,
+              "event_rate": 0.3378864126527678
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 21,
+              "mean_probability": 0.4202713496365528,
+              "event_rate": 0.47619047619047616
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.018058091436096928
+        },
+        "4": {
+          "boats": 51246,
+          "events": 8878,
+          "binary_log_loss": 0.4516369773166948,
+          "binary_brier": 0.14052742648931935,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 1279,
+              "mean_probability": 0.0923247940367639,
+              "event_rate": 0.09147771696637999
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 40008,
+              "mean_probability": 0.15081892197202632,
+              "event_rate": 0.15484403119376125
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 9700,
+              "mean_probability": 0.22887131751388637,
+              "event_rate": 0.25536082474226807
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 259,
+              "mean_probability": 0.3170080010253891,
+              "event_rate": 0.3436293436293436
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.008312124442218299
+        },
+        "5": {
+          "boats": 51246,
+          "events": 6276,
+          "binary_log_loss": 0.3640921493844163,
+          "binary_brier": 0.10567883372136305,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 7391,
+              "mean_probability": 0.08970668684863713,
+              "event_rate": 0.06778514409416858
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 41935,
+              "mean_probability": 0.13617470917300048,
+              "event_rate": 0.1263383808274711
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 1910,
+              "mean_probability": 0.22114386191358879,
+              "event_rate": 0.2481675392670157
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 10,
+              "mean_probability": 0.320975331155031,
+              "event_rate": 0.3
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.012222095943578965
+        },
+        "6": {
+          "boats": 51246,
+          "events": 3092,
+          "binary_log_loss": 0.23943381566635827,
+          "binary_brier": 0.05877886739830541,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 19364,
+              "mean_probability": 0.08556894004874034,
+              "event_rate": 0.03749225366659781
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 31602,
+              "mean_probability": 0.12671582191022218,
+              "event_rate": 0.0730017087526106
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 277,
+              "mean_probability": 0.22494080078067125,
+              "event_rate": 0.21299638989169675
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 3,
+              "mean_probability": 0.32940862060438697,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.05137429627265949
+        }
+      }
+    },
+    "2024": {
+      "first": {
+        "1": {
+          "boats": 51392,
+          "events": 28591,
+          "binary_log_loss": 0.6473807011196525,
+          "binary_brier": 0.22738814220795203,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 92,
+              "mean_probability": 0.07619733028400026,
+              "event_rate": 0.31521739130434784
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 2099,
+              "mean_probability": 0.1724245069229113,
+              "event_rate": 0.2625059552167699
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 6824,
+              "mean_probability": 0.2518463456546595,
+              "event_rate": 0.3585873388042204
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 7514,
+              "mean_probability": 0.3500934516423996,
+              "event_rate": 0.4264040457812084
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 7275,
+              "mean_probability": 0.45111642850992795,
+              "event_rate": 0.5061168384879725
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 8845,
+              "mean_probability": 0.5514807992479237,
+              "event_rate": 0.5883550028264556
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 10599,
+              "mean_probability": 0.6509812808496082,
+              "event_rate": 0.6717614869327295
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 7208,
+              "mean_probability": 0.7410950610592832,
+              "event_rate": 0.7731687014428413
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 936,
+              "mean_probability": 0.821440714702649,
+              "event_rate": 0.8344017094017094
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.0525902310794422
+        },
+        "2": {
+          "boats": 51392,
+          "events": 7011,
+          "binary_log_loss": 0.37070985081593955,
+          "binary_brier": 0.11114150319822375,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 20164,
+              "mean_probability": 0.07234306889370522,
+              "event_rate": 0.0623884149970244
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 24638,
+              "mean_probability": 0.14036269304719617,
+              "event_rate": 0.14851043104148065
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 5335,
+              "mean_probability": 0.23701823384624565,
+              "event_rate": 0.3034676663542643
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 995,
+              "mean_probability": 0.3333552281234391,
+              "event_rate": 0.39798994974874374
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 152,
+              "mean_probability": 0.4410109225083533,
+              "event_rate": 0.3618421052631579
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 50,
+              "mean_probability": 0.5506380275874592,
+              "event_rate": 0.22
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 41,
+              "mean_probability": 0.6562349054445568,
+              "event_rate": 0.14634146341463414
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 17,
+              "mean_probability": 0.7313421782508511,
+              "event_rate": 0.4117647058823529
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.01702974957342475
+        },
+        "3": {
+          "boats": 51392,
+          "events": 6330,
+          "binary_log_loss": 0.35027820717885344,
+          "binary_brier": 0.10269179845645672,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 23980,
+              "mean_probability": 0.07032774355124222,
+              "event_rate": 0.06513761467889909
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 23092,
+              "mean_probability": 0.13818057415470086,
+              "event_rate": 0.14892603499047288
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 3755,
+              "mean_probability": 0.2354406204169835,
+              "event_rate": 0.29427430093209056
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 511,
+              "mean_probability": 0.3339653189251236,
+              "event_rate": 0.3972602739726027
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 41,
+              "mean_probability": 0.4324653641608416,
+              "event_rate": 0.4878048780487805
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 10,
+              "mean_probability": 0.5391833813109873,
+              "event_rate": 0.1
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 2,
+              "mean_probability": 0.6210619462517747,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 1,
+              "mean_probability": 0.7784794095094111,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.012347038868431914
+        },
+        "4": {
+          "boats": 51392,
+          "events": 5492,
+          "binary_log_loss": 0.32187249212821206,
+          "binary_brier": 0.09160270262669551,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 28929,
+              "mean_probability": 0.06768698051627657,
+              "event_rate": 0.06664592623319161
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 20276,
+              "mean_probability": 0.13457528111303652,
+              "event_rate": 0.14130005918327085
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 1981,
+              "mean_probability": 0.23330588455332008,
+              "event_rate": 0.30641090358404843
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 191,
+              "mean_probability": 0.33182275117011784,
+              "event_rate": 0.45549738219895286
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 13,
+              "mean_probability": 0.436417013360369,
+              "event_rate": 0.38461538461538464
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 2,
+              "mean_probability": 0.5508642109396449,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.006551336907094111
+        },
+        "5": {
+          "boats": 51392,
+          "events": 3017,
+          "binary_log_loss": 0.21848083454139058,
+          "binary_brier": 0.05473079308062757,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 38384,
+              "mean_probability": 0.0614145033540375,
+              "event_rate": 0.044836390162567734
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 12695,
+              "mean_probability": 0.12785865319956974,
+              "event_rate": 0.09617959826703426
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 296,
+              "mean_probability": 0.2247310329308621,
+              "event_rate": 0.22972972972972974
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 15,
+              "mean_probability": 0.33243399084262315,
+              "event_rate": 0.4
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.45446442727826575,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 1,
+              "mean_probability": 0.6056995368136622,
+              "event_rate": 1.0
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.02027245035005844
+        },
+        "6": {
+          "boats": 51392,
+          "events": 951,
+          "binary_log_loss": 0.11978969398662265,
+          "binary_brier": 0.02156643194940886,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 41778,
+              "mean_probability": 0.05755503313478587,
+              "event_rate": 0.015749916223849872
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 9501,
+              "mean_probability": 0.12605691915811368,
+              "event_rate": 0.029575834122723924
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 108,
+              "mean_probability": 0.21545059541957123,
+              "event_rate": 0.10185185185185185
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 4,
+              "mean_probability": 0.345406969894261,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.4307847692405912,
+              "event_rate": 1.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.05209800106323888
+        }
+      },
+      "exact_second": {
+        "1": {
+          "boats": 51392,
+          "events": 9193,
+          "binary_log_loss": 0.46879587014650526,
+          "binary_brier": 0.14654134245042288,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 3115,
+              "mean_probability": 0.08717393627325602,
+              "event_rate": 0.1319422150882825
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 36532,
+              "mean_probability": 0.15461493549684888,
+              "event_rate": 0.17020694185919194
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 11484,
+              "mean_probability": 0.2291182077821818,
+              "event_rate": 0.21839080459770116
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 260,
+              "mean_probability": 0.31818049613343924,
+              "event_rate": 0.2153846153846154
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.4177770427805588,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.016722419231514143
+        },
+        "2": {
+          "boats": 51392,
+          "events": 12802,
+          "binary_log_loss": 0.5536647576054945,
+          "binary_brier": 0.1841731120718225,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 156,
+              "mean_probability": 0.08890883573285074,
+              "event_rate": 0.1858974358974359
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 18432,
+              "mean_probability": 0.16655768798003226,
+              "event_rate": 0.18473307291666666
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 26327,
+              "mean_probability": 0.2456394030652087,
+              "event_rate": 0.2722680138261101
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 6364,
+              "mean_probability": 0.32958784907664906,
+              "event_rate": 0.33940917661847897
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 113,
+              "mean_probability": 0.4161988945477117,
+              "event_rate": 0.35398230088495575
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.021807358262765964
+        },
+        "3": {
+          "boats": 51392,
+          "events": 11307,
+          "binary_log_loss": 0.5187282416815422,
+          "binary_brier": 0.16884734114340952,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 238,
+              "mean_probability": 0.09109040085066022,
+              "event_rate": 0.07563025210084033
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 27771,
+              "mean_probability": 0.16193450423427835,
+              "event_rate": 0.17863958805948651
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 21411,
+              "mean_probability": 0.23836749920223377,
+              "event_rate": 0.2642099855214609
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 1943,
+              "mean_probability": 0.32386019828490964,
+              "event_rate": 0.34071024189397836
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 29,
+              "mean_probability": 0.42273746132151485,
+              "event_rate": 0.3103448275862069
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.020565630720813154
+        },
+        "4": {
+          "boats": 51392,
+          "events": 8684,
+          "binary_log_loss": 0.4460434181340397,
+          "binary_brier": 0.13811339059196556,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 1707,
+              "mean_probability": 0.09151133150249832,
+              "event_rate": 0.0837727006444054
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 39394,
+              "mean_probability": 0.14976596314421597,
+              "event_rate": 0.1535513022287658
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 9980,
+              "mean_probability": 0.23050591604480053,
+              "event_rate": 0.2403807615230461
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 310,
+              "mean_probability": 0.3207470717804843,
+              "event_rate": 0.3
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 1,
+              "mean_probability": 0.4121850454138064,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.005209453337908151
+        },
+        "5": {
+          "boats": 51392,
+          "events": 6344,
+          "binary_log_loss": 0.3658462445338733,
+          "binary_brier": 0.10638632322508357,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 9096,
+              "mean_probability": 0.08849480036674938,
+              "event_rate": 0.07080035180299032
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 40216,
+              "mean_probability": 0.13589427907060353,
+              "event_rate": 0.12912771036403423
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 2060,
+              "mean_probability": 0.22194201199537122,
+              "event_rate": 0.24320388349514563
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 20,
+              "mean_probability": 0.32380835126506397,
+              "event_rate": 0.3
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.00928838444804989
+        },
+        "6": {
+          "boats": 51392,
+          "events": 3062,
+          "binary_log_loss": 0.2371134533127277,
+          "binary_brier": 0.05807422781095146,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "observations": 21955,
+              "mean_probability": 0.08405851889279461,
+              "event_rate": 0.04176725119562742
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "observations": 29188,
+              "mean_probability": 0.1270196916989646,
+              "event_rate": 0.07201589694394957
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "observations": 247,
+              "mean_probability": 0.2214817723577437,
+              "event_rate": 0.17408906882591094
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "observations": 2,
+              "mean_probability": 0.3108790469812932,
+              "event_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "observations": 0,
+              "mean_probability": null,
+              "event_rate": null
+            }
+          ],
+          "calibration_ece_10bin": 0.049546297078670025
+        }
+      }
+    }
+  }
+}
