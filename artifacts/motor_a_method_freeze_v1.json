@@ -1,0 +1,138 @@
+{
+  "freeze_id": "MOTOR_A_METHOD_FREEZE_V1",
+  "status": "METHOD_FROZEN",
+  "version": "v1",
+  "frozen_on_jst": "2026-09-23",
+  "scope": "Motor A retrospective method only; no Prediction integration, Motor B, Rating v2, or 2025 holdout evaluation",
+  "reference_implementation": "scripts/motor_a_v1.py",
+  "development_period": {
+    "start_inclusive": "2017-01-01",
+    "end_inclusive": "2024-12-31",
+    "fit_period": "2017-01-01 through 2022-12-31",
+    "separate_diagnostics": ["2023", "2024"],
+    "independent_holdout_2025": "SEALED_NOT_EVALUATED"
+  },
+  "residual": {
+    "formula": "finish_point[finish_position] - core.race_entry.national_win_rate",
+    "finish_points": {"1": 10, "2": 8, "3": 6, "4": 4, "5": 2, "6": 1},
+    "national_win_rate_source": "brd_l3.zenkoku_ritsu_1, carried as core.race_entry.national_win_rate with VALID status and raw lineage",
+    "national_win_rate_band_adjustment": "NONE",
+    "rating_adjustment": "NONE"
+  },
+  "motor_identity": {
+    "key": ["venue_code", "generation_start_year", "motor_no"],
+    "canonical_join": "core.race_entry.motor_id -> core.motor",
+    "generation_rule": "existing venue-specific user-fixed-month-day-v1; unchanged",
+    "cross_generation_or_cross_venue_pooling": false
+  },
+  "eligibility": {
+    "unit": "canonical race entry",
+    "ordered_conditions": [
+      "motor identity present",
+      "player identity present",
+      "canonical individual result present and finish_state is not NO_INDIVIDUAL_RESULT",
+      "core.boat_finish_state.finish_state = NUMERIC_VALID and finish_position in 1..6",
+      "core.race_entry.national_win_rate_status = VALID and national_win_rate is non-NULL"
+    ],
+    "special_or_duplicate_unresolved_finish": "EXCLUDE",
+    "missing_individual_result": "EXCLUDE",
+    "unresolved_national_win_rate": "EXCLUDE",
+    "rating_strict_reused": false,
+    "ineligible_entry_visit": "still participates in meeting/motor continuity tracking, but adds no residual"
+  },
+  "meeting_identity": {
+    "key": ["venue_code", "source_confirmed_meeting_start_date"],
+    "source_tables": ["brd_l1", "brd_b1", "brd_k1"],
+    "source_grain": "venue_code x race_date",
+    "algorithm": "scripts/motor_a_v1.py build_meeting_days, ported from development motor_a_meeting_supported.py build",
+    "start": "L1 day marker 1, or blank L1 marker with same-day B1/K1 day marker 1 agreement",
+    "end": "L1 final-day marker 9",
+    "validation": "same-day B1/K1 agreement, L1 nonblank day agreement except final 9, stable L1 title, supported day-number transitions",
+    "repeated_blank_start": "same title and consecutive blank L1 / B1 day-1 signals stay in one meeting, as in development",
+    "date_gap_inference": false,
+    "canonical_mapping": "core.race venue_code x race_date must match L1 venue-day",
+    "certified": "no reconstruction reason; final 9 confirmed",
+    "unknown_no_final_9": "start known: Current is scored through D-1; this meeting is never appended to completed Base history",
+    "unknown_no_start_1": "start unknown: Base and Current are NOT_EVALUABLE on its rows",
+    "other_unknown_reasons": "Current is unknown unless the sole reason is NO_FINAL_9; never append to completed Base history",
+    "uncertain_intervening_meeting": "clear earlier completed Base history when its start is unknown, or when the next meeting follows a noncertified prior meeting"
+  },
+  "features": {
+    "motor_a_base3": {
+      "definition": "arithmetic mean of the per-meeting mean residuals for the most recent at most three completed, certified, eligible-used meetings of the same motor generation before the current meeting",
+      "meeting_weight": "EQUAL; do not pool all races across meetings",
+      "selection": "only meetings with one or more eligible uses; require source final-day 9 before D",
+      "base_n_meetings": "number of selected meetings, 0..3",
+      "base_n_uses": "sum of eligible uses across the selected meetings",
+      "base_residual_sum": "sum of all eligible residuals in the selected meetings; companion quantity, not an additional v1 score",
+      "zero_history": {"status": "NOT_EVALUABLE", "score": null, "base_n_meetings": 0, "base_n_uses": 0, "base_residual_sum": 0}
+    },
+    "motor_a_current": {
+      "definition": "mean residual of eligible uses of the same motor generation in the current source-identified meeting with race_date < D",
+      "current_n_uses": "number of those eligible uses",
+      "zero_history": {"status": "NOT_EVALUABLE", "score": null, "current_n_uses": 0}
+    },
+    "type": "two separate continuous residual scores, not probabilities and not an additive combined score",
+    "same_player": "include current player's eligible prior uses in the same meeting; no exclusion",
+    "fallback_or_imputation": "NONE; do not use previous generation, same motor number, or venue average",
+    "history_quantity": "Current residual sum is current mean x current_n_uses; Base residual sum is retained separately because its equal-meeting-weight mean x base_n_uses is not a pooled-use sum"
+  },
+  "time_boundary": {
+    "prediction_date": "D",
+    "common_state": "every D race uses the same D-1 residual state",
+    "result_update": "apply all D eligible results only after all D entries are scored; usable from D+1",
+    "base_finalization": "a certified meeting becomes completed only after its final-day D results are committed; first available for Base after D"
+  },
+  "development_evidence": {
+    "meeting_map_sha256": "42c6f5eb5400087f49bc0f6c3dce8fb1814a200e670fa3eb3b809524fc132204",
+    "source_venue_days": {"l1": 37102, "b1": 37196, "k1": 37102},
+    "canonical_venue_days": 37102,
+    "canonical_races": 445224,
+    "meeting_counts": {"certified": 6654, "unknown": 55},
+    "venue_day_counts": {"certified": 36889, "unknown": 213, "unknown_no_final_9_start_known": 156, "unknown_no_start_1": 57},
+    "entry_counts": {"all": 2671344, "eligible": 2591688, "excluded": 79656, "eligible_meeting_unknown": 4040},
+    "excluded_first_reason_counts": {"special_finish": 39229, "missing_result": 32784, "duplicate_finish_related": 2609, "national_win_rate_unresolved": 5034},
+    "motor_meeting_pairs_with_eligible_use": 308144,
+    "distinct_eligible_players_per_motor_meeting": 1,
+    "group2_new_user_first_entry_base3": {
+      "2023": {"n": 36465, "pearson": 0.06089678004456187, "mse": 8.852761202983599},
+      "2024": {"n": 36296, "pearson": 0.050298795090075996, "mse": 8.896758560119377}
+    },
+    "group1_same_player_following_entry_current_pearson": {"2023": 0.0895023596887304, "2024": 0.08764311083667187},
+    "group3_new_user_following_entry_current_pearson": {"2023": 0.09023022148363302, "2024": 0.08803324170418987},
+    "same_cohort_base3_current": {
+      "2023": {"n": 255181, "mse_current_only": 8.946654669969265, "mse_both": 8.933428325013265},
+      "2024": {"n": 254720, "mse_current_only": 8.951864380039229, "mse_both": 8.937880785539832}
+    },
+    "group4_cold_start": {
+      "2023": {"eligible": 326374, "base_zero": 12097, "current_zero": 61550, "both_observed": 255181},
+      "2024": {"eligible": 326431, "base_zero": 12844, "current_zero": 61649, "both_observed": 254720}
+    },
+    "analysis": "2017-2022 linear diagnostic fit, separately applied to 2023 and 2024; continuous next-residual MSE, not calibrated probability quality",
+    "local_development_artifact_sha256": {
+      "motor_a_meeting_supported.py": "12254d593ec98d447e5111cc90c659cf12eeae8cf37bb3bb142b84fda2dabd64",
+      "motor_a_meeting_extract.py": "00d77999dc80ed31bcc810fb04470040b5a36a6a514379daa2fa1699675566b5",
+      "motor_a_meeting_analyze.py": "00ba9b69a498c3a473c70af9170400a8b43ab1b8973c44588df8d62802cd9eac",
+      "motor_a_meeting_identity_supported.json": "d6bf8761449563590f3a2bb50e8d287f6819702f0852558f491324c05bbe6da5",
+      "motor_a_meeting_extract.json": "d5fa28c6845c4875a0030d93fd865fa3f1e4a9cb05cb8fa5e537b0ae40648be8",
+      "motor_a_meeting_analysis.json": "293fce65e19bac8efbdc45227ae1a338efdbbd674e45c6205cde604df77badf2"
+    }
+  },
+  "race_recent5_comparator": {
+    "status": "DEVELOPMENT_COMPARATOR_NOT_V1_FEATURE",
+    "definition": "mean of the most recent at most five eligible uses of the same motor generation before D",
+    "same_base_current_observed_cohort_mse": {
+      "2023": {"n": 255181, "race5": 8.938484895192992, "base3_plus_current": 8.933428325013265},
+      "2024": {"n": 254720, "race5": 8.937672382628348, "base3_plus_current": 8.937880785539832}
+    },
+    "interpretation": "close comparator; 2024 race5 is marginally lower MSE on this cohort, so no universal superiority claim for the two-layer scores"
+  },
+  "known_limitations": [
+    "No 2025 independent holdout result or Prediction integration is asserted.",
+    "Development diagnostics estimate next residual, not first/second-place probabilities or calibration.",
+    "Current includes same-player and player-motor interaction; it is not identified as a pure motor effect.",
+    "Start-unknown meetings cannot yield meeting scores, and uncertain intervening identity resets Base continuity.",
+    "Historical per-entry L3 publication timestamps were not recorded; this method uses the adopted day-level operating boundary, without claiming timestamp-level proof.",
+    "The hashed development files are local ignored artifacts, not included in this checkpoint; the freeze JSON preserves selected aggregate results and provenance."
+  ]
+}
