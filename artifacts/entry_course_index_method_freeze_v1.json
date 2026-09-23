@@ -1,0 +1,176 @@
+{
+  "freeze_id": "ENTRY_COURSE_INDEX_METHOD_FREEZE_V1",
+  "status": "METHOD_FROZEN",
+  "frozen_on_jst": "2026-09-23",
+  "scope": "Retrospective date-causal course-distribution method only; no Prediction integration or full historical vintage as-of certification",
+  "method": {
+    "name": "NATIONAL_BOAT_NO_ACTUAL_COURSE_FREQUENCY",
+    "version": "v1",
+    "selected_candidate_id": "RECENT_1Y",
+    "grain": "boat_no x actual_course (six by six)",
+    "target": "P(actual_course=k | boat_no=b) for k=1..6",
+    "geographic_scope": "national except Edogawa; no venue-specific model",
+    "smoothing": "NONE",
+    "machine_learning": "NONE"
+  },
+  "dataset": {
+    "database": "boatrace_predictor",
+    "source": "existing Canonical core.race, core.race_entry, core.race_result and core.race_result_state",
+    "development_start_inclusive": "2017-01-01",
+    "development_end_inclusive": "2024-12-31",
+    "training_warmup": "2017-01-01 through 2022-12-31",
+    "development_scoring": "2023-01-01 through 2023-12-31",
+    "validation_scoring": "2024-01-01 through 2024-12-31",
+    "eligible_national_races_2017_2024": 418128,
+    "eligible_national_entries_2017_2024": 2508768,
+    "canonical_history_floor_inclusive": "2017-01-01"
+  },
+  "window": {
+    "unit": "calendar date",
+    "start_inclusive": "previous calendar year's same month and day; Feb 29 maps to Feb 28",
+    "end_exclusive": "prediction date D",
+    "formula": "start = D.replace(year=D.year-1); if invalid because D is Feb 29, start = Feb 28 of D.year-1; include start <= race_date < D",
+    "example_regular": {
+      "prediction_date": "2024-01-01",
+      "include_from": "2023-01-01",
+      "include_through": "2023-12-31"
+    },
+    "example_leap": {
+      "prediction_date": "2024-02-29",
+      "include_from": "2023-02-28",
+      "include_through": "2024-02-28"
+    }
+  },
+  "time_boundary": {
+    "result_filter": "race_date < prediction date D",
+    "daily_state": "all D races use the same frozen D-1 counts and probabilities",
+    "update": "only after every D race has been predicted/scored; D results first available to this method on D+1",
+    "current_race_actual_course_at_prediction": "UNAVAILABLE"
+  },
+  "eligibility": {
+    "race_requirements": [
+      "six race entries with boat_no exactly 1..6",
+      "core.race_result_state.result_state = 'RESULT_RECORDS_PRESENT'",
+      "six canonical result rows, one for each boat_no",
+      "six actual_course values form exactly the permutation 1..6",
+      "at least one canonical finish_position is non-NULL"
+    ],
+    "special_finish": "allowed when all course-specific requirements hold",
+    "duplicate_or_incomplete_finish_rank": "does not by itself exclude a race if at least one numeric finish exists; Rating STRICT is separate",
+    "missing_actual_course": "exclude race; never substitute boat_no",
+    "rating_strict_reused": false
+  },
+  "probability": {
+    "counts": "N[b,k] = count of eligible non-Edogawa races in the window with boat_no=b and actual_course=k",
+    "formula": "P(k|b)=N[b,k]/sum(j=1..6)N[b,j]",
+    "normal_case": "six values each in [0,1] and sum exactly 1 within floating tolerance",
+    "zero_course_cell": "P(k|b)=0 when N[b,k]=0 and the boat-number total is positive",
+    "epsilon_prior_smoothing": "NONE"
+  },
+  "zero_history": {
+    "condition": "sum(j=1..6)N[b,j]=0",
+    "status": "NOT_EVALUABLE",
+    "probabilities": null,
+    "fallback": "NONE",
+    "observed_development_scoring_min_individual_cell_count": 5,
+    "start_2025_window_2024_national_min_individual_cell_count": 5,
+    "production_2026_zero_history_check": "UNKNOWN; checking it requires 2025 results, excluded from this freeze"
+  },
+  "edogawa": {
+    "venue_code": 3,
+    "national_training": "EXCLUDED",
+    "planned_prediction_rule": "predicted_course = boat_no",
+    "entry_fixed_effective": true,
+    "entry_fixed_basis": "EDOGAWA_MODEL_RULE",
+    "official_source_entry_fixed_claim": false,
+    "actual_result": "preserve observed actual_course unchanged",
+    "development_background": {
+      "eligible_races": 16618,
+      "eligible_entries": 99708,
+      "mismatched_entries": 414,
+      "races_with_mismatch": 173
+    },
+    "implementation_status": "NOT_IMPLEMENTED_IN_PREDICTION"
+  },
+  "development_evidence": {
+    "source_artifact": ".local/entry_course_development_2017_2024.json (local, untracked)",
+    "source_script": ".local/entry_course_development_readonly.py (local, untracked)",
+    "scoring_period_2023": {
+      "RECENT_1Y": {
+        "entries": 314838,
+        "log_loss": 0.4223715009944403
+      }
+    },
+    "scoring_period_2024": {
+      "BOAT_NO_ONE_HOT": {
+        "entries": 316062,
+        "log_loss": 3.3579092743285393,
+        "brier": 0.19444286247634956,
+        "top1_accuracy": 0.9027785687618252,
+        "top1_ece_10bin": 0.09722143123817478
+      },
+      "ALL_HISTORY": {
+        "entries": 316062,
+        "log_loss": 0.4038010659616511,
+        "brier": 0.17751940044944298,
+        "top1_accuracy": 0.9027785687618252,
+        "top1_ece_10bin": 0.02485668034240785
+      },
+      "RECENT_1Y": {
+        "entries": 316062,
+        "log_loss": 0.40024760350700556,
+        "brier": 0.17649427112061158,
+        "top1_accuracy": 0.9027785687618252,
+        "top1_ece_10bin": 0.004686513523087968
+      },
+      "RECENT_2Y": {
+        "entries": 316062,
+        "log_loss": 0.4004438828582975,
+        "brier": 0.17654466193120694,
+        "top1_accuracy": 0.9027785687618252,
+        "top1_ece_10bin": 0.00720494820410235
+      },
+      "RECENT_3Y": {
+        "entries": 316062,
+        "log_loss": 0.4008106140301114,
+        "brier": 0.17665116472796008,
+        "top1_accuracy": 0.9027785687618252,
+        "top1_ece_10bin": 0.010664602098261537
+      },
+      "RECENT_5Y": {
+        "entries": 316062,
+        "log_loss": 0.40182668563962465,
+        "brier": 0.17693162079440103,
+        "top1_accuracy": 0.9027785687618252,
+        "top1_ece_10bin": 0.01684862663590437
+      }
+    },
+    "recent_1y_2024_by_boat_log_loss": {
+      "1": 0.05720335734487404,
+      "2": 0.2813758647625299,
+      "3": 0.36810135251366505,
+      "4": 0.5090622031831277,
+      "5": 0.6288316782858281,
+      "6": 0.556911164952009
+    },
+    "selection": "RECENT_1Y has the lowest 2023 and 2024 log loss among the evaluated windows; RECENT_2Y is runner-up",
+    "zero_cell_evaluator_guard": "The development evaluator raises on a zero individual course cell; no evaluated cell was zero (minimum 5). The formal positive-total zero-cell rule above is explicitly fixed here and was not empirically exercised."
+  },
+  "as_of_limitation": "Date-causal D-1 OOS is verified. Current Canonical data do not prove which historical correction vintage was published by every D; full vintage as-of evaluation remains unverified and is required separately for strict historical Prediction simulation.",
+  "rating_boundary": "Rating v1 and its frozen venue-by-boat Dirichlet prediction-course diagnostic remain unchanged. This independent national un-smoothed layer does not retroactively alter Rating v1; later Prediction integration must resolve the interface explicitly.",
+  "holdout_2025": {
+    "status": "SEALED_NOT_EVALUATED",
+    "use_in_this_freeze": "NONE",
+    "future_rule": "Any 2025 check occurs only after this method freeze; do not retune v1 and then call the same 2025 outcomes independent."
+  },
+  "hashes": {
+    "baseline_checkpoint_commit": "a60ad15c9ce223e281bb79272bc2023379636280",
+    "development_script_sha256": "1d049eb09e448c8a84dfbe47fa865d570a82094b15a135b578e136ebeecbacde",
+    "development_artifact_sha256": "7380920259091ba676c02481adf3c0059e05f3d323d15ad1a38ce57aef9dbc77",
+    "development_extract_sql_sha256": "2b71db7b84942eec7c66f29cffecb461868869ee34cc6c51c568cf10d4b130a0",
+    "development_extracted_rows_sha256": "9f671b9fcd70feeae45d6a315e2171201ba810f02c582e7f35c9e86b150989db",
+    "development_snapshot_ephemeral": "409373:409373:",
+    "reference_code_sha256_lf": "4a6486e527b788c328ec6cbf8db8856668ac83af48d8413c86f1d4401ceb856e"
+  },
+  "revision_rule": "After 2025 outcomes are inspected, any method/window/eligibility change must be a new version and cannot reuse 2025 as an independent holdout."
+}
