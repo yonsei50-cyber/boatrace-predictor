@@ -13,6 +13,24 @@ ANCHOR = date(2016, 12, 31)
 OUT = Path('.local/f_suspension_k3_only_probe.json')
 
 
+def prediction_features(state_value):
+    """Frozen v1 feature contract; unknown remains SQL/Python NULL/None."""
+    flags = {'CLEAR': False, 'ACTIVE_UNSERVED': True, 'UNRESOLVED': None}
+    if state_value not in flags:
+        raise ValueError(f'unknown F suspension state: {state_value}')
+    return {'f_suspension_state': state_value,
+            'has_unserved_f_suspension': flags[state_value]}
+
+
+def fetch_initial_seed(cur, jan1):
+    """The replay's only pre-2017 state evidence is late-2016 K3 F."""
+    cur.execute("""SELECT toroku_bango,max(kaisai_tsukihi) FROM public.brd_k3
+                 WHERE kaisai_nen='2016' AND kaisai_tsukihi>='1203'
+                   AND btrim(chakujun)='F' GROUP BY toroku_bango""")
+    return {int(player): date(2016, int(md[:2]), int(md[2:]))
+            for player, md in cur if int(player) in jan1}
+
+
 class State:
     def __init__(self, seed=None):
         self.value = 'ACTIVE_UNSERVED' if seed else 'UNRESOLVED'
@@ -90,11 +108,7 @@ def main(canonical=False):
             end = date.fromisoformat(q.fetchone()[0])
             q.execute("SELECT DISTINCT toroku_bango FROM public.brd_l3 WHERE kaisai_nen='2017' AND kaisai_tsukihi='0101'")
             jan1 = {int(row[0]) for row in q}
-            q.execute("""SELECT toroku_bango,max(kaisai_tsukihi) FROM public.brd_k3
-                       WHERE kaisai_nen='2016' AND kaisai_tsukihi>='1203'
-                         AND btrim(chakujun)='F' GROUP BY toroku_bango""")
-            seed = {int(player): date(2016, int(md[:2]), int(md[2:]))
-                    for player, md in q if int(player) in jan1}
+            seed = fetch_initial_seed(q, jan1)
         current_player = current_day = None
         state = None
         day_cursor = START

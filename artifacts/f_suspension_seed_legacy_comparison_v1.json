@@ -1,0 +1,13 @@
+{
+  "purpose": "non_authoritative_legacy_seed_comparison_only",
+  "old_aggregate_active": 48,
+  "k3_active": 48,
+  "old_only_player_ids": [],
+  "k3_only_player_ids": [],
+  "old_active_ids_sha256": "07455f811fbbd2b3d60d0a28b934c3bdb92ed11ec74245c6e28a30538b978144",
+  "k3_active_ids_sha256": "07455f811fbbd2b3d60d0a28b934c3bdb92ed11ec74245c6e28a30538b978144",
+  "cohort_source": "same 2017-01-01 brd_l3 distinct player query in old and K3-only implementations",
+  "old_unresolved": 569,
+  "k3_unresolved": 569,
+  "player_state_difference_count": 0
+}

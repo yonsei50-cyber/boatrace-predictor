@@ -1,0 +1,147 @@
+{
+  "probe": "f-suspension-k3-only-v1",
+  "source": "pckyotei.public.brd_k3",
+  "scope": [
+    "2017-01-01",
+    "2026-09-18"
+  ],
+  "generated_at": "2026-09-23T17:10:59.030802+00:00",
+  "self_test": "PASS",
+  "initial_jan1_players": 617,
+  "initial_jan1_active_seed": 48,
+  "initial_jan1_unresolved": 569,
+  "counts": {
+    "calendar_player_days": 7415320,
+    "entry_player_days": 2001659,
+    "entries": 3252024,
+    "f2_additional_events": 808,
+    "f_events": 12635,
+    "f_player_days": 12630,
+    "multi_race_f_player_days": 9312,
+    "transitions_to_active": 11827,
+    "clear_transitions": 12636,
+    "clear_on_no_entry_day": 12559,
+    "k3_missing_entries": 40374,
+    "r2_cancelled_entries": 40014,
+    "special_finish_started_entries": 28213,
+    "k_code_nonstarter_entries": 5943,
+    "clear_on_entry_day": 77,
+    "players": 2090,
+    "possible_races": 360,
+    "clear_to_unresolved_possible_f": 204,
+    "f_event_players": 1958
+  },
+  "prediction_entry_state": {
+    "UNRESOLVED": 356624,
+    "ACTIVE_UNSERVED": 329543,
+    "CLEAR": 2565857
+  },
+  "final_state": {
+    "CLEAR": 1791,
+    "ACTIVE_UNSERVED": 231,
+    "UNRESOLVED": 68
+  },
+  "initial_unknown_first_resolution": {
+    "ACTIVE_BY_F": 1083,
+    "CLEAR_BY_GAP": 957,
+    "STILL_UNRESOLVED_INITIAL": 2
+  },
+  "yearly_f": {
+    "2017": 1298,
+    "2018": 1286,
+    "2019": 1232,
+    "2020": 1269,
+    "2023": 1366,
+    "2024": 1389,
+    "2021": 1346,
+    "2022": 1300,
+    "2025": 1200,
+    "2026": 949
+  },
+  "examples": {
+    "f": [
+      {
+        "player": 2014,
+        "day": "2017-03-15",
+        "before": "UNRESOLVED",
+        "after": "ACTIVE_UNSERVED",
+        "f": 1,
+        "races": [
+          [
+            "03",
+            "02"
+          ],
+          [
+            "03",
+            "09"
+          ]
+        ]
+      },
+      {
+        "player": 2014,
+        "day": "2018-08-10",
+        "before": "CLEAR",
+        "after": "ACTIVE_UNSERVED",
+        "f": 1,
+        "races": [
+          [
+            "06",
+            "01"
+          ],
+          [
+            "06",
+            "05"
+          ]
+        ]
+      },
+      {
+        "player": 2014,
+        "day": "2019-10-05",
+        "before": "CLEAR",
+        "after": "ACTIVE_UNSERVED",
+        "f": 1,
+        "races": [
+          [
+            "02",
+            "03"
+          ],
+          [
+            "02",
+            "07"
+          ]
+        ]
+      },
+      {
+        "player": 2014,
+        "day": "2020-01-31",
+        "before": "CLEAR",
+        "after": "ACTIVE_UNSERVED",
+        "f": 1,
+        "races": [
+          [
+            "05",
+            "01"
+          ],
+          [
+            "05",
+            "07"
+          ]
+        ]
+      },
+      {
+        "player": 2014,
+        "day": "2023-08-11",
+        "before": "CLEAR",
+        "after": "ACTIVE_UNSERVED",
+        "f": 1,
+        "races": [
+          [
+            "06",
+            "04"
+          ]
+        ]
+      }
+    ]
+  },
+  "treatment": "K3 F is sole F event; numeric/L or measured start confirm racing, K with blank start is nonstarter, other specials unresolved; R2 only classifies cancelled entries"
+}

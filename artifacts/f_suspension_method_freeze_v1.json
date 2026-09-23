@@ -1,0 +1,92 @@
+{
+  "freeze_id": "F_SUSPENSION_STATE_METHOD_V1",
+  "status": "METHOD_FROZEN",
+  "frozen_on_jst": "2026-09-24",
+  "scope": "Retrospective F suspension state reconstruction only; no Prediction model integration or current-term F-count feature",
+  "source_policy_dependency": {
+    "checkpoint_git": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+    "result_dataset_version": "K3_ONLY_RESULT_V1_b68a27cf8f653602",
+    "authoritative_individual_result_source": "brd_k3",
+    "result_normalization": "k3-only-result-v1",
+    "canonical_history": "2017-01-01 through 2026-09-18"
+  },
+  "implementation": {
+    "state_machine_and_replay": "scripts/f_suspension_k3_only_probe.py",
+    "initial_seed_rebuild": "scripts/f_suspension_seed_k3.py",
+    "prediction_feature_mapping": "scripts/f_suspension_k3_only_probe.py:prediction_features",
+    "canonical_replay_artifact": "artifacts/f_suspension_canonical_replay_v1.json",
+    "direct_k3_replay_artifact": "artifacts/f_suspension_direct_k3_replay_v1.json",
+    "initial_seed_artifact": "artifacts/f_suspension_initial_seed_k3_v1.json"
+  },
+  "initial_state": {
+    "date": "2017-01-01",
+    "cohort": "617 distinct player registrations on 2017-01-01 brd_l3 entries, independently equal to Canonical race_entry cohort",
+    "active_rule": "A cohort player with a direct 2016-12-03 through 2016-12-31 brd_k3 chakujun=F result is ACTIVE_UNSERVED",
+    "unresolved_rule": "A cohort player without such a confirmed late-2016 K3 F remains UNRESOLVED; absence of a late F is not proof of CLEAR",
+    "late_2016_k3_f_rows_all_players": 104,
+    "late_2016_k3_f_rows_in_cohort": 49,
+    "late_2016_cohort_k3_f_l3_missing_or_player_mismatch": 0,
+    "initial_cohort_players": 617,
+    "active_unserved": 48,
+    "unresolved": 569,
+    "k3_player_rows_sha256": "877d76dd7f07f297847a26ebecbc42c714c8b84edbc64fba5bb8770622dbdc6c",
+    "legacy_non_authoritative_comparison": "artifacts/f_suspension_seed_legacy_comparison_v1.json",
+    "legacy_active": 48,
+    "legacy_unresolved": 569,
+    "old_only_active_player_ids": [],
+    "k3_only_active_player_ids": [],
+    "player_state_difference_count": 0,
+    "pre_2017_uncertainty_bound": "Use 2016-12-31 as the last-possible-race anchor; no earlier unknown race is inferred to have cleared a state"
+  },
+  "state_machine": {
+    "states": ["CLEAR", "ACTIVE_UNSERVED", "UNRESOLVED"],
+    "f_event": "K3 chakujun=F, preserved in K3-only Canonical finish_raw/result_status",
+    "prediction_time": "All races on D use the same state after D-1; all D evidence is applied only after the last D prediction and first affects D+1",
+    "clear_rule": "Before D prediction, if D - last_possible_race_date >= 30 calendar days, CLEAR; 29 days ACTIVE, 30 and 31 days CLEAR",
+    "active_regular_race": "A confirmed race within 29 days keeps ACTIVE_UNSERVED and updates last race date after D",
+    "additional_f": "F during ACTIVE keeps ACTIVE; diagnostic F2 count increases, but one 30-day gap clears all pending F without a 60-day extension",
+    "period_boundaries": "No internal state reset on 05-01 or 11-01; current-term source F count is a separate feature",
+    "initial_unresolved_resolution": "A new K3 F confirms ACTIVE after D; a 30-day no-race gap on complete post-2017 history confirms CLEAR before D prediction",
+    "missing_evidence": "Retain UNRESOLVED when race participation or result leaves F status possible; never coerce unknown to CLEAR",
+    "history_assumption": "Project-authoritative assumption: nationwide participation and result history from 2017-01-01 onward is complete"
+  },
+  "prediction_feature_contract": {
+    "f_suspension_state": ["CLEAR", "ACTIVE_UNSERVED", "UNRESOLVED"],
+    "has_unserved_f_suspension": {
+      "CLEAR": false,
+      "ACTIVE_UNSERVED": true,
+      "UNRESOLVED": null
+    },
+    "current_term_f_count": "separate feature; not developed or used in v1",
+    "prediction_model_connection": "NOT_IN_SCOPE"
+  },
+  "formal_reconstruction": {
+    "scope": "2017-01-01 through 2026-09-18",
+    "players": 2090,
+    "prediction_entries": 3252024,
+    "k3_f_events": 12635,
+    "additional_f2_events": 808,
+    "prediction_before_entry": {
+      "CLEAR": 2565857,
+      "ACTIVE_UNSERVED": 329543,
+      "UNRESOLVED": 356624
+    },
+    "period_end": {
+      "CLEAR": 1791,
+      "ACTIVE_UNSERVED": 231,
+      "UNRESOLVED": 68
+    },
+    "difference_from_k3_only_checkpoint": "NONE; independent K3 seed rebuilt to the same 617/48/569 player states"
+  },
+  "evidence": {
+    "initial_seed_artifact_sha256": "8A74A2B5AFC68D58A807FBEE195A1EFF3994B355DDA7D3DB79512263FC697C76",
+    "canonical_replay_artifact_sha256": "788F386212658A52DE78DE5EAAAD63DC72F6ABB8D0A8D3F22EE8744D25DE9508",
+    "direct_k3_replay_artifact_sha256": "0C7CDB2E17A8EC7723F907E0FAA41F6A85AEBF281DF08C2A162D6EC61EF5E973",
+    "legacy_comparison_artifact_sha256": "04FC4A14A8ACCC66B7C960DD349889725EC9EFC16C9DA5B1184AC3188868C0D8",
+    "direct_k3_vs_canonical": "PASS; scope, seed, counts, prediction states, final states, first resolutions, and yearly F match exactly",
+    "focused_unit_and_db_tests": "13 PASS",
+    "no_retired_source_static_and_db_guard": "2 PASS",
+    "whole_pure_suite": "183 tests, 74 opt-in DB skips, PASS"
+  },
+  "version_rule": "v1 is immutable after freeze; any method change requires v2"
+}

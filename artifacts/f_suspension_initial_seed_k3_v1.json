@@ -1,0 +1,4119 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "generated_at": "2026-09-23T17:12:38.501392+00:00",
+  "cohort_source": "pckyotei.public.brd_l3 2017-01-01; independently matched to core.race_entry",
+  "initial_state_source": "pckyotei.public.brd_k3 2016-12-03..2016-12-31 chakujun=F",
+  "policy": "late K3 F proves ACTIVE; all other initial states remain UNRESOLVED",
+  "initial_day": "2017-01-01",
+  "cohort_players": 617,
+  "active": 48,
+  "unresolved": 569,
+  "source_window_f_rows": 104,
+  "source_window_cohort_f_rows": 49,
+  "source_window_cohort_l3_missing": 0,
+  "source_window_cohort_l3_player_mismatch": 0,
+  "player_rows_sha256": "877d76dd7f07f297847a26ebecbc42c714c8b84edbc64fba5bb8770622dbdc6c",
+  "result_dataset_version": {
+    "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602",
+    "authoritative_source": "brd_k3",
+    "date_start": "2017-01-01",
+    "date_end": "2026-09-18",
+    "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a"
+  },
+  "players": [
+    {
+      "player_id": 2014,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2380,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-16",
+      "k3_f_events": [
+        {
+          "date": "2016-12-16",
+          "venue_code": "15",
+          "race_no": "03",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 2568,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2698,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2816,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2887,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2907,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2912,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2914,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2942,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-15",
+      "k3_f_events": [
+        {
+          "date": "2016-12-15",
+          "venue_code": "20",
+          "race_no": "05",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 2958,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 2992,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-15",
+      "k3_f_events": [
+        {
+          "date": "2016-12-15",
+          "venue_code": "21",
+          "race_no": "02",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3005,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3010,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3022,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3025,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3036,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3064,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3070,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3121,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3123,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3137,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3156,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3158,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3161,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3171,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3186,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-19",
+      "k3_f_events": [
+        {
+          "date": "2016-12-19",
+          "venue_code": "23",
+          "race_no": "04",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3187,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3189,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3211,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-21",
+      "k3_f_events": [
+        {
+          "date": "2016-12-21",
+          "venue_code": "22",
+          "race_no": "02",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3212,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3214,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3220,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3224,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3231,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3234,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3235,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-09",
+      "k3_f_events": [
+        {
+          "date": "2016-12-09",
+          "venue_code": "06",
+          "race_no": "02",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3265,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3268,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3273,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3282,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3283,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3290,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3291,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3293,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3294,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3298,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3304,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3305,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3329,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-23",
+      "k3_f_events": [
+        {
+          "date": "2016-12-23",
+          "venue_code": "08",
+          "race_no": "09",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3331,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3333,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3335,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3338,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3344,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3350,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3352,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3360,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3361,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3363,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3370,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3372,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3379,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3388,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3392,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3397,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3401,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3404,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3409,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-17",
+      "k3_f_events": [
+        {
+          "date": "2016-12-17",
+          "venue_code": "08",
+          "race_no": "05",
+          "boat_no": "2",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3422,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3430,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3434,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3436,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3443,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-10",
+      "k3_f_events": [
+        {
+          "date": "2016-12-10",
+          "venue_code": "05",
+          "race_no": "03",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3454,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3455,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3461,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3467,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3476,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3477,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3478,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3482,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3489,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3491,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3499,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3501,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-15",
+      "k3_f_events": [
+        {
+          "date": "2016-12-15",
+          "venue_code": "08",
+          "race_no": "05",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3502,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3507,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3508,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3516,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-08",
+      "k3_f_events": [
+        {
+          "date": "2016-12-08",
+          "venue_code": "03",
+          "race_no": "01",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3519,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3522,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3523,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3527,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3536,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-24",
+      "k3_f_events": [
+        {
+          "date": "2016-12-24",
+          "venue_code": "09",
+          "race_no": "02",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3541,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3543,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3544,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3548,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3553,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3554,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3563,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3566,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3567,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3571,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3573,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3574,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3578,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3584,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3587,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3591,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3593,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3601,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3605,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3608,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3609,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3614,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3617,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3620,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3623,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3626,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3627,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3628,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3630,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3635,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3637,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3644,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3654,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3660,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3661,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3662,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3663,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3668,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3673,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-22",
+      "k3_f_events": [
+        {
+          "date": "2016-12-22",
+          "venue_code": "20",
+          "race_no": "01",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3678,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3680,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3682,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3684,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3687,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3690,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3703,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3710,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3711,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3713,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3714,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3717,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3718,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3719,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3723,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3726,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3729,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3730,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3731,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3743,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3744,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3750,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3752,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-31",
+      "k3_f_events": [
+        {
+          "date": "2016-12-31",
+          "venue_code": "21",
+          "race_no": "07",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3753,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3764,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3768,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3773,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3777,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3779,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3783,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3787,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3789,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3796,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3797,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3798,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3804,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3807,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3811,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3812,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3814,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3820,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3823,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3824,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3825,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3829,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3831,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3832,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3833,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-30",
+      "k3_f_events": [
+        {
+          "date": "2016-12-30",
+          "venue_code": "10",
+          "race_no": "09",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3837,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3839,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3841,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3842,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3843,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3846,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3848,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3852,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3853,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3855,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3858,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3859,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3867,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3869,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3875,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3878,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3881,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3884,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3890,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3891,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3893,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3897,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3901,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3906,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3907,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3908,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3909,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3920,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3922,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3925,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3926,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3930,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3933,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3934,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3936,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3941,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3942,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3943,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3945,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3946,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3948,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3953,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3955,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3956,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3957,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3960,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3961,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3964,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3974,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3975,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3976,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3979,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3980,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3982,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3984,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-29",
+      "k3_f_events": [
+        {
+          "date": "2016-12-29",
+          "venue_code": "09",
+          "race_no": "12",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3987,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3988,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3989,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 3995,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-19",
+      "k3_f_events": [
+        {
+          "date": "2016-12-19",
+          "venue_code": "19",
+          "race_no": "08",
+          "boat_no": "2",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 3998,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-31",
+      "k3_f_events": [
+        {
+          "date": "2016-12-31",
+          "venue_code": "23",
+          "race_no": "02",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4000,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4004,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4005,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4006,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4007,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4009,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4013,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4019,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4020,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4022,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4023,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4024,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4027,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4028,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-24",
+      "k3_f_events": [
+        {
+          "date": "2016-12-24",
+          "venue_code": "12",
+          "race_no": "08",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4030,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4033,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4034,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4035,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4037,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4038,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4041,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4046,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4049,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4052,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4056,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4058,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-10",
+      "k3_f_events": [
+        {
+          "date": "2016-12-10",
+          "venue_code": "15",
+          "race_no": "03",
+          "boat_no": "2",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4060,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4061,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4063,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4064,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4066,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4067,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4069,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4073,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4074,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4076,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4079,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4084,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4091,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4092,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4096,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4097,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4100,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4101,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4102,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4106,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4107,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4108,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4111,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4112,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4116,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-25",
+      "k3_f_events": [
+        {
+          "date": "2016-12-25",
+          "venue_code": "10",
+          "race_no": "10",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4118,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4121,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4124,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4129,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4134,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4139,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4142,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4146,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4150,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4153,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4154,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4155,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4156,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4158,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4159,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4163,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4167,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4170,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4171,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4173,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4174,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4179,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4182,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4186,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4189,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4193,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4195,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-12",
+      "k3_f_events": [
+        {
+          "date": "2016-12-12",
+          "venue_code": "18",
+          "race_no": "11",
+          "boat_no": "2",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4196,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4202,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4204,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4209,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4212,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4213,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4215,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4219,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4220,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4221,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4226,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-11",
+      "k3_f_events": [
+        {
+          "date": "2016-12-11",
+          "venue_code": "13",
+          "race_no": "02",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4227,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4229,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4230,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4232,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4236,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4237,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4239,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4244,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4250,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4251,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-27",
+      "k3_f_events": [
+        {
+          "date": "2016-12-27",
+          "venue_code": "18",
+          "race_no": "06",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4252,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4257,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4259,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4260,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4261,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4264,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4269,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4270,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4271,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4272,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4275,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4277,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4284,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4287,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4292,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4293,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4294,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4295,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4298,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4301,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4302,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4306,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4307,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-17",
+      "k3_f_events": [
+        {
+          "date": "2016-12-17",
+          "venue_code": "15",
+          "race_no": "02",
+          "boat_no": "2",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4308,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4309,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4314,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4315,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4316,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4317,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4319,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4320,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4324,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4327,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4330,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4333,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4334,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4336,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4337,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4342,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4343,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4344,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4346,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4352,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4358,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4360,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4361,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4364,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4367,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4369,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4374,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4376,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4378,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4388,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4390,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4391,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4394,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4396,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4398,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4401,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4404,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4405,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4406,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4410,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4413,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4415,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4416,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-25",
+      "k3_f_events": [
+        {
+          "date": "2016-12-25",
+          "venue_code": "15",
+          "race_no": "04",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4417,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4424,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4425,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4427,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4429,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4431,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-12",
+      "k3_f_events": [
+        {
+          "date": "2016-12-12",
+          "venue_code": "18",
+          "race_no": "11",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4434,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4437,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4445,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-07",
+      "k3_f_events": [
+        {
+          "date": "2016-12-07",
+          "venue_code": "03",
+          "race_no": "10",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4452,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4453,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4457,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-17",
+      "k3_f_events": [
+        {
+          "date": "2016-12-17",
+          "venue_code": "21",
+          "race_no": "01",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4458,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4459,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4461,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4462,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4463,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4466,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4467,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-29",
+      "k3_f_events": [
+        {
+          "date": "2016-12-29",
+          "venue_code": "07",
+          "race_no": "10",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4471,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-27",
+      "k3_f_events": [
+        {
+          "date": "2016-12-27",
+          "venue_code": "18",
+          "race_no": "06",
+          "boat_no": "2",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4474,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4475,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4477,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4485,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-03",
+      "k3_f_events": [
+        {
+          "date": "2016-12-03",
+          "venue_code": "10",
+          "race_no": "05",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4487,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4490,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4492,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4494,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4497,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4498,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4500,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4503,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4504,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4509,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4511,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4513,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4515,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4516,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4520,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4521,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4526,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4527,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4529,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4531,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4538,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4539,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4541,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4544,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-15",
+      "k3_f_events": [
+        {
+          "date": "2016-12-15",
+          "venue_code": "23",
+          "race_no": "08",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4545,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4549,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4551,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4552,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4553,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4559,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4560,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4564,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4567,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4574,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4579,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4581,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4583,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4586,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4587,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4588,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4591,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-25",
+      "k3_f_events": [
+        {
+          "date": "2016-12-25",
+          "venue_code": "09",
+          "race_no": "02",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4592,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4600,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4601,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4604,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4607,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4614,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-17",
+      "k3_f_events": [
+        {
+          "date": "2016-12-17",
+          "venue_code": "17",
+          "race_no": "12",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4618,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4622,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4624,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-29",
+      "k3_f_events": [
+        {
+          "date": "2016-12-29",
+          "venue_code": "23",
+          "race_no": "06",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4625,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4630,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4636,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4638,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4640,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4642,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4643,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4648,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4649,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4650,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4652,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4657,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-03",
+      "k3_f_events": [
+        {
+          "date": "2016-12-03",
+          "venue_code": "02",
+          "race_no": "03",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4661,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4664,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4665,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4669,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4671,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4674,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4679,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4682,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4684,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4685,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4691,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4692,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4695,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4697,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-28",
+      "k3_f_events": [
+        {
+          "date": "2016-12-28",
+          "venue_code": "20",
+          "race_no": "06",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4698,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4703,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4705,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4706,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4708,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4709,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4711,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4715,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-10",
+      "k3_f_events": [
+        {
+          "date": "2016-12-10",
+          "venue_code": "15",
+          "race_no": "03",
+          "boat_no": "3",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4718,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4724,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-10",
+      "k3_f_events": [
+        {
+          "date": "2016-12-10",
+          "venue_code": "17",
+          "race_no": "04",
+          "boat_no": "1",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4725,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4727,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4731,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4732,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4734,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4737,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4739,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4740,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4744,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4747,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4752,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4753,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4754,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4755,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4756,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-30",
+      "k3_f_events": [
+        {
+          "date": "2016-12-30",
+          "venue_code": "06",
+          "race_no": "11",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4757,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4761,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4763,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4771,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4774,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4776,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4777,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4778,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4784,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4785,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4786,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4789,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4793,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4796,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4797,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4798,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4800,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-10",
+      "k3_f_events": [
+        {
+          "date": "2016-12-10",
+          "venue_code": "11",
+          "race_no": "05",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4802,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4808,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4810,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4811,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4812,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4817,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-03",
+      "k3_f_events": [
+        {
+          "date": "2016-12-03",
+          "venue_code": "10",
+          "race_no": "05",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4821,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4822,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4824,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4829,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4830,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4831,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4832,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4833,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4838,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4839,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4840,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4844,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4846,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4848,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4850,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-03",
+      "k3_f_events": [
+        {
+          "date": "2016-12-03",
+          "venue_code": "07",
+          "race_no": "09",
+          "boat_no": "6",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4852,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4856,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4861,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4866,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4868,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4870,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4871,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4872,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4874,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4876,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4878,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-09",
+      "k3_f_events": [
+        {
+          "date": "2016-12-09",
+          "venue_code": "02",
+          "race_no": "07",
+          "boat_no": "4",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4879,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4881,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4889,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4890,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4892,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4894,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4896,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4899,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4903,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4910,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4911,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4912,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-11",
+      "k3_f_events": [
+        {
+          "date": "2016-12-11",
+          "venue_code": "11",
+          "race_no": "09",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4914,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-30",
+      "k3_f_events": [
+        {
+          "date": "2016-12-17",
+          "venue_code": "03",
+          "race_no": "09",
+          "boat_no": "5",
+          "finish_raw": "F "
+        },
+        {
+          "date": "2016-12-30",
+          "venue_code": "07",
+          "race_no": "04",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4918,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4919,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4920,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4923,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4926,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4931,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4932,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4933,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4934,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4937,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4943,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4946,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4948,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4949,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4950,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4951,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4952,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4955,
+      "state": "ACTIVE_UNSERVED",
+      "latest_f_date": "2016-12-15",
+      "k3_f_events": [
+        {
+          "date": "2016-12-15",
+          "venue_code": "18",
+          "race_no": "10",
+          "boat_no": "5",
+          "finish_raw": "F "
+        }
+      ]
+    },
+    {
+      "player_id": 4957,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4958,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4959,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4960,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    },
+    {
+      "player_id": 4962,
+      "state": "UNRESOLVED",
+      "latest_f_date": null,
+      "k3_f_events": []
+    }
+  ]
+}
