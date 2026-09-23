@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETED",
+  "preflight_started_utc": "2026-09-23T04:28:00.817920+00:00",
+  "preflight_completed_utc": "2026-09-23T04:30:08.309777+00:00",
+  "identity": {
+    "git_head": "f8a4d4d0d2bff962489d7c492f391951a1eccc6d",
+    "freeze_sha256": "00233686ff49bca92e09645eb9177aecddd83d141f1a9478a5e6365a89374453",
+    "reference_sha256_lf": "4a6486e527b788c328ec6cbf8db8856668ac83af48d8413c86f1d4401ceb856e",
+    "evaluator_sha256": "be983d68e6f8955700c46f366c6772089db5bd40ab37f18b374bd4a6e745cd82",
+    "development_sql_sha256": "2b71db7b84942eec7c66f29cffecb461868869ee34cc6c51c568cf10d4b130a0",
+    "holdout_sql_sha256": "74860bbc4a2ed3a9f484274427e62d7b763b79ef3a4ff0c3fa87ec737a650c72",
+    "selected_method": "RECENT_1Y",
+    "holdout_period": [
+      "2025-01-01",
+      "2025-12-31"
+    ]
+  },
+  "dataset": {
+    "database": "boatrace_predictor",
+    "read_only": "on",
+    "isolation": "REPEATABLE READ",
+    "snapshot": "409373:409373:",
+    "shards": 108,
+    "development_shard_chain_sha256": "ae4075eeff72db3b66ce68d6f06ee5c62c00cc74b8df7a886c1d21c1209a6ed8",
+    "full_shard_chain_sha256": "a0bfb0bf2f9e6b4c055372ded6d805326f8162c6ff69d0d733c395ea3bc8d610",
+    "dataset_sql_sha256": "fa186ca4b72d40300e96ca72014efab16a3a022594771847d92c1eb5460359b0"
+  },
+  "development_extract": {
+    "rows": 2671344,
+    "sha256": "9f671b9fcd70feeae45d6a315e2171201ba810f02c582e7f35c9e86b150989db"
+  },
+  "2025_outcome_rows_read_before_gate": 0,
+  "evaluation_started_utc": "2026-09-23T04:30:41.014960+00:00",
+  "evaluation_snapshot": "409373:409373:",
+  "evaluation_finished_utc": "2026-09-23T04:32:45.394965+00:00",
+  "result_sha256": "311ff88ac4c5fb61df8c84ecc5573f7783a52f86fdb798a7db5260ac9d2f489f"
+}

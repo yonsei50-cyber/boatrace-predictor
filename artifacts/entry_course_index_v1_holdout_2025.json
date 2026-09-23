@@ -1,0 +1,264 @@
+{
+  "status": "ENTRY_COURSE_INDEX_V1_HOLDOUT_EVALUATED_NO_PREDECLARED_PASS_THRESHOLD",
+  "method": "RECENT_1Y",
+  "period": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "counts": {
+    "all_races": 55908,
+    "edogawa_eligible_entries": 13110,
+    "edogawa_eligible_races": 2185,
+    "edogawa_excluded_races": 203,
+    "edogawa_mismatched_entries": 6,
+    "edogawa_races": 2388,
+    "edogawa_races_with_mismatch": 3,
+    "extract_rows": 671832,
+    "national_eligible_entries": 312480,
+    "national_eligible_races": 52080,
+    "national_excluded_races": 1440,
+    "national_races": 53520,
+    "warmup_2024_eligible_national_races": 52677
+  },
+  "overall": {
+    "evaluated_entries": 312480,
+    "log_loss": 0.3986728493012526,
+    "log_loss_status": "FINITE",
+    "zero_probability_actuals": 0,
+    "multiclass_brier_sum": 0.17418634015458828,
+    "top1_accuracy": 0.9044098822324629,
+    "top1_ece_10bin": 0.0011056617847010415
+  },
+  "by_boat": {
+    "1": {
+      "evaluated_entries": 52080,
+      "log_loss": 0.06870390600614033,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.022103771204221686,
+      "top1_accuracy": 0.9888440860215054,
+      "top1_ece_10bin": 0.0018283453798989293
+    },
+    "2": {
+      "evaluated_entries": 52080,
+      "log_loss": 0.2867302810927282,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.11466845436703976,
+      "top1_accuracy": 0.9399385560675884,
+      "top1_ece_10bin": 0.0020671508193729833
+    },
+    "3": {
+      "evaluated_entries": 52080,
+      "log_loss": 0.373029695174604,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.15251947982536224,
+      "top1_accuracy": 0.9191244239631337,
+      "top1_ece_10bin": 0.0023402508490163606
+    },
+    "4": {
+      "evaluated_entries": 52080,
+      "log_loss": 0.5056154273762035,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.21661063965961935,
+      "top1_accuracy": 0.882315668202765,
+      "top1_ece_10bin": 0.0017735612800006018
+    },
+    "5": {
+      "evaluated_entries": 52080,
+      "log_loss": 0.6175809539600026,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.2916726052628324,
+      "top1_accuracy": 0.8341589861751152,
+      "top1_ece_10bin": 0.00023745319674264587
+    },
+    "6": {
+      "evaluated_entries": 52080,
+      "log_loss": 0.5403768321977979,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.2475430906087509,
+      "top1_accuracy": 0.8620775729646697,
+      "top1_ece_10bin": 0.0011378844226988627
+    }
+  },
+  "by_month": {
+    "2025-01": {
+      "evaluated_entries": 28164,
+      "log_loss": 0.3689681881073996,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.16042294387015726,
+      "top1_accuracy": 0.9123704019315438,
+      "top1_ece_10bin": 0.009106789171089012
+    },
+    "2025-02": {
+      "evaluated_entries": 24468,
+      "log_loss": 0.40659786545016824,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.18010837033826327,
+      "top1_accuracy": 0.9004005231322544,
+      "top1_ece_10bin": 0.003625137448311392
+    },
+    "2025-03": {
+      "evaluated_entries": 25536,
+      "log_loss": 0.3962652677581806,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17220923943125352,
+      "top1_accuracy": 0.9056234335839599,
+      "top1_ece_10bin": 0.002986531838365009
+    },
+    "2025-04": {
+      "evaluated_entries": 23958,
+      "log_loss": 0.4159501006204311,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.18365872015205648,
+      "top1_accuracy": 0.8987394607229318,
+      "top1_ece_10bin": 0.006736109484268387
+    },
+    "2025-05": {
+      "evaluated_entries": 28458,
+      "log_loss": 0.41094849644763837,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.18167330853635247,
+      "top1_accuracy": 0.8997821350762527,
+      "top1_ece_10bin": 0.005922228145000872
+    },
+    "2025-06": {
+      "evaluated_entries": 27018,
+      "log_loss": 0.3858788913224504,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17023421086759202,
+      "top1_accuracy": 0.906173662003109,
+      "top1_ece_10bin": 0.003936424406543685
+    },
+    "2025-07": {
+      "evaluated_entries": 29310,
+      "log_loss": 0.4057271390513994,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17841856797057895,
+      "top1_accuracy": 0.9019106107130672,
+      "top1_ece_10bin": 0.00439063958461787
+    },
+    "2025-08": {
+      "evaluated_entries": 29154,
+      "log_loss": 0.39851351624929626,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17331998153255798,
+      "top1_accuracy": 0.9051245112162997,
+      "top1_ece_10bin": 0.0028649167466115962
+    },
+    "2025-09": {
+      "evaluated_entries": 23928,
+      "log_loss": 0.38586413219144156,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.16690868949878246,
+      "top1_accuracy": 0.9089351387495821,
+      "top1_ece_10bin": 0.003171663555614144
+    },
+    "2025-10": {
+      "evaluated_entries": 23112,
+      "log_loss": 0.4110569897273834,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17882191583608442,
+      "top1_accuracy": 0.9019989615784009,
+      "top1_ece_10bin": 0.004557167171699435
+    },
+    "2025-11": {
+      "evaluated_entries": 22170,
+      "log_loss": 0.4045663975619121,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17379911755328428,
+      "top1_accuracy": 0.9052774018944519,
+      "top1_ece_10bin": 0.004814612796057942
+    },
+    "2025-12": {
+      "evaluated_entries": 27204,
+      "log_loss": 0.3977193099629837,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17186288228760174,
+      "top1_accuracy": 0.9060064696368181,
+      "top1_ece_10bin": 0.002128225183498232
+    }
+  },
+  "zero_history_boat_days": [],
+  "not_evaluable_by_date_boat": [],
+  "zero_probability_actuals": [],
+  "extract_rows_sha256": "bf5d17a01ce64fd0c93694c67cb254bb7a2d595395cf2e52981e42ec041f048d",
+  "development_comparison": {
+    "2023_development": {
+      "entries": 314838,
+      "log_loss": 0.4223715009944403
+    },
+    "2024_validation": {
+      "entries": 316062,
+      "log_loss": 0.40024760350700556,
+      "brier": 0.17649427112061158,
+      "top1_accuracy": 0.9027785687618252,
+      "top1_ece_10bin": 0.004686513523087968
+    },
+    "2025_independent_holdout": {
+      "evaluated_entries": 312480,
+      "log_loss": 0.3986728493012526,
+      "log_loss_status": "FINITE",
+      "zero_probability_actuals": 0,
+      "multiclass_brier_sum": 0.17418634015458828,
+      "top1_accuracy": 0.9044098822324629,
+      "top1_ece_10bin": 0.0011056617847010415
+    }
+  },
+  "leakage_audit": {
+    "score_before_appending_same_day_results": true,
+    "history_dates_strictly_before_scoring_day": true,
+    "all_races_on_day_share_one_probability_state": true,
+    "edogawa_excluded_from_national_history_and_metrics": true,
+    "latest_prior_result_date_in_final_state": "2025-12-30",
+    "full_vintage_as_of_certified": false
+  },
+  "as_of_limitation": "Date-causal D-1 OOS is verified. Current Canonical data do not prove which historical correction vintage was published by every D; full vintage as-of evaluation remains unverified and is required separately for strict historical Prediction simulation.",
+  "integrity": {
+    "git_head": "f8a4d4d0d2bff962489d7c492f391951a1eccc6d",
+    "freeze_sha256": "00233686ff49bca92e09645eb9177aecddd83d141f1a9478a5e6365a89374453",
+    "reference_sha256_lf": "4a6486e527b788c328ec6cbf8db8856668ac83af48d8413c86f1d4401ceb856e",
+    "evaluator_sha256": "be983d68e6f8955700c46f366c6772089db5bd40ab37f18b374bd4a6e745cd82",
+    "development_sql_sha256": "2b71db7b84942eec7c66f29cffecb461868869ee34cc6c51c568cf10d4b130a0",
+    "holdout_sql_sha256": "74860bbc4a2ed3a9f484274427e62d7b763b79ef3a4ff0c3fa87ec737a650c72",
+    "selected_method": "RECENT_1Y",
+    "holdout_period": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "gate_preflight_started_utc": "2026-09-23T04:28:00.817920+00:00",
+    "evaluation_started_utc": "2026-09-23T04:30:41.014960+00:00",
+    "evaluation_finished_utc": "2026-09-23T04:32:45.394965+00:00",
+    "dataset": {
+      "database": "boatrace_predictor",
+      "read_only": "on",
+      "isolation": "REPEATABLE READ",
+      "snapshot": "409373:409373:",
+      "shards": 108,
+      "development_shard_chain_sha256": "ae4075eeff72db3b66ce68d6f06ee5c62c00cc74b8df7a886c1d21c1209a6ed8",
+      "full_shard_chain_sha256": "a0bfb0bf2f9e6b4c055372ded6d805326f8162c6ff69d0d733c395ea3bc8d610",
+      "dataset_sql_sha256": "fa186ca4b72d40300e96ca72014efab16a3a022594771847d92c1eb5460359b0"
+    },
+    "development_extract": {
+      "rows": 2671344,
+      "sha256": "9f671b9fcd70feeae45d6a315e2171201ba810f02c582e7f35c9e86b150989db"
+    },
+    "holdout_extraction_sql_sha256": "74860bbc4a2ed3a9f484274427e62d7b763b79ef3a4ff0c3fa87ec737a650c72"
+  }
+}
