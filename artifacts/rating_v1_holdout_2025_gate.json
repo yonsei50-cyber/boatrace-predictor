@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETED",
+  "preflight_utc": "2026-09-23T02:45:15.416599+00:00",
+  "identity": {
+    "freeze_sha256": "c7fbd2af725f2c9d62491923a5a411350a33076b8b1b305798c5ed07d23136fb",
+    "frozen_code_sha256": "10fb2db5c6b97ce0e6e2d968e783ca5fcbd35b77314bc5817561f146f9703271",
+    "holdout_code_sha256": "54996c3e3d7bc936446165ca071cd9f165cf719118dc1c49517d917614adc141",
+    "comparison_artifact_sha256": "a3f9c3144b902b12c03ad6310e188d2090dd6a498084c9e28d4dd64a1eaa08bd",
+    "git_head": "240044f92975fa6f6c426d899660ec134f2666dc",
+    "development_cutoff": "2024-12-31",
+    "holdout_period": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "methods": {
+      "FIRST_COURSE_1_TO_6": "A-lr16-WARMUP_2017_2022-STRICT",
+      "EXACT_SECOND_COURSE_1_TO_6": "A-lr16-WARMUP_2017_2022-STRICT",
+      "OVERALL": "B-k120-RACE_NORMALIZED-WARMUP_2017_2022-STRICT",
+      "SHORT_50": "SHORT50-VALID_RESULT-AVAILABLE_HISTORY"
+    },
+    "parameters": {
+      "rating_scale": 400.0,
+      "A_learning_rate": 16.0,
+      "A_course_prior_pseudocount_each": 1,
+      "B_k_factor": 120.0,
+      "B_pair_weight": "RACE_NORMALIZED",
+      "B_effective_strict_pair_k": 8.0,
+      "short_window_size": 50,
+      "short_value_scale": 100.0,
+      "decay": "none beyond the SHORT_50 window",
+      "additional_calibration": "none in this rating-only comparison"
+    },
+    "eligibility": "STRICT for A, B, and SHORT_50 numeric updates"
+  },
+  "dataset": {
+    "database": "boatrace_predictor",
+    "read_only": "on",
+    "isolation": "REPEATABLE READ",
+    "snapshot": "409104:409104:",
+    "shards": 108,
+    "development_shard_chain_sha256": "ae4075eeff72db3b66ce68d6f06ee5c62c00cc74b8df7a886c1d21c1209a6ed8",
+    "full_shard_chain_sha256": "a0bfb0bf2f9e6b4c055372ded6d805326f8162c6ff69d0d733c395ea3bc8d610"
+  },
+  "evaluation_started_utc": "2026-09-23T02:45:24.275596+00:00",
+  "evaluation_snapshot": "409104:409104:",
+  "evaluation_finished_utc": "2026-09-23T02:51:32.779371+00:00"
+}
