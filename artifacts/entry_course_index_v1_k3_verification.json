@@ -1,0 +1,12 @@
+{
+  "status": "DETERMINISTIC_REPLAY_PASS",
+  "independent_database_replay": true,
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "freeze_sha256": "00233686ff49bca92e09645eb9177aecddd83d141f1a9478a5e6365a89374453",
+  "first_run_artifact_sha256": "9c01717378a4e4d5262df52039e367ccc5c61906181a4a1164c81bb429a2688c",
+  "ordered_input_sha256": "be780e7598a70d0dfd7e941b1ec59a6a05f94a7ff6693bfad9810b837305c62a",
+  "history_state_sha256": "3627876023137fcf5b4361e51b54cf7716b3be0003151875b1d5277e5505e9fe",
+  "eligible_result_sha256": "a5e2336562b98c50e79299bb184912b4060d4b717257e9d00e940b4fe4e4f71a",
+  "metrics_sha256": "4e5814717cafed09f6fed53532a9d4151021b61b85dc88c0d3d5ca8a846a555b",
+  "full_replay_data_equal": true
+}

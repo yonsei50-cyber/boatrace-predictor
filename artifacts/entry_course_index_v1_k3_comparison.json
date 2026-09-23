@@ -1,0 +1,212 @@
+{
+  "source": {
+    "result_dataset_version": {
+      "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602",
+      "authoritative_source": "brd_k3",
+      "date_start": "2017-01-01",
+      "date_end": "2026-09-18",
+      "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+      "normalization_version": "k3-only-result-v1",
+      "result_races": 535275,
+      "result_boats": 3211650
+    },
+    "result_boats_2017_2025": 2969286,
+    "non_k3_result_boats": 0,
+    "known_2025_08_12_k3_absent": {
+      "races": 60,
+      "entries": 360,
+      "results": 0
+    }
+  },
+  "freeze_sha256": "00233686ff49bca92e09645eb9177aecddd83d141f1a9478a5e6365a89374453",
+  "reference_sha256_lf": "4a6486e527b788c328ec6cbf8db8856668ac83af48d8413c86f1d4401ceb856e",
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "extract_sql_sha256": "276badb17e094c436e9ab8bbda377e53e42c3a1de93ce9066dd82ec60ee10cad",
+  "window": {
+    "unit": "calendar date",
+    "start_inclusive": "previous calendar year's same month and day; Feb 29 maps to Feb 28",
+    "end_exclusive": "prediction date D",
+    "formula": "start = D.replace(year=D.year-1); if invalid because D is Feb 29, start = Feb 28 of D.year-1; include start <= race_date < D",
+    "example_regular": {
+      "prediction_date": "2024-01-01",
+      "include_from": "2023-01-01",
+      "include_through": "2023-12-31"
+    },
+    "example_leap": {
+      "prediction_date": "2024-02-29",
+      "include_from": "2023-02-28",
+      "include_through": "2024-02-28"
+    }
+  },
+  "edogawa_rule": {
+    "venue_code": 3,
+    "national_training": "EXCLUDED",
+    "planned_prediction_rule": "predicted_course = boat_no",
+    "entry_fixed_effective": true,
+    "entry_fixed_basis": "EDOGAWA_MODEL_RULE",
+    "official_source_entry_fixed_claim": false,
+    "actual_result": "preserve observed actual_course unchanged",
+    "development_background": {
+      "eligible_races": 16618,
+      "eligible_entries": 99708,
+      "mismatched_entries": 414,
+      "races_with_mismatch": 173
+    },
+    "implementation_status": "NOT_IMPLEMENTED_IN_PREDICTION"
+  },
+  "historical_baseline_only": true,
+  "old_development_artifact_sha256": "7380920259091ba676c02481adf3c0059e05f3d323d15ad1a38ce57aef9dbc77",
+  "old_2025_artifact_sha256": "311ff88ac4c5fb61df8c84ecc5573f7783a52f86fdb798a7db5260ac9d2f489f",
+  "by_year": {
+    "2023": {
+      "national_eligible_races": {
+        "old": 52473,
+        "new": 52473,
+        "absolute_difference": 0,
+        "relative_difference": 0.0
+      },
+      "national_eligible_entries": {
+        "old": 314838,
+        "new": 314838,
+        "absolute_difference": 0,
+        "relative_difference": 0.0
+      },
+      "not_evaluable_entries": {
+        "old": 0,
+        "new": 0,
+        "absolute_difference": 0,
+        "relative_difference": null
+      },
+      "zero_probability_actuals": {
+        "old": 0,
+        "new": 0,
+        "absolute_difference": 0,
+        "relative_difference": null
+      },
+      "log_loss": {
+        "old": 0.4223715009944403,
+        "new": 0.42238444207142556,
+        "absolute_difference": 1.2941076985240052e-05,
+        "relative_difference": 3.063908657371842e-05
+      },
+      "multiclass_brier_sum": {
+        "old": 0.1872811295646181,
+        "new": 0.18729026543579372,
+        "absolute_difference": 9.135871175625088e-06,
+        "relative_difference": 4.878158945785787e-05
+      },
+      "top1_accuracy": {
+        "old": 0.8962418767747222,
+        "new": 0.8962355243013868,
+        "absolute_difference": -6.352473335469178e-06,
+        "relative_difference": -7.087900599255221e-06
+      },
+      "top1_ece_10bin": {
+        "old": 0.003212404373183451,
+        "new": 0.0032116052224527105,
+        "absolute_difference": -7.991507307405013e-07,
+        "relative_difference": -0.00024877027855261987
+      }
+    },
+    "2024": {
+      "national_eligible_races": {
+        "old": 52677,
+        "new": 52677,
+        "absolute_difference": 0,
+        "relative_difference": 0.0
+      },
+      "national_eligible_entries": {
+        "old": 316062,
+        "new": 316062,
+        "absolute_difference": 0,
+        "relative_difference": 0.0
+      },
+      "not_evaluable_entries": {
+        "old": 0,
+        "new": 0,
+        "absolute_difference": 0,
+        "relative_difference": null
+      },
+      "zero_probability_actuals": {
+        "old": 0,
+        "new": 0,
+        "absolute_difference": 0,
+        "relative_difference": null
+      },
+      "log_loss": {
+        "old": 0.40024760350700556,
+        "new": 0.40024763458578055,
+        "absolute_difference": 3.10787749979724e-08,
+        "relative_difference": 7.764887216227499e-08
+      },
+      "multiclass_brier_sum": {
+        "old": 0.17649427112061158,
+        "new": 0.17649428466819309,
+        "absolute_difference": 1.3547581501072159e-08,
+        "relative_difference": 7.675932717280151e-08
+      },
+      "top1_accuracy": {
+        "old": 0.9027785687618252,
+        "new": 0.9027785687618252,
+        "absolute_difference": 0.0,
+        "relative_difference": 0.0
+      },
+      "top1_ece_10bin": {
+        "old": 0.004686513523087968,
+        "new": 0.00468680285775895,
+        "absolute_difference": 2.893346709824385e-07,
+        "relative_difference": 6.17377224149765e-05
+      }
+    },
+    "2025": {
+      "national_eligible_races": {
+        "old": 52080,
+        "new": 52265,
+        "absolute_difference": 185,
+        "relative_difference": 0.003552227342549923
+      },
+      "national_eligible_entries": {
+        "old": 312480,
+        "new": 313590,
+        "absolute_difference": 1110,
+        "relative_difference": 0.003552227342549923
+      },
+      "not_evaluable_entries": {
+        "old": 0,
+        "new": 0,
+        "absolute_difference": 0,
+        "relative_difference": null
+      },
+      "zero_probability_actuals": {
+        "old": 0,
+        "new": 0,
+        "absolute_difference": 0,
+        "relative_difference": null
+      },
+      "log_loss": {
+        "old": 0.3986728493012526,
+        "new": 0.3995211771261872,
+        "absolute_difference": 0.0008483278249346027,
+        "relative_difference": 0.0021278796045967343
+      },
+      "multiclass_brier_sum": {
+        "old": 0.17418634015458828,
+        "new": 0.1745875033096724,
+        "absolute_difference": 0.00040116315508412215,
+        "relative_difference": 0.0023030689704376054
+      },
+      "top1_accuracy": {
+        "old": 0.9044098822324629,
+        "new": 0.9041742402500079,
+        "absolute_difference": -0.00023564198245495938,
+        "relative_difference": -0.00026054777494612964
+      },
+      "top1_ece_10bin": {
+        "old": 0.0011056617847010415,
+        "new": 0.0012150362511068324,
+        "absolute_difference": 0.00010937446640579091,
+        "relative_difference": 0.09892217305436177
+      }
+    }
+  }
+}

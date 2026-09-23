@@ -1,0 +1,369 @@
+{
+  "source": {
+    "result_dataset_version": {
+      "version_id": "K3_ONLY_RESULT_V1_b68a27cf8f653602",
+      "authoritative_source": "brd_k3",
+      "date_start": "2017-01-01",
+      "date_end": "2026-09-18",
+      "source_manifest_hash": "b68a27cf8f6536024f8d68149bd026f1ab271f62b1190b3bc1d860bf3bb1db4a",
+      "normalization_version": "k3-only-result-v1",
+      "result_races": 535275,
+      "result_boats": 3211650
+    },
+    "result_boats_2017_2025": 2969286,
+    "non_k3_result_boats": 0,
+    "known_2025_08_12_k3_absent": {
+      "races": 60,
+      "entries": 360,
+      "results": 0
+    }
+  },
+  "replay": {
+    "years": {
+      "2023": {
+        "counts": {
+          "all_races": 55992,
+          "edogawa_eligible_entries": 12720,
+          "edogawa_eligible_races": 2120,
+          "edogawa_excluded_races": 172,
+          "edogawa_mismatched_entries": 6,
+          "edogawa_races": 2292,
+          "edogawa_races_with_mismatch": 3,
+          "national_eligible_entries": 314838,
+          "national_eligible_races": 52473,
+          "national_excluded_races": 1227,
+          "national_races": 53700
+        },
+        "overall": {
+          "evaluated_entries": 314838,
+          "log_loss": 0.42238444207142556,
+          "log_loss_status": "FINITE",
+          "zero_probability_actuals": 0,
+          "multiclass_brier_sum": 0.18729026543579372,
+          "top1_accuracy": 0.8962355243013868,
+          "top1_ece_10bin": 0.0032116052224527105
+        },
+        "by_boat": {
+          "1": {
+            "evaluated_entries": 52473,
+            "log_loss": 0.060764316918402,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.018909127223319815,
+            "top1_accuracy": 0.9904712899967603,
+            "top1_ece_10bin": 0.0010729557763187127
+          },
+          "2": {
+            "evaluated_entries": 52473,
+            "log_loss": 0.2983388157721712,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.12125159457966204,
+            "top1_accuracy": 0.936252930078326,
+            "top1_ece_10bin": 0.0009538231529799161
+          },
+          "3": {
+            "evaluated_entries": 52473,
+            "log_loss": 0.3910724503759235,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.16145653298315663,
+            "top1_accuracy": 0.9140700931907838,
+            "top1_ece_10bin": 0.004074005009192705
+          },
+          "4": {
+            "evaluated_entries": 52473,
+            "log_loss": 0.5443166998551608,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.23838789682210254,
+            "top1_accuracy": 0.8691136393954987,
+            "top1_ece_10bin": 0.005115161786794288
+          },
+          "5": {
+            "evaluated_entries": 52473,
+            "log_loss": 0.6594995139932022,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.31556182923626114,
+            "top1_accuracy": 0.8182303279781983,
+            "top1_ece_10bin": 0.0045637275770394215
+          },
+          "6": {
+            "evaluated_entries": 52473,
+            "log_loss": 0.5803148555139477,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.26817461177031165,
+            "top1_accuracy": 0.8492748651687535,
+            "top1_ece_10bin": 0.0034899580319983923
+          }
+        },
+        "zero_audit": {
+          "min_boat_history_total": {
+            "1": 51994,
+            "2": 51994,
+            "3": 51994,
+            "4": 51994,
+            "5": 51994,
+            "6": 51994
+          },
+          "min_course_cell_count": 7,
+          "zero_course_cell_boat_days": 0,
+          "zero_history_boat_days": 0,
+          "zero_probability_actuals": []
+        }
+      },
+      "2024": {
+        "counts": {
+          "all_races": 56064,
+          "edogawa_eligible_entries": 11556,
+          "edogawa_eligible_races": 1926,
+          "edogawa_excluded_races": 294,
+          "edogawa_mismatched_entries": 0,
+          "edogawa_races": 2220,
+          "edogawa_races_with_mismatch": 0,
+          "national_eligible_entries": 316062,
+          "national_eligible_races": 52677,
+          "national_excluded_races": 1167,
+          "national_races": 53844
+        },
+        "overall": {
+          "evaluated_entries": 316062,
+          "log_loss": 0.40024763458578055,
+          "log_loss_status": "FINITE",
+          "zero_probability_actuals": 0,
+          "multiclass_brier_sum": 0.17649428466819309,
+          "top1_accuracy": 0.9027785687618252,
+          "top1_ece_10bin": 0.00468680285775895
+        },
+        "by_boat": {
+          "1": {
+            "evaluated_entries": 52677,
+            "log_loss": 0.0572033573448824,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.018191791953549596,
+            "top1_accuracy": 0.9908309129221482,
+            "top1_ece_10bin": 0.0006394655966224242
+          },
+          "2": {
+            "evaluated_entries": 52677,
+            "log_loss": 0.2813758647625443,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.11468913886170043,
+            "top1_accuracy": 0.9398219336712417,
+            "top1_ece_10bin": 0.004099306362024546
+          },
+          "3": {
+            "evaluated_entries": 52677,
+            "log_loss": 0.3681013525136664,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.15105725097544936,
+            "top1_accuracy": 0.91990811929305,
+            "top1_ece_10bin": 0.004424414591712911
+          },
+          "4": {
+            "evaluated_entries": 52677,
+            "log_loss": 0.5090622031831162,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.2197188093466249,
+            "top1_accuracy": 0.8803462611766046,
+            "top1_ece_10bin": 0.007684334604443655
+          },
+          "5": {
+            "evaluated_entries": 52677,
+            "log_loss": 0.628831801897571,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.299404325398592,
+            "top1_accuracy": 0.8288437078800994,
+            "top1_ece_10bin": 0.006778853456345181
+          },
+          "6": {
+            "evaluated_entries": 52677,
+            "log_loss": 0.556911227813022,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.2559043914735474,
+            "top1_accuracy": 0.8569204776278072,
+            "top1_ece_10bin": 0.004494442535123072
+          }
+        },
+        "zero_audit": {
+          "min_boat_history_total": {
+            "1": 52019,
+            "2": 52019,
+            "3": 52019,
+            "4": 52019,
+            "5": 52019,
+            "6": 52019
+          },
+          "min_course_cell_count": 5,
+          "zero_course_cell_boat_days": 0,
+          "zero_history_boat_days": 0,
+          "zero_probability_actuals": []
+        }
+      },
+      "2025": {
+        "counts": {
+          "all_races": 55908,
+          "edogawa_eligible_entries": 13140,
+          "edogawa_eligible_races": 2190,
+          "edogawa_excluded_races": 198,
+          "edogawa_mismatched_entries": 6,
+          "edogawa_races": 2388,
+          "edogawa_races_with_mismatch": 3,
+          "national_eligible_entries": 313590,
+          "national_eligible_races": 52265,
+          "national_excluded_races": 1255,
+          "national_races": 53520
+        },
+        "overall": {
+          "evaluated_entries": 313590,
+          "log_loss": 0.3995211771261872,
+          "log_loss_status": "FINITE",
+          "zero_probability_actuals": 0,
+          "multiclass_brier_sum": 0.1745875033096724,
+          "top1_accuracy": 0.9041742402500079,
+          "top1_ece_10bin": 0.0012150362511068324
+        },
+        "by_boat": {
+          "1": {
+            "evaluated_entries": 52265,
+            "log_loss": 0.06912232683586898,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.022251891095333577,
+            "top1_accuracy": 0.9887687745144934,
+            "top1_ece_10bin": 0.001854595271365959
+          },
+          "2": {
+            "evaluated_entries": 52265,
+            "log_loss": 0.2874021999372659,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.11494711986163438,
+            "top1_accuracy": 0.9397876207787238,
+            "top1_ece_10bin": 0.0021314065465439435
+          },
+          "3": {
+            "evaluated_entries": 52265,
+            "log_loss": 0.37404194183414397,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.15299546809298384,
+            "top1_accuracy": 0.9188558308619535,
+            "top1_ece_10bin": 0.00245674090248434
+          },
+          "4": {
+            "evaluated_entries": 52265,
+            "log_loss": 0.5069351410359568,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.21729231247710903,
+            "top1_accuracy": 0.8819094996651679,
+            "top1_ece_10bin": 0.0019513528487279472
+          },
+          "5": {
+            "evaluated_entries": 52265,
+            "log_loss": 0.6182849345091777,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.2920631724433657,
+            "top1_accuracy": 0.833904142351478,
+            "top1_ece_10bin": 0.00010128742167173095
+          },
+          "6": {
+            "evaluated_entries": 52265,
+            "log_loss": 0.541340518604628,
+            "log_loss_status": "FINITE",
+            "zero_probability_actuals": 0,
+            "multiclass_brier_sum": 0.24797505588733904,
+            "top1_accuracy": 0.8618195733282311,
+            "top1_ece_10bin": 0.0010025906420804767
+          }
+        },
+        "zero_audit": {
+          "min_boat_history_total": {
+            "1": 52057,
+            "2": 52057,
+            "3": 52057,
+            "4": 52057,
+            "5": 52057,
+            "6": 52057
+          },
+          "min_course_cell_count": 1,
+          "zero_course_cell_boat_days": 0,
+          "zero_history_boat_days": 0,
+          "zero_probability_actuals": []
+        }
+      }
+    },
+    "all_year_eligible_national_races": {
+      "2017": 51938,
+      "2018": 52092,
+      "2019": 51944,
+      "2020": 52220,
+      "2021": 52181,
+      "2022": 52610,
+      "2023": 52473,
+      "2024": 52677,
+      "2025": 52265
+    },
+    "extract_rows_by_year": {
+      "2017": 330192,
+      "2018": 331992,
+      "2019": 331056,
+      "2020": 332784,
+      "2021": 334368,
+      "2022": 338616,
+      "2023": 335952,
+      "2024": 336384,
+      "2025": 335448
+    },
+    "ordered_input_sha256": "be780e7598a70d0dfd7e941b1ec59a6a05f94a7ff6693bfad9810b837305c62a",
+    "history_state_sha256": "3627876023137fcf5b4361e51b54cf7716b3be0003151875b1d5277e5505e9fe",
+    "eligible_result_sha256": "a5e2336562b98c50e79299bb184912b4060d4b717257e9d00e940b4fe4e4f71a",
+    "metrics_sha256": "4e5814717cafed09f6fed53532a9d4151021b61b85dc88c0d3d5ca8a846a555b"
+  },
+  "freeze_sha256": "00233686ff49bca92e09645eb9177aecddd83d141f1a9478a5e6365a89374453",
+  "reference_sha256_lf": "4a6486e527b788c328ec6cbf8db8856668ac83af48d8413c86f1d4401ceb856e",
+  "source_policy_checkpoint": "fd49bffe83b2f23443ec5f525786c0dd309abe95",
+  "extract_sql_sha256": "276badb17e094c436e9ab8bbda377e53e42c3a1de93ce9066dd82ec60ee10cad",
+  "window": {
+    "unit": "calendar date",
+    "start_inclusive": "previous calendar year's same month and day; Feb 29 maps to Feb 28",
+    "end_exclusive": "prediction date D",
+    "formula": "start = D.replace(year=D.year-1); if invalid because D is Feb 29, start = Feb 28 of D.year-1; include start <= race_date < D",
+    "example_regular": {
+      "prediction_date": "2024-01-01",
+      "include_from": "2023-01-01",
+      "include_through": "2023-12-31"
+    },
+    "example_leap": {
+      "prediction_date": "2024-02-29",
+      "include_from": "2023-02-28",
+      "include_through": "2024-02-28"
+    }
+  },
+  "edogawa_rule": {
+    "venue_code": 3,
+    "national_training": "EXCLUDED",
+    "planned_prediction_rule": "predicted_course = boat_no",
+    "entry_fixed_effective": true,
+    "entry_fixed_basis": "EDOGAWA_MODEL_RULE",
+    "official_source_entry_fixed_claim": false,
+    "actual_result": "preserve observed actual_course unchanged",
+    "development_background": {
+      "eligible_races": 16618,
+      "eligible_entries": 99708,
+      "mismatched_entries": 414,
+      "races_with_mismatch": 173
+    },
+    "implementation_status": "NOT_IMPLEMENTED_IN_PREDICTION"
+  }
+}
