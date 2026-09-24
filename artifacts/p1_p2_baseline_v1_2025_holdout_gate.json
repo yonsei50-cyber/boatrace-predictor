@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "f7dcb2f64fbc345de64767dcf9723a52b4db972121f30320c85ee48ea606a9f4",
+  "metrics_sha256": "eda7b35721c14d8593a4f30e5a66404f097d6e0159c76cef91c872f825fca584",
+  "model_sha256": "3954fbecb97dae5816b45e00735ab4ec31f13dbdb13d21c2c4022fca9d37f54e",
+  "prediction_sha256": "b05869f2df22477c17851014f8a9b4aca7dfb006acdf433b5a6cc1df7bf7915a",
+  "status": "COMPLETED",
+  "verdict": "P1_P2_BASELINE_V1_2025_INDEPENDENT_HOLDOUT_COMPLETE"
+}

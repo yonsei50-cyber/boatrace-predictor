@@ -1,4 +1,8 @@
 scripts/p1_p2_baseline_v1.py text eol=lf
+scripts/evaluate_p1_p2_baseline_v1_holdout_2025.py text eol=lf
 artifacts/p1_p2_baseline_v1_freeze.json -text whitespace=cr-at-eol
 artifacts/p1_p2_baseline_v1_model.json -text whitespace=cr-at-eol
 artifacts/p1_p2_baseline_v1_development_predictions.npz -text
+artifacts/p1_p2_baseline_v1_2025_holdout_gate.json -text whitespace=cr-at-eol
+artifacts/p1_p2_baseline_v1_2025_holdout_metrics.json -text whitespace=cr-at-eol
+artifacts/p1_p2_baseline_v1_2025_holdout_predictions.npz -text

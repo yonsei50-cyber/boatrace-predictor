@@ -1,0 +1,47 @@
+{
+  "P1": {
+    "bundle": "CORE_MOTOR",
+    "l2": 0.01,
+    "metrics": {
+      "brier": 0.5872723584484317,
+      "ece_10bin": 0.0026524810114420105,
+      "log_loss": 1.1999229721400018,
+      "races": 51311,
+      "top1": 0.569215178032001
+    },
+    "temperature": 1.0143334057206692,
+    "validation": {
+      "probability_nonfinite": 0,
+      "probability_out_of_range": 0,
+      "race_probability_sum": 0
+    }
+  },
+  "P2": {
+    "bundle": "FULL",
+    "l2": 0.01,
+    "metrics": {
+      "brier": 0.7988774497158004,
+      "ece_10bin": 0.008953477735191867,
+      "log_loss": 1.6728453399487815,
+      "races": 51311,
+      "top1": 0.2781274970279277
+    },
+    "temperature": 1.0066548794380772,
+    "validation": {
+      "probability_nonfinite": 0,
+      "probability_out_of_range": 0,
+      "race_probability_sum": 0
+    }
+  },
+  "eligible_races": 51311,
+  "filter": "label_eligible = TRUE AND race_date >= DATE '2025-01-01' AND race_date < DATE '2026-01-01'",
+  "freeze_sha256": "f7dcb2f64fbc345de64767dcf9723a52b4db972121f30320c85ee48ea606a9f4",
+  "label_source": "existing K3-only prediction_dataset_v1 labels",
+  "model_sha256": "3954fbecb97dae5816b45e00735ab4ec31f13dbdb13d21c2c4022fca9d37f54e",
+  "prediction_artifact": "artifacts\\p1_p2_baseline_v1_2025_holdout_predictions.npz",
+  "prediction_sha256": "b05869f2df22477c17851014f8a9b4aca7dfb006acdf433b5a6cc1df7bf7915a",
+  "prediction_shape": "race_id and race_date_yyyymmdd: (races,); boat_no, label_p1, label_p2, pred_p1, pred_p2: (races, 6)",
+  "rows": 307866,
+  "source_table": "core.prediction_dataset_v1",
+  "verdict": "P1_P2_BASELINE_V1_2025_INDEPENDENT_HOLDOUT_COMPLETE"
+}
