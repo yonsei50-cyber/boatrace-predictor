@@ -1,0 +1,4 @@
+scripts/p1_p2_baseline_v1.py text eol=lf
+artifacts/p1_p2_baseline_v1_freeze.json -text whitespace=cr-at-eol
+artifacts/p1_p2_baseline_v1_model.json -text whitespace=cr-at-eol
+artifacts/p1_p2_baseline_v1_development_predictions.npz -text

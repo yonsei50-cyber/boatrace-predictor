@@ -1,0 +1,2016 @@
+{
+  "artifacts": {
+    "development_predictions_path": "artifacts\\p1_p2_baseline_v1_development_predictions.npz",
+    "development_predictions_sha256": "13d8c22b45055426a777bb9a98c78157e4913a1ea60557b0bddea5e1096ecdea",
+    "model_path": "artifacts\\p1_p2_baseline_v1_model.json",
+    "model_sha256": "3954fbecb97dae5816b45e00735ab4ec31f13dbdb13d21c2c4022fca9d37f54e"
+  },
+  "calibration_2024": {
+    "P1": {
+      "fitted_years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "post": {
+        "brier": 0.5869757496450789,
+        "ece_10bin": 0.0021707779913327035,
+        "log_loss": 1.1991607377463032,
+        "races": 51392,
+        "top1": 0.5690963574097135
+      },
+      "pre": {
+        "brier": 0.5869946136295936,
+        "ece_10bin": 0.0023934152110061026,
+        "log_loss": 1.1992429617971274,
+        "races": 51392,
+        "top1": 0.5690963574097135
+      },
+      "solver": {
+        "gradient_max": 2.7943601641280957e-06,
+        "iterations": 48
+      },
+      "temperature": 1.0143334057206692
+    },
+    "P2": {
+      "fitted_years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "post": {
+        "brier": 0.7999556702095216,
+        "ece_10bin": 0.009527298554309775,
+        "log_loss": 1.676508150281554,
+        "races": 51392,
+        "top1": 0.27325264632627644
+      },
+      "pre": {
+        "brier": 0.8000067129418268,
+        "ece_10bin": 0.009401632368340499,
+        "log_loss": 1.6765124792239292,
+        "races": 51392,
+        "top1": 0.27325264632627644
+      },
+      "solver": {
+        "gradient_max": 9.906671658148e-06,
+        "iterations": 51
+      },
+      "temperature": 1.0066548794380772
+    }
+  },
+  "code_sha256": "057c048e6b8032cc5a0165839896e89120ef2f08f61197d3117eb2e88cb8ceea",
+  "method": {
+    "bundles": [
+      "CORE",
+      "CORE_SHORT",
+      "CORE_MOTOR",
+      "FULL"
+    ],
+    "calibration": "one positive scalar T per target, 2024 log loss minimum with log T in [-4,4]",
+    "final_fit": "all eligible 2017-2024; selected bundle and L2; frozen T",
+    "model": "separate six-boat linear softmax for P1 and exact P2",
+    "objective": "mean race negative log likelihood + 0.5 * L2 * squared coefficient norm",
+    "penalties": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "preprocessing": "train-only numeric median, missing indicator, train-only mean/std with zero scale replaced by 1; train-only categorical levels and unseen all-zero; race-center transformed features",
+    "selection": "equal-weight mean of 2022 and 2023 annual log loss; 1e-5 tie band, then Brier with 1e-5 tie band, then simpler bundle"
+  },
+  "scope": {
+    "calibration_year": 2024,
+    "development_years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "eligible_only": true,
+    "holdout_2025": "UNTOUCHED",
+    "selection_validation": [
+      2022,
+      2023
+    ],
+    "year_2026": "UNUSED"
+  },
+  "selected": {
+    "P1": {
+      "bundle": "CORE_MOTOR",
+      "mean_brier": 0.5806930867632658,
+      "mean_log_loss": 1.1849947254212267,
+      "penalty": 0.01
+    },
+    "P2": {
+      "bundle": "FULL",
+      "mean_brier": 0.7985140519459204,
+      "mean_log_loss": 1.6719927936952712,
+      "penalty": 0.01
+    }
+  },
+  "selection_folds": {
+    "P1": [
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.820828495215924,
+          "ece_10bin": 5.1971861932708e-06,
+          "log_loss": 1.7549177231458086,
+          "races": 51264,
+          "top1": 0.4855844257178527
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.54550007683374e-07,
+          "iterations": 3
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7415196353180554,
+          "ece_10bin": 0.09066677748579889,
+          "log_loss": 1.5479752216251734,
+          "races": 51264,
+          "top1": 0.5062031835205992
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.887933317318291e-08,
+          "iterations": 6
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.6107969502360402,
+          "ece_10bin": 0.03198403213164524,
+          "log_loss": 1.2615192939472684,
+          "races": 51264,
+          "top1": 0.5529221285892634
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.5481008376894145e-06,
+          "iterations": 9
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5853929522967953,
+          "ece_10bin": 0.006535954608158632,
+          "log_loss": 1.1992630241898334,
+          "races": 51264,
+          "top1": 0.5677083333333334
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.9874000013370428e-06,
+          "iterations": 20
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5834793539847866,
+          "ece_10bin": 0.003168918370226879,
+          "log_loss": 1.1938190026593536,
+          "races": 51264,
+          "top1": 0.5697175405742821
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 2.190659639183558e-06,
+          "iterations": 44
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8202322254109854,
+          "ece_10bin": 5.1850147348560045e-06,
+          "log_loss": 1.753174444584426,
+          "races": 51264,
+          "top1": 0.479771379525593
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 4.293871785909786e-09,
+          "iterations": 4
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7395115785442529,
+          "ece_10bin": 0.08916850391247705,
+          "log_loss": 1.5425423002705845,
+          "races": 51264,
+          "top1": 0.5038623595505618
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 2.0468306105581036e-08,
+          "iterations": 6
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.6100656011188736,
+          "ece_10bin": 0.03217870037183081,
+          "log_loss": 1.2588737290822747,
+          "races": 51264,
+          "top1": 0.5535853620474407
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.2825477068642566e-06,
+          "iterations": 9
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5854868296461674,
+          "ece_10bin": 0.0066403848147865464,
+          "log_loss": 1.1992198518615924,
+          "races": 51264,
+          "top1": 0.5675717852684145
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 4.989608519303905e-06,
+          "iterations": 18
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5835667283040381,
+          "ece_10bin": 0.003051526546888688,
+          "log_loss": 1.1939199277371362,
+          "races": 51264,
+          "top1": 0.569015293383271
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 2.6774288098015792e-06,
+          "iterations": 47
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8207529262380469,
+          "ece_10bin": 5.194899219959913e-06,
+          "log_loss": 1.7546956921867112,
+          "races": 51264,
+          "top1": 0.48579900124843944
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.884787482591161e-07,
+          "iterations": 3
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7408431545542132,
+          "ece_10bin": 0.09154341140761225,
+          "log_loss": 1.5461831429405608,
+          "races": 51264,
+          "top1": 0.5078612671660424
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.2960301859488155e-08,
+          "iterations": 6
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.6075522033735719,
+          "ece_10bin": 0.03256497437874593,
+          "log_loss": 1.2533592050429971,
+          "races": 51264,
+          "top1": 0.5547752808988764
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.7341859526003034e-06,
+          "iterations": 9
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5801617894627188,
+          "ece_10bin": 0.006260659408657051,
+          "log_loss": 1.1857759666807932,
+          "races": 51264,
+          "top1": 0.5711610486891385
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 4.147765859080499e-06,
+          "iterations": 19
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5784163242513813,
+          "ece_10bin": 0.002646430042602523,
+          "log_loss": 1.1805343194604554,
+          "races": 51264,
+          "top1": 0.5737359550561798
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 2.305768974075577e-06,
+          "iterations": 46
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8201567686280684,
+          "ece_10bin": 5.1827127934910865e-06,
+          "log_loss": 1.7529529365408254,
+          "races": 51264,
+          "top1": 0.4809612983770287
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 4.540100252345414e-09,
+          "iterations": 4
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7388400529578314,
+          "ece_10bin": 0.08982931171303404,
+          "log_loss": 1.5407670359363324,
+          "races": 51264,
+          "top1": 0.5051693196004994
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 2.1840366515313292e-08,
+          "iterations": 6
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.6068829213351246,
+          "ece_10bin": 0.032515233184746355,
+          "log_loss": 1.2508802090490132,
+          "races": 51264,
+          "top1": 0.5553214731585518
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.175242181766789e-06,
+          "iterations": 9
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5803832658351206,
+          "ece_10bin": 0.0062123973122077125,
+          "log_loss": 1.186085487903443,
+          "races": 51264,
+          "top1": 0.5715706928838952
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.0815043958157735e-06,
+          "iterations": 19
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.5784545669820383,
+          "ece_10bin": 0.0025822501603133957,
+          "log_loss": 1.1806004159331165,
+          "races": 51264,
+          "top1": 0.5737554619225967
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 3.454137990706709e-06,
+          "iterations": 50
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8210378767077872,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7555191639145487,
+          "races": 51246,
+          "top1": 0.4756859071927565
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.606047119213528e-07,
+          "iterations": 3
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7434746532690528,
+          "ece_10bin": 0.08893163075754333,
+          "log_loss": 1.5525400009374926,
+          "races": 51246,
+          "top1": 0.4991023689653827
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.9227528680332284e-08,
+          "iterations": 6
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.6151970666199047,
+          "ece_10bin": 0.031240305803520312,
+          "log_loss": 1.270406938212601,
+          "races": 51246,
+          "top1": 0.5488038090777817
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.6024176877627028e-06,
+          "iterations": 9
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5905923338842775,
+          "ece_10bin": 0.005688520134561349,
+          "log_loss": 1.2087892335649995,
+          "races": 51246,
+          "top1": 0.5650001951371815
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.2853689675167866e-06,
+          "iterations": 18
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5884843509793268,
+          "ece_10bin": 0.002709018595455082,
+          "log_loss": 1.2026623414917146,
+          "races": 51246,
+          "top1": 0.5672247590055809
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 1.7609677920122843e-06,
+          "iterations": 42
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8204602296836502,
+          "ece_10bin": 0.0,
+          "log_loss": 1.753827383595438,
+          "races": 51246,
+          "top1": 0.47149045779182763
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 4.5240180490679904e-09,
+          "iterations": 4
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7415420989977438,
+          "ece_10bin": 0.08698674529990764,
+          "log_loss": 1.5472406434190065,
+          "races": 51246,
+          "top1": 0.4961362838075167
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 2.0237685458002197e-08,
+          "iterations": 6
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.6144863211646513,
+          "ece_10bin": 0.03157585646318051,
+          "log_loss": 1.2677349369302637,
+          "races": 51246,
+          "top1": 0.5499941458845569
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 7.10516853921761e-07,
+          "iterations": 10
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5908305355915435,
+          "ece_10bin": 0.005756140909768742,
+          "log_loss": 1.2090028559353985,
+          "races": 51246,
+          "top1": 0.5643757561565781
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 3.2344781174722254e-06,
+          "iterations": 19
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5886689309224553,
+          "ece_10bin": 0.0028460739869350504,
+          "log_loss": 1.2029751189994473,
+          "races": 51246,
+          "top1": 0.5667954572064161
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 5.299949521542398e-06,
+          "iterations": 41
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8209665206798152,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7553096829912305,
+          "races": 51246,
+          "top1": 0.47818366311516997
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 3.100224639229765e-07,
+          "iterations": 3
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.74282214791196,
+          "ece_10bin": 0.08962203796565495,
+          "log_loss": 1.550826429835037,
+          "races": 51246,
+          "top1": 0.5019123443780978
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.2811313780669575e-08,
+          "iterations": 6
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.6118024496706203,
+          "ece_10bin": 0.0319259101814178,
+          "log_loss": 1.2622700686291148,
+          "races": 51246,
+          "top1": 0.5529992584787106
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.6316153169243508e-06,
+          "iterations": 9
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5848712285262965,
+          "ece_10bin": 0.005477263259153853,
+          "log_loss": 1.1951219077749753,
+          "races": 51246,
+          "top1": 0.5690590485111033
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 3.8176712194443185e-06,
+          "iterations": 19
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5829698492751504,
+          "ece_10bin": 0.0021102944804465024,
+          "log_loss": 1.189455131381998,
+          "races": 51246,
+          "top1": 0.5716934004605237
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 5.156797800717067e-06,
+          "iterations": 44
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8203889640908442,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7536183765378486,
+          "races": 51246,
+          "top1": 0.47314912383405533
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 4.9980926845188955e-09,
+          "iterations": 4
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7408930163839943,
+          "ece_10bin": 0.08776292971647856,
+          "log_loss": 1.5455415159121375,
+          "races": 51246,
+          "top1": 0.4987511220387933
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 2.361955775409541e-08,
+          "iterations": 6
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.6111467221568287,
+          "ece_10bin": 0.03212467644536015,
+          "log_loss": 1.259751571451068,
+          "races": 51246,
+          "top1": 0.5535261288685946
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 7.33845502025321e-07,
+          "iterations": 10
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.5852292571857032,
+          "ece_10bin": 0.005348005900476231,
+          "log_loss": 1.1956493952600566,
+          "races": 51246,
+          "top1": 0.568707801584514
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 1.5248171944537425e-06,
+          "iterations": 20
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.58303894756378,
+          "ece_10bin": 0.002068574305001822,
+          "log_loss": 1.1895833217133918,
+          "races": 51246,
+          "top1": 0.5715568044335168
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 8.049132889770792e-06,
+          "iterations": 47
+        },
+        "year": 2023
+      }
+    ],
+    "P2": [
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8310710140856372,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7849734516905185,
+          "races": 51264,
+          "top1": 0.24598158551810237
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.242737289215313e-07,
+          "iterations": 3
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8186190733485357,
+          "ece_10bin": 0.008900646373647046,
+          "log_loss": 1.747248310371316,
+          "races": 51264,
+          "top1": 0.25052668539325845
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.679727819059451e-07,
+          "iterations": 5
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8015746729020077,
+          "ece_10bin": 0.0128856295369568,
+          "log_loss": 1.6888110047099392,
+          "races": 51264,
+          "top1": 0.2675756866416979
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 4.066472228947404e-07,
+          "iterations": 10
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7978247462491,
+          "ece_10bin": 0.01067550123021296,
+          "log_loss": 1.6716800161287766,
+          "races": 51264,
+          "top1": 0.27885065543071164
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 1.1957733476341127e-05,
+          "iterations": 19
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7978461190407662,
+          "ece_10bin": 0.009222266276909358,
+          "log_loss": 1.6708511209811605,
+          "races": 51264,
+          "top1": 0.2797869850187266
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 1.1679248607241572e-05,
+          "iterations": 44
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8308444848535278,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7842912422778399,
+          "races": 51264,
+          "top1": 0.2452988451935081
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 1.3149763833375516e-07,
+          "iterations": 3
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8177197342612089,
+          "ece_10bin": 0.009609863445023275,
+          "log_loss": 1.7443444427749895,
+          "races": 51264,
+          "top1": 0.25033161672908866
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.7052668663079806e-07,
+          "iterations": 5
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8010511221622435,
+          "ece_10bin": 0.013137958135640221,
+          "log_loss": 1.6864444426906833,
+          "races": 51264,
+          "top1": 0.26898018102372034
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.0629697505676328e-06,
+          "iterations": 9
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7979304031123625,
+          "ece_10bin": 0.01056853733011182,
+          "log_loss": 1.6715303658132135,
+          "races": 51264,
+          "top1": 0.2778167915106117
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.7439921274829623e-06,
+          "iterations": 21
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7979212646056317,
+          "ece_10bin": 0.00952074997052355,
+          "log_loss": 1.6707731679737463,
+          "races": 51264,
+          "top1": 0.2795333957553059
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 2.3393643817168222e-06,
+          "iterations": 46
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8310513980929893,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7849144058899342,
+          "races": 51264,
+          "top1": 0.24520131086142322
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.386123329478629e-07,
+          "iterations": 3
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8184550994596467,
+          "ece_10bin": 0.009125301503854339,
+          "log_loss": 1.7467403316859254,
+          "races": 51264,
+          "top1": 0.25040964419475653
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.543368839049264e-07,
+          "iterations": 5
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8009593132846635,
+          "ece_10bin": 0.013521105238801913,
+          "log_loss": 1.68666052364947,
+          "races": 51264,
+          "top1": 0.26915574282147314
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 3.502829879278857e-07,
+          "iterations": 10
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.797134125208876,
+          "ece_10bin": 0.011276452964165006,
+          "log_loss": 1.6688211459648927,
+          "races": 51264,
+          "top1": 0.2810549313358302
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 3.084112757033297e-06,
+          "iterations": 20
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7972523570525123,
+          "ece_10bin": 0.009895108354866027,
+          "log_loss": 1.6681882693714778,
+          "races": 51264,
+          "top1": 0.2808208489388265
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 2.596068617877114e-06,
+          "iterations": 48
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8308249184610325,
+          "ece_10bin": 0.0,
+          "log_loss": 1.784232327397312,
+          "races": 51264,
+          "top1": 0.24506476279650438
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 1.9197661978512248e-07,
+          "iterations": 3
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.817557954123137,
+          "ece_10bin": 0.009644483530951417,
+          "log_loss": 1.7438421532221413,
+          "races": 51264,
+          "top1": 0.25070224719101125
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.7116969074255917e-07,
+          "iterations": 5
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.8004608228416855,
+          "ece_10bin": 0.013679628436664813,
+          "log_loss": 1.6843808437617924,
+          "races": 51264,
+          "top1": 0.2700920724094881
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.256101294568046e-06,
+          "iterations": 9
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.7972702657623235,
+          "ece_10bin": 0.011285194843525961,
+          "log_loss": 1.6688296629644885,
+          "races": 51264,
+          "top1": 0.2798845193508115
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.0247185845609014e-05,
+          "iterations": 20
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "metrics": {
+          "brier": 0.797318815455719,
+          "ece_10bin": 0.01007195142153914,
+          "log_loss": 1.6681922485103635,
+          "races": 51264,
+          "top1": 0.28058676654182274
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 1.130358783787771e-05,
+          "iterations": 49
+        },
+        "year": 2022
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8311884394232784,
+          "ece_10bin": 0.0,
+          "log_loss": 1.785324887656833,
+          "races": 51246,
+          "top1": 0.23999921945127425
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.3710217916805831e-07,
+          "iterations": 3
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8194931468825765,
+          "ece_10bin": 0.008145106948915765,
+          "log_loss": 1.7498521414283688,
+          "races": 51246,
+          "top1": 0.24474105296023105
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.7236870570279395e-07,
+          "iterations": 5
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8036555701410376,
+          "ece_10bin": 0.01219000112030856,
+          "log_loss": 1.6952706860542592,
+          "races": 51246,
+          "top1": 0.2632790851968934
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 3.8788015406521215e-07,
+          "iterations": 10
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8003925725448862,
+          "ece_10bin": 0.010430674253464613,
+          "log_loss": 1.6796480862944094,
+          "races": 51246,
+          "top1": 0.27284080708738245
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 3.9450709610876905e-06,
+          "iterations": 19
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8004109740596524,
+          "ece_10bin": 0.010332200816145259,
+          "log_loss": 1.6788210242631463,
+          "races": 51246,
+          "top1": 0.2733481637591227
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 4.53851284249753e-06,
+          "iterations": 47
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8309751827898457,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7846824692509358,
+          "races": 51246,
+          "top1": 0.2390625609803692
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 1.3837150653062125e-07,
+          "iterations": 3
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.818653289629949,
+          "ece_10bin": 0.009054682711378137,
+          "log_loss": 1.7471360204750543,
+          "races": 51246,
+          "top1": 0.24405807282519612
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.726583395873782e-07,
+          "iterations": 5
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8031394127188217,
+          "ece_10bin": 0.011907990855543484,
+          "log_loss": 1.6929854037052843,
+          "races": 51246,
+          "top1": 0.2641572025133669
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 9.068733414496766e-07,
+          "iterations": 9
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8004239837022863,
+          "ece_10bin": 0.010247476798440801,
+          "log_loss": 1.6793097285401763,
+          "races": 51246,
+          "top1": 0.27305545798696484
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.1218155052196708e-06,
+          "iterations": 21
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_SHORT",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8004351515858301,
+          "ece_10bin": 0.010375516059656809,
+          "log_loss": 1.6786160059018393,
+          "races": 51246,
+          "top1": 0.2736213558131366
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 1.1668792899931961e-05,
+          "iterations": 47
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8311696112850222,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7852680761130855,
+          "races": 51246,
+          "top1": 0.24083830933146003
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 2.385285829409334e-07,
+          "iterations": 3
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8193363467573903,
+          "ece_10bin": 0.008308366035535586,
+          "log_loss": 1.7493589866564199,
+          "races": 51246,
+          "top1": 0.24587284861257463
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.6781641495183797e-07,
+          "iterations": 5
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8030289698135566,
+          "ece_10bin": 0.012327222047601675,
+          "log_loss": 1.6930962725565284,
+          "races": 51246,
+          "top1": 0.2632790851968934
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 3.6780295314953193e-07,
+          "iterations": 10
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7995749941884674,
+          "ece_10bin": 0.010055599163203553,
+          "log_loss": 1.6765631797934033,
+          "races": 51246,
+          "top1": 0.2745970417203294
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 2.2444591293389188e-06,
+          "iterations": 21
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "CORE_MOTOR",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7996772079687903,
+          "ece_10bin": 0.010083984448582784,
+          "log_loss": 1.675875151951601,
+          "races": 51246,
+          "top1": 0.27568980993638526
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 4.036557462893623e-06,
+          "iterations": 46
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8309564058826275,
+          "ece_10bin": 0.0,
+          "log_loss": 1.7846257794739002,
+          "races": 51246,
+          "top1": 0.23943332162510245
+        },
+        "penalty": 100.0,
+        "solver": {
+          "gradient_max": 1.9984559815333647e-07,
+          "iterations": 3
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8184986582764058,
+          "ece_10bin": 0.009080439360157717,
+          "log_loss": 1.7466480731266096,
+          "races": 51246,
+          "top1": 0.24538500565897825
+        },
+        "penalty": 10.0,
+        "solver": {
+          "gradient_max": 1.7841074543070712e-07,
+          "iterations": 5
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.8025381598372056,
+          "ece_10bin": 0.012289580714356306,
+          "log_loss": 1.690898570371789,
+          "races": 51246,
+          "top1": 0.2646255317488194
+        },
+        "penalty": 1.0,
+        "solver": {
+          "gradient_max": 1.2574406098586621e-06,
+          "iterations": 9
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7996524301797474,
+          "ece_10bin": 0.009999060354312517,
+          "log_loss": 1.6764190942435797,
+          "races": 51246,
+          "top1": 0.27408968504858916
+        },
+        "penalty": 0.1,
+        "solver": {
+          "gradient_max": 9.97477865942193e-06,
+          "iterations": 20
+        },
+        "year": 2023
+      },
+      {
+        "bundle": "FULL",
+        "fitted_years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "metrics": {
+          "brier": 0.7997092884361218,
+          "ece_10bin": 0.009942532306956782,
+          "log_loss": 1.6757933388801787,
+          "races": 51246,
+          "top1": 0.2755532139093783
+        },
+        "penalty": 0.01,
+        "solver": {
+          "gradient_max": 4.360000050144561e-06,
+          "iterations": 47
+        },
+        "year": 2023
+      }
+    ]
+  },
+  "source_sha256": "25056b8213e43b17b8cc8b6a94d50acff21741d609cdae6062add5f40da06095",
+  "source_table": "core.prediction_dataset_v1",
+  "sql_sha256": "707bc38ff182627198feee0f63b42ce6828e72604cd292dd29a3007685b3eafa",
+  "verdict": "P1_P2_BASELINE_V1_PREHOLDOUT_FROZEN"
+}
