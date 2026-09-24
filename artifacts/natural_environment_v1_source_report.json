@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "air_available": 439793,
+    "air_missing": 5431,
+    "c2_missing": 1,
+    "c2_present": 445223,
+    "races": 445224,
+    "tide_AVAILABLE": 223716,
+    "tide_NOT_APPLICABLE": 221508,
+    "weather_1": 270000,
+    "weather_2": 127752,
+    "weather_3": 43838,
+    "weather_4": 1922,
+    "weather_5": 1262,
+    "weather_6": 22,
+    "weather_MISSING": 428,
+    "wind_CALM": 29855,
+    "wind_HEADWIND": 155513,
+    "wind_LEFT_CROSSWIND": 58211,
+    "wind_MISSING": 5432,
+    "wind_RIGHT_CROSSWIND": 60475,
+    "wind_TAILWIND": 135738
+  },
+  "scope": "2017-01-01 <= race_date < 2025-01-01",
+  "source_sha256": "a5942468fe42e6b81d379fb21f3421f2792cdbe4236a0c9def42ddf738efadb9",
+  "source_tables": [
+    "pckyotei.public.brd_c2",
+    "pckyotei.public.brd_l2",
+    "pckyotei.public.apd_choihyo"
+  ],
+  "tide_mapping": {
+    "03": "TK",
+    "04": "TK",
+    "06": "MI",
+    "14": "KM",
+    "15": "AX",
+    "16": "UN",
+    "17": "Q8",
+    "18": "QA",
+    "19": "WH",
+    "20": "N1",
+    "22": "QF",
+    "24": "NS"
+  },
+  "tide_source_sha256": "59417ba3fc1f189c59d740906ffc177cd03579b03dd8d3e7096dc26fc3cea3af",
+  "version": "NATURAL_ENVIRONMENT_FEATURE_V1"
+}

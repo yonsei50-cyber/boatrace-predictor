@@ -1,0 +1,16 @@
+{
+  "actual_probability_mean": 0.03314179123668125,
+  "actual_probability_median": 0.024442436648767343,
+  "brier_120_class": 0.9650464059803244,
+  "code_sha256": "4b4dddd3a7dbaf61edc9ca1b5584a21816c7371424d608addd591da7398d973a",
+  "input_prediction_sha256": "5b338ef1362bb1ce899d85cf9a5bb74e63d37e1111991c3e1c5326f9ce93e73e",
+  "method": "sequential_p1_p2_p2_v1",
+  "races": 51392,
+  "result_source": "brd_k3",
+  "top10_hit_rate": 0.47801214196762143,
+  "top1_hit_rate": 0.08783468244084683,
+  "top3_hit_rate": 0.222622198007472,
+  "top5_hit_rate": 0.31894069115815693,
+  "trifecta_log_loss": 3.921103351445997,
+  "year": 2024
+}

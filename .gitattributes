@@ -6,3 +6,10 @@ artifacts/p1_p2_baseline_v1_development_predictions.npz -text
 artifacts/p1_p2_baseline_v1_2025_holdout_gate.json -text whitespace=cr-at-eol
 artifacts/p1_p2_baseline_v1_2025_holdout_metrics.json -text whitespace=cr-at-eol
 artifacts/p1_p2_baseline_v1_2025_holdout_predictions.npz -text
+scripts/build_natural_environment_v1.py text eol=lf
+scripts/natural_environment_model_v1.py text eol=lf
+scripts/natural_environment_tide_v1.py text eol=lf
+scripts/natural_environment_trifecta_2024.py text eol=lf
+sql/migrations/0010_natural_environment_feature_v1.sql text eol=lf
+artifacts/natural_environment_v1_*.json -text whitespace=cr-at-eol
+artifacts/natural_environment_v1_development_predictions.npz -text
