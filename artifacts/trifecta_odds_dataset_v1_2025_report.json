@@ -1,0 +1,133 @@
+{
+  "artifact": "artifacts\\trifecta_odds_dataset_v1_2025.npz",
+  "artifact_sha256": "87b1abfac01f01866e2e6e558ee1d6ea4bc3f74691b41a09c7cfcc81d9c0512a",
+  "columns": [
+    "race_id",
+    "race_date_yyyymmdd",
+    "first_boat",
+    "second_boat",
+    "third_boat",
+    "venue_code",
+    "race_no",
+    "confirmed_odds",
+    "confirmed_odds_status",
+    "confirmed_odds_raw",
+    "odds_5min",
+    "odds_5min_status",
+    "odds_5min_raw"
+  ],
+  "confirmed_coverage": {
+    "all_missing_races": 74,
+    "complete_races": 51237,
+    "missing_rows": 8880,
+    "partial_races": 0,
+    "races_with_any_valid_odds": 51237,
+    "target_races": 51311,
+    "valid_rows": 6148440
+  },
+  "confirmed_source": {
+    "columns": [
+      "kaisai_nen",
+      "kaisai_tsukihi",
+      "kyoteijo_code",
+      "race_no",
+      "record_id",
+      "data_kubun",
+      "odds_koshinjikan",
+      "odds_sanrentan"
+    ],
+    "source_races_joined": 51237,
+    "source_rows_joined": 51237,
+    "source_shimekiri": "not a column; O6 data_kubun=3 is the confirmed series",
+    "source_states": [
+      {
+        "data_kubun": "3",
+        "odds_koshinjikan": "    ",
+        "races": 51237,
+        "record_id": "O6"
+      }
+    ],
+    "table": "pckyotei.public.brd_o6"
+  },
+  "confirmed_status_counts": {
+    "MISSING_SOURCE": 8880,
+    "VALID": 6148440
+  },
+  "five_minute_coverage": {
+    "all_missing_races": 51310,
+    "complete_races": 1,
+    "missing_rows": 6157200,
+    "partial_races": 0,
+    "races_with_any_valid_odds": 1,
+    "target_races": 51311,
+    "valid_rows": 120
+  },
+  "five_minute_retrieved_at_by_race": {
+    "202512150101": "2026-08-01 22:08:36.042136+09"
+  },
+  "five_minute_source": {
+    "columns": [
+      "race_id",
+      "race_date",
+      "kyoteijo_code",
+      "race_no",
+      "bet_type",
+      "kumiawase",
+      "combination",
+      "odds_5min",
+      "odds_missing_reason",
+      "source_endpoint",
+      "source_shimekiri",
+      "response_sha256",
+      "retrieved_at"
+    ],
+    "dump_sha256": "c709a9ca54f1a793f0d4cdeb7d1a63a889ceeacc979deacb3793e31e102d3d56",
+    "historical_snapshot_timestamp": null,
+    "missing_reasons": {
+      "\\N": 120
+    },
+    "response_sha256_by_race": {
+      "202512150101": "6bb0ab1ad87ed53d89984284710c67aabafde70aba9d262a2b3f76fe1b2c4700"
+    },
+    "source_races_joined": 1,
+    "source_rows_joined": 120,
+    "source_shimekiri": 5,
+    "table": "preserved dump br_model.kyoteibiyori_odds_5min"
+  },
+  "five_minute_status_counts": {
+    "MISSING_SOURCE": 6157200,
+    "VALID": 120
+  },
+  "grain": "race_id x first_boat x second_boat x third_boat",
+  "null_encoding": "numeric NaN with status != VALID; odds_or_none returns None",
+  "period": "2025-01-01 through 2025-12-31",
+  "races": 51311,
+  "rows": 6157320,
+  "status_codes": {
+    "CAPPED": 4,
+    "INVALID_RAW": 5,
+    "MISSING_SOURCE": 0,
+    "NO_VOTES": 2,
+    "SCRATCHED": 3,
+    "SOURCE_MISSING": 7,
+    "SOURCE_NONPOSITIVE": 6,
+    "VALID": 1
+  },
+  "target_probability_artifact": "artifacts\\trifecta_probability_v1_2025.npz",
+  "target_probability_sha256": "1be7f4338693c0f1a4984f06b89c0ae5a3c08c03f7b6a7e94778800d848f068d",
+  "validation": {
+    "confirmed_to_five_minute_fill_rows": 0,
+    "cross_series_source_violations": 0,
+    "duplicate_boat_rows": 0,
+    "duplicate_probability_join_rows": 0,
+    "five_minute_to_confirmed_fill_rows": 0,
+    "grain_duplicate_rows": 0,
+    "missing_numeric_not_null_rows": 0,
+    "nonpositive_numeric_rows": 0,
+    "probability_combination_join_rows": 6157320,
+    "probability_race_join_rows": 51311,
+    "probability_rows_without_odds_row": 0,
+    "rows_with_both_series_valid": 120
+  },
+  "verdict": "TRIFECTA_ODDS_DATASET_V1_READY"
+}
