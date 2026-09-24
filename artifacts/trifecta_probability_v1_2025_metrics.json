@@ -1,0 +1,49 @@
+{
+  "artifact": "artifacts\\trifecta_probability_v1_2025.npz",
+  "artifact_columns": [
+    "race_id",
+    "race_date_yyyymmdd",
+    "first_boat",
+    "second_boat",
+    "third_boat",
+    "trifecta_probability",
+    "is_actual"
+  ],
+  "artifact_rows": 6157320,
+  "artifact_sha256": "1be7f4338693c0f1a4984f06b89c0ae5a3c08c03f7b6a7e94778800d848f068d",
+  "brier_definition": "race mean of sum over 120 classes of (p - one_hot_actual)^2",
+  "combinations_per_evaluable_race": 120,
+  "eligible_races": 51311,
+  "evaluable_races": 51311,
+  "input_artifact": "artifacts\\p1_p2_baseline_v1_2025_holdout_predictions.npz",
+  "input_sha256": "b05869f2df22477c17851014f8a9b4aca7dfb006acdf433b5a6cc1df7bf7915a",
+  "log_loss_minus_uniform": -0.8791694489493787,
+  "method": "sequential_p1_p2_p2_v1",
+  "metrics": {
+    "actual_probability_mean": 0.03366825257967162,
+    "actual_probability_median": 0.02484135477814658,
+    "brier_120_class": 0.9642840419379898,
+    "top10_hit_rate": 0.48408723275710863,
+    "top1_hit_rate": 0.090760265829939,
+    "top3_hit_rate": 0.225819025160297,
+    "top5_hit_rate": 0.3231081054744597,
+    "trifecta_log_loss": 3.908322293832667
+  },
+  "not_evaluable_race_ids": [],
+  "not_evaluable_races": 0,
+  "period": "2025-01-01 through 2025-12-31",
+  "third_label_source": "core.race_result.finish_position; raw.source_batch.source_table = brd_k3",
+  "top_k_tie_rule": "descending probability, stable lexicographic combination order",
+  "uniform_log_loss_reference": 4.787491742782046,
+  "validation": {
+    "actual_match_violations": 0,
+    "combination_count_violations": 0,
+    "duplicate_boat_violations": 0,
+    "input_hash_after": "b05869f2df22477c17851014f8a9b4aca7dfb006acdf433b5a6cc1df7bf7915a",
+    "negative_probability_violations": 0,
+    "nonfinite_probability_violations": 0,
+    "probability_sum_absolute_tolerance": 2e-10,
+    "probability_sum_violations": 0
+  },
+  "verdict": "TRIFECTA_PROBABILITY_V1_2025_EVALUATION_COMPLETE"
+}
