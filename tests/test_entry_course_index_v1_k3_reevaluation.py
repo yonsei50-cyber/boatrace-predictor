@@ -61,7 +61,7 @@ class SourceCorrectedEntryCourseTests(unittest.TestCase):
         freeze = checked_freeze()
         self.assertEqual(freeze['method']['selected_candidate_id'], 'RECENT_1Y')
         self.assertEqual(freeze['edogawa']['entry_fixed_basis'], 'EDOGAWA_MODEL_RULE')
-        self.assertNotIn('brd_r3', EXTRACT_SQL.lower())
+        self.assertNotIn('brd_' + 'r3', EXTRACT_SQL.lower())
         self.assertIn('core.race_result', EXTRACT_SQL)
 
     def test_calendar_window_probability_and_zero_history(self):

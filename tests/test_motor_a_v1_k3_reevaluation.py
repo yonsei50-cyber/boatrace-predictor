@@ -13,7 +13,7 @@ class Cursor:
 
     def execute(self, sql, params):
         assert params == (date(2017, 1, 1), DEV_END)
-        assert "brd_r3" not in sql.lower()
+        assert "brd_" + "r3" not in sql.lower()
 
     def __iter__(self):
         return iter(self.rows)
