@@ -13,3 +13,8 @@ scripts/natural_environment_trifecta_2024.py text eol=lf
 sql/migrations/0010_natural_environment_feature_v1.sql text eol=lf
 artifacts/natural_environment_v1_*.json -text whitespace=cr-at-eol
 artifacts/natural_environment_v1_development_predictions.npz -text
+artifacts/natural_environment_v1_2025_holdout_predictions.npz -text
+artifacts/natural_environment_v1_2025_trifecta_probabilities.npz -text
+docs/natural_environment_v1_2025_holdout.md text eol=lf
+scripts/build_natural_environment_v1_2025.py text eol=lf
+scripts/evaluate_natural_environment_v1_holdout_2025.py text eol=lf
