@@ -1,0 +1,137 @@
+{
+  "P1": {
+    "bundle": "E2",
+    "l2": 0.01,
+    "metrics": {
+      "brier": 0.5865006306676228,
+      "ece_10bin": 0.002577289267584399,
+      "log_loss": 1.1984434175481877,
+      "races": 51311,
+      "top1": 0.5706183859211476
+    },
+    "temperature": 1.0149487987174035,
+    "validation": {
+      "nonfinite": 0,
+      "out_of_range": 0,
+      "race_sum": 0
+    }
+  },
+  "P2": {
+    "bundle": "E2",
+    "l2": 0.01,
+    "metrics": {
+      "brier": 0.798797871784519,
+      "ece_10bin": 0.008927967306716592,
+      "log_loss": 1.67265272862015,
+      "races": 51311,
+      "top1": 0.2763929761649549
+    },
+    "temperature": 1.0068924602159712,
+    "validation": {
+      "nonfinite": 0,
+      "out_of_range": 0,
+      "race_sum": 0
+    }
+  },
+  "artifacts": {
+    "feature_report": "artifacts\\natural_environment_v1_2025_feature_report.json",
+    "feature_report_sha256": "7f0b2e7406ad25afb6bfd187ff4c8120140a47217c348a7be6d5a32be1d87e1c",
+    "predictions": "artifacts\\natural_environment_v1_2025_holdout_predictions.npz",
+    "predictions_sha256": "0fe7ee41c176e6df788c681bede487d487ccfbed84e63a4d0f9155bf1716ea32",
+    "trifecta": "artifacts\\natural_environment_v1_2025_trifecta_probabilities.npz",
+    "trifecta_sha256": "6b7999f6983a596bbe1d4071409f49f26017c862b919c46c2865d206ed310bd6"
+  },
+  "baseline": {
+    "P1": {
+      "brier": 0.5872723584484317,
+      "ece_10bin": 0.0026524810114420105,
+      "log_loss": 1.1999229721400018,
+      "races": 51311,
+      "top1": 0.569215178032001
+    },
+    "P2": {
+      "brier": 0.7988774497158004,
+      "ece_10bin": 0.008953477735191867,
+      "log_loss": 1.6728453399487815,
+      "races": 51311,
+      "top1": 0.2781274970279277
+    },
+    "trifecta": {
+      "actual_probability_mean": 0.03366825257967162,
+      "actual_probability_median": 0.02484135477814658,
+      "brier_120_class": 0.9642840419379898,
+      "top10_hit_rate": 0.48408723275710863,
+      "top1_hit_rate": 0.090760265829939,
+      "top3_hit_rate": 0.225819025160297,
+      "top5_hit_rate": 0.3231081054744597,
+      "trifecta_log_loss": 3.908322293832667
+    }
+  },
+  "boats_per_race": 6,
+  "coverage": {
+    "air_temperature_available_races": 51272,
+    "c2_available_races": 51311,
+    "eligible_races": 51311,
+    "scope": "2025 eligible races only",
+    "tide_not_applicable_races": 26152,
+    "tide_source_target_races": 25159,
+    "tide_unresolved_races": 7,
+    "tide_valid_races": 25152,
+    "wind_category_available_races": 51272
+  },
+  "delta": {
+    "P1": {
+      "brier": -0.0007717277808089174,
+      "ece_10bin": -7.519174385761142e-05,
+      "log_loss": -0.0014795545918140363,
+      "top1": 0.001403207889146607
+    },
+    "P2": {
+      "brier": -7.95779312814382e-05,
+      "ece_10bin": -2.5510428475275515e-05,
+      "log_loss": -0.00019261132863146457,
+      "top1": -0.0017345208629728215
+    },
+    "trifecta": {
+      "actual_probability_mean": 5.2522975592959875e-05,
+      "actual_probability_median": 5.177296873241921e-05,
+      "brier_120_class": -8.37554831716325e-05,
+      "top10_hit_rate": 0.0007405819414940118,
+      "top1_hit_rate": -1.9488998460368e-05,
+      "top3_hit_rate": -0.000233867981524416,
+      "top5_hit_rate": 0.0007016039445733036,
+      "trifecta_log_loss": -0.0016604397090005385
+    }
+  },
+  "eligible_races": 51311,
+  "environment_input_sha256": "5624862c03e93bdf3330bfc8a2da64deddb2edc93c2a5206b5ecd84c7c5f866e",
+  "filter": "label_eligible = TRUE AND race_date >= DATE '2025-01-01' AND race_date < DATE '2026-01-01'",
+  "freeze_sha256": "78c24d7c97d07678684045ee3b4ef2a1b8f25871a8549cbfe959efd6a29eebf7",
+  "head_at_start": "afbd8845722a972a3d20035a34e0648813ae32f5",
+  "method": {
+    "P1": "E2 L2=0.01",
+    "P2": "E2 L2=0.01",
+    "fit_during_holdout": false,
+    "trifecta": "sequential_p1_p2_p2_v1"
+  },
+  "model_sha256": "041ad07643a166e3da60488a642618ce18398111b7f9971501572629ce934a20",
+  "period": "2025-01-01 through 2025-12-31",
+  "rows": 307866,
+  "trifecta": {
+    "evaluable_races": 51311,
+    "metrics": {
+      "actual_probability_mean": 0.03372077555526458,
+      "actual_probability_median": 0.024893127746879,
+      "brier_120_class": 0.9642002864548181,
+      "top10_hit_rate": 0.48482781469860264,
+      "top1_hit_rate": 0.09074077683147863,
+      "top3_hit_rate": 0.2255851571787726,
+      "top5_hit_rate": 0.323809709419033,
+      "trifecta_log_loss": 3.9066618541236666
+    },
+    "probabilities_per_race": 120,
+    "probability_sum_violations": 0,
+    "rows": 6157320
+  },
+  "verdict": "NATURAL_ENVIRONMENT_V1_2025_INDEPENDENT_HOLDOUT_COMPLETE"
+}

@@ -1,0 +1,10 @@
+{
+  "feature_report_sha256": "7f0b2e7406ad25afb6bfd187ff4c8120140a47217c348a7be6d5a32be1d87e1c",
+  "freeze_sha256": "78c24d7c97d07678684045ee3b4ef2a1b8f25871a8549cbfe959efd6a29eebf7",
+  "metrics_sha256": "3f8539de0125c11cf63c3c8e3355367e12cf9c84fadaa92925a53f3f8012e9d6",
+  "predictions_sha256": "0fe7ee41c176e6df788c681bede487d487ccfbed84e63a4d0f9155bf1716ea32",
+  "report_sha256": "1f97b45966425831fe367d1adb3b82f1efc8203f05f699cb8108fca69575085b",
+  "status": "COMPLETED",
+  "trifecta_sha256": "6b7999f6983a596bbe1d4071409f49f26017c862b919c46c2865d206ed310bd6",
+  "verdict": "NATURAL_ENVIRONMENT_V1_2025_INDEPENDENT_HOLDOUT_COMPLETE"
+}

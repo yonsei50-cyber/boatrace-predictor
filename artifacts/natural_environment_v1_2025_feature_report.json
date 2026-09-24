@@ -1,0 +1,41 @@
+{
+  "counts": {
+    "air_available": 55185,
+    "air_missing": 723,
+    "c2_present": 55908,
+    "races": 55908,
+    "tide_AVAILABLE": 27617,
+    "tide_NOT_APPLICABLE": 28284,
+    "tide_UNRESOLVED": 7,
+    "wind_CALM": 3382,
+    "wind_HEADWIND": 20458,
+    "wind_LEFT_CROSSWIND": 8075,
+    "wind_MISSING": 723,
+    "wind_RIGHT_CROSSWIND": 6585,
+    "wind_TAILWIND": 16685
+  },
+  "freeze_sha256": "78c24d7c97d07678684045ee3b4ef2a1b8f25871a8549cbfe959efd6a29eebf7",
+  "scope": "2025-01-01 <= race_date < 2026-01-01",
+  "source_sha256": "00046d7818ca5d5994a022b12afbab349efadb62afb5c57febdfa825eac7b300",
+  "source_tables": [
+    "pckyotei.public.brd_c2",
+    "pckyotei.public.brd_l2",
+    "pckyotei.public.apd_choihyo"
+  ],
+  "tide_calculation": "frozen natural_environment_tide_v1 with date guard extended to 2026-01-01",
+  "tide_mapping": {
+    "03": "TK",
+    "04": "TK",
+    "06": "MI",
+    "14": "KM",
+    "15": "AX",
+    "16": "UN",
+    "17": "Q8",
+    "18": "QA",
+    "19": "WH",
+    "20": "N1",
+    "22": "QF",
+    "24": "NS"
+  },
+  "tide_source_sha256": "3dd13a196e348084343f34e3b0364e3f764c7c05045e9e71f44dac1ba8836e82"
+}
